@@ -1,4 +1,4 @@
-# Collatz Retained-History Path Groupoid — v0.4
+CORRECTION NOTE: this document describes the reduced behavioral path groupoid. Raw retained provenance is modeled separately in formalism/collatz-history-behavior-quotient-v0.4.md and is not erased by inverse cancellation.\n\n# Collatz Retained-History Path Groupoid — v0.4
 
 Status: **EXACT FINITE PATH GROUPOID CANDIDATE / NO GLOBAL ACTION CLAIM / NO MAIN MERGE**
 
