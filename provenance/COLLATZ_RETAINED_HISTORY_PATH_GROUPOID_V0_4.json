@@ -1,0 +1,60 @@
+{
+  "schema": "COLLATZ_RETAINED_HISTORY_PATH_GROUPOID_V0_4_RECEIPT",
+  "date": "2026-09-25",
+  "status": "TARGETED_AND_RANDOMIZED_PASS",
+  "authority": "CANDIDATE_ONLY",
+  "branch": "feat/prime-hilbert-collatz-association-v0.4-20260925",
+  "targeted_tests": {
+    "passed": 14,
+    "failed": 0,
+    "elapsed_s": 0.4
+  },
+  "randomized_gate": {
+    "seed": 20260925,
+    "composable_triples": 5000,
+    "elapsed_s": 13.768462045998604,
+    "cases_per_s": 363.148765874915,
+    "repeated_equal_valuation_noninverse_witnesses": 100,
+    "status": "PASS"
+  },
+  "classification": {
+    "retained_history_sector": "PATH_GROUPOID_ON_VALID_FINITE_SIGNED_COLLATZ_PATHS",
+    "action_groupoid": false,
+    "maximal_core_claim": false,
+    "relation_to_core": "CERTIFIED_SUBGROUPOID_CANDIDATE_ON_RESTRICTED_VALID_DOMAINS_AND_IMAGES",
+    "lossy_projections_included": false
+  },
+  "exact_laws": {
+    "signed_prime_history_roundtrip": true,
+    "composition_associative_on_tested_valid_paths": true,
+    "left_inverse_identity": true,
+    "right_inverse_identity": true,
+    "declared_cut_dissociation": true,
+    "state_validated_inverse_cancellation": true
+  },
+  "claims": {
+    "collatz_conjecture": false,
+    "global_representation_groupoid": false,
+    "physical_quantum_claim": false,
+    "main_mutated": false
+  },
+  "gremlin_live": {
+    "authority": "CANDIDATE_ONLY",
+    "task_event_id": "gremlin:whisper:sha256:f753497102309273b08ab7eb6c927e34699f8d34397c1e2c62776328cfc55df1",
+    "ingest_ack_event_id": "gremlin:whisper:sha256:c9292819ce42a4101d7a07397fe38fb47c58060bec5357cbb1eb6867ea913404",
+    "phasenav36d_event_id": "gremlin:whisper:sha256:e3d31a83e72632b231f399802288983f655a4484eef534ab7e7df2c7590eaba5",
+    "fused_event_id": "gremlin:whisper:sha256:5205624b7b6d30acfc951f16b5f9ffa2b08b8306c3e6d62a5008b6b95df21eb9",
+    "internal_audit_event_id": "gremlin:whisper:sha256:4334c5a436549b72bcad88e378abfa96a209501df0ec281356ecc1df626dcc37",
+    "route_species": [
+      "OWL",
+      "RAVEN"
+    ],
+    "phase_attention_terms": [
+      "equal-valuation",
+      "false-cancel",
+      "composable",
+      "noninverse"
+    ],
+    "interpretation": "GREMLIN targeted the false-cancellation boundary; this is an audit-routing signal, not an independent proof."
+  }
+}

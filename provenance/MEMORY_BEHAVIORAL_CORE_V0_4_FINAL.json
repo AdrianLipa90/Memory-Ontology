@@ -1,0 +1,39 @@
+{
+  "schema": "MEMORY_BEHAVIORAL_CORE_V0_4_FINAL_RECEIPT",
+  "date": "2026-09-25",
+  "status": "TARGETED_LOCAL_PASS_READY_FOR_MAIN",
+  "authority": "CANDIDATE_ONLY",
+  "branch": "feat/prime-hilbert-collatz-association-v0.4-20260925",
+  "gate": {
+    "passed": 63,
+    "failed": 0,
+    "elapsed_s": 0.71,
+    "environment": "local reconstructed current-branch logic",
+    "github_actions": false
+  },
+  "closed_items": {
+    "behavioral_signature": true,
+    "historical_signature": true,
+    "canonical_signature_backward_compatible": true,
+    "stable_category_views": true,
+    "witnessed_inverse_pairs": true,
+    "unwitnessed_invertible_excluded": true,
+    "exact_zero_error_core_gate": true,
+    "collatz_inverse_validator": true,
+    "legacy_groupoid_key_preserved": true
+  },
+  "structural_model": {
+    "historical_layer": "RAW_HISTORY_CATEGORY",
+    "behavioral_layer": "REDUCED_PATH_GROUPOID",
+    "representation_layer": "PARTIAL_TYPED_CATEGORY",
+    "invertible_core": "CERTIFIED_WITNESS_GATED_UNDER_APPROXIMATION"
+  },
+  "claims": {
+    "maximal_core": false,
+    "global_action_groupoid": false,
+    "collatz_conjecture": false,
+    "physical_quantum_claim": false,
+    "physical_ternary_claim": false,
+    "main_mutated": false
+  }
+}

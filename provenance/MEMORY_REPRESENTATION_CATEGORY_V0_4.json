@@ -1,0 +1,51 @@
+{
+  "schema": "MEMORY_REPRESENTATION_CATEGORY_V0_4_RECEIPT",
+  "date": "2026-09-25",
+  "status": "TARGETED_PASS_AFTER_FLOAT_ASSOCIATIVITY_FAILURE",
+  "authority": "CANDIDATE_ONLY",
+  "branch": "feat/prime-hilbert-collatz-association-v0.4-20260925",
+  "first_adversarial_run": {
+    "passed": 30,
+    "failed": 1,
+    "failure": "FLOAT_ERROR_BOUND_PARENTHESES_DIFFERED",
+    "left": "3/50",
+    "right_float": 0.060000000000000005
+  },
+  "correction": {
+    "error_algebra": "Q_EXACT_FRACTION",
+    "implicit_triangle_bound": false,
+    "explicit_metric_witness": true,
+    "explicit_source_target_sectors": true,
+    "explicit_sector_witness_on_mismatch": true,
+    "ordered_prime_lineage": true
+  },
+  "final_targeted_suite": {
+    "passed": 31,
+    "failed": 0,
+    "elapsed_s": 0.1,
+    "association_tests": 16,
+    "category_v04_tests": 15
+  },
+  "gates": {
+    "left_identity": "PASS",
+    "right_identity": "PASS",
+    "associativity_full_canonical_signature": "PASS",
+    "ordered_lineage": "PASS",
+    "lineage_dissociation": "PASS",
+    "exact_rational_error_associativity": "PASS",
+    "metric_witness_required": "PASS",
+    "wrong_metric_witness_fails": "PASS",
+    "sector_mismatch_without_witness_fails": "PASS",
+    "explicit_sector_witness": "PASS",
+    "invertibility_not_created": "PASS",
+    "cross_memory_arrow_fails": "PASS"
+  },
+  "claims": {
+    "arbitrary_category_theorem": false,
+    "global_groupoid": false,
+    "automatic_metric_triangle": false,
+    "automatic_sector_compatibility": false,
+    "collatz_conjecture": false,
+    "main_mutated": false
+  }
+}

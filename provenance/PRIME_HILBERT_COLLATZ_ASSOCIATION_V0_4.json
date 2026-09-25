@@ -1,0 +1,56 @@
+{
+  "schema": "MEMORY_PRIME_HILBERT_COLLATZ_ASSOCIATION_V0_4_RECEIPT",
+  "date": "2026-09-25",
+  "status": "TARGETED_PASS_WITH_NEGATIVE_HOTPATH_BASELINE",
+  "authority": "CANDIDATE_ONLY",
+  "branch": "feat/prime-hilbert-collatz-association-v0.4-20260925",
+  "source_provenance": {
+    "on_primes_readme_sha": "b86404af7c7f072c96cf3edf5f061bf2cffa52c5",
+    "infinities_readme_sha": "934be8e9d13bc77b2d72db5b0bf0ca3d4417d168",
+    "infinities_core_sha": "8675ee37abe5d37eadcfdf4e102daf728aeaa78f",
+    "infinities_validation_sha": "adb54558fda975d08337ee0b51692d5b031dadaf"
+  },
+  "exact_results": {
+    "positional_prime_word_injective": true,
+    "ordered_concatenation_identity": true,
+    "finite_associativity": true,
+    "declared_cut_dissociation": true,
+    "finite_deconcatenation_coassociativity_witness": true,
+    "hilbert_shift_partial_inverse_on_image": true,
+    "finite_channel_pack_bijection": true,
+    "accelerated_collatz_generated_branch_inverse": true,
+    "lifted_collatz_finite_history_roundtrip": true
+  },
+  "targeted_tests": {
+    "passed": 16,
+    "failed": 0,
+    "elapsed_s": 0.08
+  },
+  "negative_baseline": {
+    "implementation": "MATERIALIZE_AND_REFACTOR_PRIME_CODE_EVERY_STEP",
+    "trials": 10000,
+    "timeout_s": 120,
+    "status": "FAIL_TIMEOUT"
+  },
+  "optimized_stress": {
+    "trials": 10000,
+    "total_steps": 204060,
+    "elapsed_s": 1.1479050239995559,
+    "steps_per_s": 177767.32023439507,
+    "max_history_length": 40,
+    "max_observed_branch_valuation": 16
+  },
+  "prime_code_materialization": {
+    "codes": 5000,
+    "elapsed_s": 0.10686288599936233,
+    "codes_per_s": 46788.92913326181,
+    "max_code_bits": 537
+  },
+  "firewalls": {
+    "collatz_conjecture_proven": false,
+    "infinite_history_completion_proven": false,
+    "global_groupoid": false,
+    "physical_quantum_claim": false,
+    "main_mutated": false
+  }
+}

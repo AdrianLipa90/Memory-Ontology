@@ -1,0 +1,106 @@
+{
+  "schema": "MEMORY_ONTOLOGY_TERNARY_CROSS_DOMAIN_AUDIT_V0_2",
+  "date": "2026-09-25",
+  "status": "PARTIAL_TODO_RESOLUTION_EXACT_SUBSTRUCTURES_GLOBAL_BINDING_OPEN",
+  "memory_ontology_branch": "feat/ternary-cross-domain-audit-v0.2-20260925",
+  "sources": [
+    {
+      "repository": "AdrianLipa90/GREMLIN",
+      "ref": "main",
+      "commit": "279aa3b9d7c9667f0ae58796a2b3d86544b26401",
+      "artifacts": [
+        {
+          "path": "spec/GREMLIN_HERMITIAN_ORIENTED_EXCHANGE_V1_4.md",
+          "blob_sha": "9676a77eca8a0e51c354f0a0efc1ae40a2f5af2e"
+        },
+        {
+          "path": "spec/GREMLIN_RELATIONAL_MEASUREMENT_CHANNEL_CATALOG_V0_1.md",
+          "blob_sha": "f09600aa6aecbd976c547a1004cac2b94e43c16c"
+        }
+      ]
+    },
+    {
+      "repository": "AdrianLipa90/Resonant-Chemistry",
+      "ref": "main",
+      "commit": "c60305b993e083233484ac00a7643cd3ee3611f4",
+      "artifacts": [
+        {
+          "path": "reschem/relational_holonomy_spectroscopy.py",
+          "blob_sha": "7a6777c1f208a36e5c2ac84086f3251e8dbd9824"
+        },
+        {
+          "path": "tests/test_relational_holonomy_spectroscopy.py",
+          "blob_sha": "407d514f7c83380d3ce8bfdfc02dc9a19b301d78"
+        }
+      ]
+    },
+    {
+      "repository": "AdrianLipa90/Orbital-Eclipse-Spectroscopy",
+      "ref": "main",
+      "commit": "20957d9eafce27497e948c69cfc87dc9ef705e91"
+    },
+    {
+      "repository": "AdrianLipa90/PhaseNav-Telescope-Spectral-Modulation",
+      "ref": "main",
+      "commit": "d71bb0091136a241f579955b6ed87e9d8b74e647",
+      "artifacts": [
+        {
+          "path": "README.md",
+          "blob_sha": "be918f4780329871636d38c19b08b202d7d44054"
+        },
+        {
+          "path": "docs/INFORMATIONAL_PHASE_EB_ORBITAL_SPECTRAL_CROSSWALK.md",
+          "blob_sha": "a92b697ee86a12dcf0292d7bce3e6ff87f47d5e2"
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "STELLA_27",
+      "verdict": "EXACT_COMBINATORICS",
+      "statement": "T3^3 has 27 states decomposed by support size as 1+6+12+8."
+    },
+    {
+      "id": "STELLA_OUTER_8",
+      "verdict": "ISOMORPHISM",
+      "statement": "The fully active shell {±1}^3 is in bijection with the eight cube vertices."
+    },
+    {
+      "id": "ORIENTED_PATH_TERNARY",
+      "verdict": "EXACT_REPRESENTATION_ON_SECTOR",
+      "statement": "Simple oriented path/cycle edge support with multiplicity at most one is exactly represented by coefficients in {-1,0,+1}."
+    },
+    {
+      "id": "CHEM_RING_SPECTRAL_TRIT",
+      "verdict": "EXACT_REPRESENTATION_ON_SECTOR",
+      "statement": "The declared three-site unit-hopping pi/2-flux control spectrum {-sqrt(3),0,+sqrt(3)} normalizes bijectively to {-1,0,+1}."
+    },
+    {
+      "id": "GREMLIN_EXCHANGE_TRIT",
+      "verdict": "EXACT_QUOTIENT",
+      "statement": "Distinct values of the GREMLIN exchange spectrum {-|E|,0,0,+|E|} normalize to {-1,0,+1}; zero degeneracy prevents full-state bijection."
+    },
+    {
+      "id": "SPECTRAL_SIGN_TRIT",
+      "verdict": "EXACT_QUOTIENT",
+      "statement": "A frozen sign/null quantizer gives an exact ternary quotient of a declared response observable while discarding magnitude."
+    },
+    {
+      "id": "PHASENAV_PAIR_TO_TRIT",
+      "verdict": "ANALOGY_CONDITIONAL",
+      "statement": "PhaseNav involution supplies ±1 eigenspaces; a third zero class requires an additional null/projection rule."
+    }
+  ],
+  "open_gates": [
+    "path composition beyond multiplicity one",
+    "Q-native to ternary information-loss audit",
+    "behavioral equivalence d_H <= epsilon",
+    "Q->T3->B versus Q->B resource benchmark",
+    "procedural-memory benchmark",
+    "Stella shell routing utility",
+    "noise-stability threshold freeze",
+    "typed cross-domain trit adapter",
+    "composite Stella trit utility"
+  ]
+}

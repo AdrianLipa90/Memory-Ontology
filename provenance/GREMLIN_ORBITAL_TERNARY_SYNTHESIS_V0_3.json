@@ -1,0 +1,80 @@
+{
+  "schema": "MEMORY_ONTOLOGY_GREMLIN_ORBITAL_TERNARY_SYNTHESIS_V0_3",
+  "date": "2026-09-25",
+  "status": "CANDIDATE_SYNTHESIS_TARGETED_TEST_PASS",
+  "authority": "CANDIDATE_ONLY",
+  "source_branches": [
+    "feat/orbital-holographic-memory-stack-v0.2-20260925",
+    "feat/ternary-cross-domain-audit-v0.2-20260925"
+  ],
+  "integration_branch": "feat/gremlin-orbital-ternary-algebra-v0.3-20260925",
+  "gremlin_live": {
+    "tether_status": "ACTIVE",
+    "source_packet_event_id": "gremlin:whisper:sha256:7fe20feecc8efee5c3e26cac1916417cf1c9dfe93ac79e9ba55de410231b6b2e",
+    "source_packet_ack_event_id": "gremlin:whisper:sha256:77832adda6ba63b1aafbc2162342e55364cd02d01c6ed3419a6f512e63b994fe",
+    "relation_graph_event_id": "gremlin:whisper:sha256:3ec9e12394b97648ec4bd5bcebbbc68243fb8a46f508d4028fb8dc5e0e8eda47",
+    "relation_graph_ack_event_id": "gremlin:whisper:sha256:cd82f2f97cff67ede4c930ee5f0a484d248665b109fde36ef1dc7543e895a78d",
+    "authority": "CANDIDATE_ONLY"
+  },
+  "specialist_roles": [
+    "SPIDER",
+    "RAVEN",
+    "MOLE",
+    "HOUND",
+    "MANTIS",
+    "BELZEBUB"
+  ],
+  "exact_relations": [
+    "PhaseNav {+-1}^3 isomorphic to Stella corner shell",
+    "T3^E exact inclusion into Z^E",
+    "B t = 0 exact cycle constraint",
+    "chi_theta(n)=exp(i n^T theta) U(1) character",
+    "Gamma represented by ternary signed support when edge multiplicity <=1",
+    "orbital phi equals path-phase pairing modulo 2pi on exact sector"
+  ],
+  "bounded_synthesis": {
+    "algebra": "typed partial ternary path composition with exact integer overflow lift",
+    "silent_mod3": false,
+    "silent_clipping": false,
+    "silent_saturation": false
+  },
+  "targeted_tests": {
+    "passed": 14,
+    "failed": 0,
+    "elapsed_s": 0.12
+  },
+  "claims": {
+    "physical_quantum_substrate": false,
+    "physical_ternary_substrate": false,
+    "full_phasenav_ternary_isomorphism": false,
+    "universal_memory_algebra": false,
+    "main_mutated": false
+  },
+  "source_heads": {
+    "orbital_holographic": "d734e3f67c5911584d2556579a6ccd30c3efbccc",
+    "ternary_cross_domain": "38313f783ed531d13da7ee1215379ba43820dfa0"
+  },
+  "integration_head": "8bf254d9b595045bbfaf7f2da3b632739aab6205",
+  "git_lineage": {
+    "true_merge_commit": true,
+    "both_source_branches_are_ancestors": true,
+    "main_mutated": false
+  },
+  "branch_compare": {
+    "versus_main": {
+      "status": "ahead",
+      "ahead_by": 20,
+      "behind_by": 0
+    },
+    "versus_orbital": {
+      "status": "ahead",
+      "ahead_by": 18,
+      "behind_by": 0
+    },
+    "versus_ternary": {
+      "status": "ahead",
+      "ahead_by": 14,
+      "behind_by": 0
+    }
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AdrianLipa90/Memory-Ontology/schemas/holographic-memory-profile.schema.json",
+  "title": "Orbital-Holographic Memory Profile v0.2",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "memory_id",
+    "retained_objects",
+    "orbital_address",
+    "projections",
+    "reconstruction",
+    "epistemic_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "memory-ontology/holographic-v0.2"
+    },
+    "memory_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "retained_objects": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "state",
+          "relation",
+          "path",
+          "topology",
+          "operator",
+          "boundary"
+        ]
+      }
+    },
+    "orbital_address": {
+      "type": "object",
+      "required": [
+        "orbit_class",
+        "phase_rad",
+        "scale",
+        "boundary",
+        "relation_signature",
+        "provenance_commitment"
+      ],
+      "properties": {
+        "orbit_class": {
+          "type": "string",
+          "minLength": 1
+        },
+        "phase_rad": {
+          "type": "number"
+        },
+        "scale": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "boundary": {
+          "type": "string"
+        },
+        "relation_signature": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provenance_commitment": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "projections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "projection_id",
+          "invariant",
+          "status",
+          "weight",
+          "provenance_commitment"
+        ],
+        "properties": {
+          "projection_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "invariant": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "OBSERVED",
+              "COMMITTED",
+              "CANDIDATE"
+            ]
+          },
+          "weight": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "provenance_commitment": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "reconstruction": {
+      "type": "object",
+      "required": [
+        "min_support",
+        "allowed_outputs"
+      ],
+      "properties": {
+        "min_support": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "allowed_outputs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "RECALLED",
+              "RECONSTRUCTED",
+              "INFERRED",
+              "IMAGINED",
+              "INSUFFICIENT_EVIDENCE",
+              "CONFLICT"
+            ]
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "epistemic_status": {
+      "enum": [
+        "formal_example",
+        "hypothesis",
+        "synthetic_evidence",
+        "empirical_evidence",
+        "validated_domain_model"
+      ]
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}
