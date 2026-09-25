@@ -1,0 +1,26 @@
+{
+  "schema_version": "memory-representation/v0.1",
+  "name": "procedural-memory-qnative-reference",
+  "representation_family": "quantum_native",
+  "physical_substrate_claim": false,
+  "equivalence_contract": {
+    "epsilon": 0.001,
+    "horizon": 100,
+    "observable_contract": "trajectory choice, update response, and task-relevant path probabilities",
+    "distance": "backend-specific bounded output distance"
+  },
+  "cost_metrics": [
+    "storage",
+    "compile_time",
+    "update_time",
+    "query_time",
+    "sample_count",
+    "sequential_depth"
+  ],
+  "evidence_status": "formal_only",
+  "notes": [
+    "Current project representation is quantum-native.",
+    "Binaryizability and binaryization cost remain open empirical/theoretical questions.",
+    "No physical quantum-memory claim is encoded by this profile."
+  ]
+}
