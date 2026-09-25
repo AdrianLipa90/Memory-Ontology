@@ -1,0 +1,36 @@
+{
+  "schema": "MEMORY_REPRESENTATION_CATEGORY_V0_3_RECEIPT",
+  "date": "2026-09-25",
+  "status": "TARGETED_LOCAL_PASS",
+  "authority": "CANDIDATE_ONLY",
+  "branch": "feat/gremlin-orbital-ternary-algebra-v0.3-20260925",
+  "gremlin_live": {
+    "research_input_event_id": "gremlin:whisper:sha256:d24ede76ad713da510d2ffe93ef787bd741e0381f83a83f7e363194a39b23f18",
+    "ingest_ack_event_id": "gremlin:whisper:sha256:45d99b77f63534da779166dc3f4e4e9cac54938306229c1f543adbc34e2c0d0e",
+    "authority": "CANDIDATE_ONLY"
+  },
+  "classification": {
+    "global_group": "REJECTED_TERNARY_NONCLOSURE",
+    "global_groupoid": "REJECTED_NONINVERTIBLE_PARTIAL_MORPHISMS",
+    "local_exact_groupoid_fragments": "ALLOWED_WITH_INVERSE_WITNESSES",
+    "current_minimal_structure": "CATEGORY_OF_PARTIAL_TYPED_REPRESENTATION_MORPHISMS_OVER_MEMORY_ONTOLOGY"
+  },
+  "path_fiber": {
+    "exact_inclusion": "T3^E -> C1(G;Z)",
+    "boundary": "partial=B",
+    "phase_character": "chi_theta(n)=exp(i n^T theta)",
+    "overflow": "EXACT_INTEGER_LIFT"
+  },
+  "targeted_tests": {
+    "passed": 12,
+    "failed": 0,
+    "elapsed_s": 0.06
+  },
+  "claims": {
+    "formal_grothendieck_fibration": false,
+    "global_groupoid": false,
+    "physical_quantum_substrate": false,
+    "physical_ternary_substrate": false,
+    "main_mutated": false
+  }
+}
