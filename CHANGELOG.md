@@ -46,3 +46,25 @@ Recorded a non-canonical research TODO for later validation:
 - benchmark questions for information loss, routing utility, compression, and cost versus direct binaryization.
 
 Status: UNTESTED INTUITION / TODO; no quantum-advantage or physical-substrate claim.
+
+
+### Ternary/Stella cross-domain audit v0.2
+
+Promoted the original ternary note from wholly untested intuition to a partially resolved research queue.
+
+Added:
+
+- exact 27-state Stella combinatorics with support-shell decomposition 1+6+12+8;
+- exact bijection between the fully active sign shell {±1}^3 and cube vertices;
+- exact signed-ternary representation of simple oriented path/cycle support under edge multiplicity <= 1;
+- exact Wilson-loop factorization through ternary edge coefficients on that sector;
+- Resonant Chemistry three-site pi/2-flux spectral witness {-sqrt(3),0,+sqrt(3)} -> {-1,0,+1};
+- GREMLIN oriented-exchange {-|E|,0,0,+|E|} exact spectral quotient;
+- spectroscopic sign/null ternary quotient with a frozen threshold requirement for noisy data;
+- explicit non-isomorphism warning for PhaseNav +/- involution sectors without an added zero rule;
+- fail-loud warning that signed ternary is not closed under unrestricted path addition;
+- separation of signed routing semantics from F3 modulo-3 arithmetic;
+- source-bound provenance receipt and dependency-free contract tests;
+- ten remaining promotion gates covering composition, information loss, equivalence, resources, procedural tasks, shell utility, noise, adapters, PhaseNav binding and composite Stella-trit utility.
+
+Status: EXACT_SUBSTRUCTURES_IDENTIFIED / FULL_TERNARY_MEMORY_BACKEND_OPEN.
