@@ -1,0 +1,39 @@
+{
+  "schema": "COLLATZ_HISTORY_BEHAVIOR_QUOTIENT_V0_4_RECEIPT",
+  "date": "2026-09-25",
+  "status": "CORRECTION_TARGETED_PASS",
+  "authority": "CANDIDATE_ONLY",
+  "branch": "feat/prime-hilbert-collatz-association-v0.4-20260925",
+  "correction": {
+    "prior_wording": "RETAINED_HISTORY_PATH_GROUPOID",
+    "corrected_model": "RAW_HISTORY_CATEGORY_TO_REDUCED_BEHAVIORAL_PATH_GROUPOID",
+    "reason": "inverse-pair reduction preserves behavior but erases provenance"
+  },
+  "tests": {
+    "quotient_tests": {
+      "passed": 8,
+      "failed": 0,
+      "elapsed_s": 0.25
+    },
+    "combined_groupoid_and_quotient": {
+      "passed": 22,
+      "failed": 0,
+      "elapsed_s": 0.64
+    },
+    "randomized_quotient_pairs": 1000
+  },
+  "laws": {
+    "historical_composition_associative": true,
+    "raw_roundtrip_history_nonempty": true,
+    "behavioral_roundtrip_identity": true,
+    "quotient_respects_composition": true,
+    "prime_history_survives_raw_layer": true
+  },
+  "claims": {
+    "global_action_groupoid": false,
+    "maximal_core": false,
+    "collatz_conjecture": false,
+    "physical_quantum_claim": false,
+    "main_mutated": false
+  }
+}
