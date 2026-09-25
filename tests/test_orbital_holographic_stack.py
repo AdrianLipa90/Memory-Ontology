@@ -2,6 +2,7 @@ import importlib.util
 import json
 import math
 from pathlib import Path
+import sys
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -12,6 +13,7 @@ EXAMPLE = ROOT / "examples" / "orbital-holographic-memory.json"
 spec = importlib.util.spec_from_file_location("orbital_reconstruction", ENGINE)
 module = importlib.util.module_from_spec(spec)
 assert spec.loader is not None
+sys.modules[spec.name] = module
 spec.loader.exec_module(module)
 
 
