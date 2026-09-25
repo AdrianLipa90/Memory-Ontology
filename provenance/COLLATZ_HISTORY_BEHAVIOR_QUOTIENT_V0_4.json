@@ -35,5 +35,25 @@
     "collatz_conjecture": false,
     "physical_quantum_claim": false,
     "main_mutated": false
+  },
+  "gremlin_live": {
+    "authority": "CANDIDATE_ONLY",
+    "task_event_id": "gremlin:whisper:sha256:bc283716a3c25f23351237045ae476dd2f14197552ced742a2e096bd634e0b37",
+    "ingest_ack_event_id": "gremlin:whisper:sha256:f45f579a930105071591705c3e35e1c31d38063a70385f21f60b2cd0d9cf727a",
+    "phasenav36d_event_id": "gremlin:whisper:sha256:ae93aeffd61a217b2c6ffbd0ad89081da9e3d78ba86f5e9444fdcc119037e09c",
+    "fused_event_id": "gremlin:whisper:sha256:95e6928da6271cda9b3c67928d8f2885c4a409a33c7441308077a373003d35f0",
+    "internal_audit_event_id": "gremlin:whisper:sha256:364e5e186e72fcce8ae4817c474d07cca3e596c017292e14a6b2df64864e63ac",
+    "route_species": [
+      "OWL",
+      "SPIDER",
+      "RAVEN"
+    ],
+    "phase_attention_terms": [
+      "category_of_raw_validated_signed_collatz_paths",
+      "reduced_path_groupoid",
+      "inverse-edge",
+      "adjacent"
+    ],
+    "interpretation": "GREMLIN routed attention to the exact history-category / reduced-groupoid seam; this is audit routing, not an independent theorem."
   }
 }
