@@ -86,6 +86,7 @@ This prevents two opposite errors: assuming quantum-native notation proves a phy
 - examples/representation-duality.json — current quantum-native representation profile.
 - tests/test_repository_contract.py — memory-object structural validation.
 - tests/test_representation_contract.py — representation-contract validation.
+- todo/ternary-stella-intuition-v0.1.md — untested balanced-ternary/Stella representation intuition.
 - CHANGELOG.md — append-only change record.
 
 ## Epistemic status
