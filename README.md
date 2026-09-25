@@ -79,6 +79,7 @@ This prevents two opposite errors: assuming quantum-native notation proves a phy
 - ontology/memory-ontology-v0.1.md — ontological primitives and hierarchy.
 - taxonomy/memory-taxonomy-v0.1.md — multi-axis classification.
 - cross_domain/classical-memory-map-v0.1.md — mapping of conventional memory terms.
+- cross_domain/ternary-stella-cross-domain-audit-v0.2.md — exact/quotient/analogy audit across GREMLIN, chemistry and spectroscopy.
 - benchmarks/binaryization-benchmark-spec-v0.1.md — fail-loud comparison protocol.
 - schemas/memory-object.schema.json — machine-readable memory-object schema.
 - schemas/representation-profile.schema.json — representation/evidence contract.
@@ -86,7 +87,9 @@ This prevents two opposite errors: assuming quantum-native notation proves a phy
 - examples/representation-duality.json — current quantum-native representation profile.
 - tests/test_repository_contract.py — memory-object structural validation.
 - tests/test_representation_contract.py — representation-contract validation.
-- todo/ternary-stella-intuition-v0.1.md — untested balanced-ternary/Stella representation intuition.
+- tests/test_ternary_cross_domain_contract.py — dependency-free ternary/Stella exact-sector checks.
+- provenance/TERNARY_CROSS_DOMAIN_AUDIT_V0_2.json — source-bound cross-domain audit receipt.
+- todo/ternary-stella-intuition-v0.1.md — partially resolved ternary/Stella research queue and open promotion gates.
 - CHANGELOG.md — append-only change record.
 
 ## Epistemic status
