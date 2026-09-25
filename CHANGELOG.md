@@ -160,3 +160,23 @@ GREMLIN live audits routed to OWL/SPIDER/RAVEN and focused on the exact
 history-category / reduced-groupoid seam.
 
 Status: CANDIDATE_ONLY / NO_MAIN_MERGE.
+
+
+### v0.4 final: behavioral/historical signature split and certified core
+
+Closed the final representation-category gap before main promotion.
+
+Added:
+
+- separate `behavioral_signature()` and `historical_signature()`;
+- backward-compatible historical `canonical_signature()`;
+- stable object/morphism views for core extraction;
+- explicit inverse-pair witness contract;
+- certified behavioral core that excludes merely flagged-but-unwitnessed arrows;
+- Collatz finite-path inverse validator;
+- backward-compatible groupoid classification alias after the history/behavior correction.
+
+Final targeted local gate: **63/63 PASS** in ~0.71 s.
+
+The certified core is intentionally an under-approximation; no maximal-core
+claim is made.
