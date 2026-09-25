@@ -1,0 +1,30 @@
+{
+  "schema_version": "memory-ontology/v0.1",
+  "name": "procedural-memory-generic",
+  "description": "Substrate-neutral procedural memory represented as a slowly changing graph of reusable transition paths.",
+  "retained_objects": ["path", "topology", "operator"],
+  "persistence": "structural",
+  "access": ["implicit"],
+  "plasticity": ["adaptive", "consolidating"],
+  "effects": ["routing", "attractor"],
+  "coupling": [
+    {
+      "source": "fast_active_layer",
+      "target": "procedural_layer",
+      "relation": "repeated trajectory reinforcement",
+      "timescale": "slow"
+    },
+    {
+      "source": "procedural_layer",
+      "target": "fast_active_layer",
+      "relation": "constrains and routes execution",
+      "timescale": "fast"
+    }
+  ],
+  "substrate": "unspecified",
+  "epistemic_status": "formal_example",
+  "notes": [
+    "Stable means metastable on the relevant timescale, not immutable.",
+    "No physical quantum substrate is assumed by this example."
+  ]
+}
