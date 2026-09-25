@@ -151,8 +151,33 @@ For a proposed memory variable \(M\), the model fails if controlled intervention
 
 A claimed cross-domain invariant requires these criteria to survive independent tests in each claimed substrate class.
 
-## 9. Quantum-native realizations
+## 9. Representation neutrality and current quantum-native form
 
-A path graph may be represented using phases, amplitudes, interference or other quantum-native mathematics. Such a representation is an implementation/formalization choice.
+The law above is representation-neutral.
 
-The core law does **not** assert that all physical memory mechanisms are quantum mechanical. Any physical quantum binding is a separate empirical claim.
+A path graph may currently be represented using phases, amplitudes, interference, superposition or other quantum-native mathematics. This does not determine whether the underlying physical substrate must itself be quantum.
+
+Conversely, the possibility of encoding the same dynamics in binary form does not establish that the binary cost is practical.
+
+The correct comparison is behavioral:
+
+\[
+d_H(R_Q,R_B)\le\varepsilon,
+\]
+
+followed by a resource comparison across binary realizations satisfying that contract.
+
+The dedicated formalism is defined in:
+
+- formalism/representation-duality-v0.1.md
+- benchmarks/binaryization-benchmark-spec-v0.1.md
+
+Memory Ontology v0.1 therefore keeps three claims separate:
+
+\[
+\text{memory law}
+\neq
+\text{representation}
+\neq
+\text{physical substrate}.
+\]
