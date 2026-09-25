@@ -33,3 +33,16 @@ Added:
 - fail-loud binaryization benchmark specification;
 - machine-readable representation profile and validation test;
 - current project position: substrate-neutral law + quantum-native current representation + binaryizability open.
+
+
+### Ternary/Stella intuition TODO
+
+Recorded a non-canonical research TODO for later validation:
+
+- classical balanced-ternary layer `{-1,0,+1}` as a possible coarse representation between Q-native and binary backends;
+- clarification that one standard trit has 3 states, while three trits have 27 states;
+- decomposition `27 = 1 + 6 + 12 + 8`, with the 8 outer sign configurations given by `(±1,±1,±1)`;
+- explicit allowance for a future project-specific composite "Stella trit" only if its coarse-graining map is defined;
+- benchmark questions for information loss, routing utility, compression, and cost versus direct binaryization.
+
+Status: UNTESTED INTUITION / TODO; no quantum-advantage or physical-substrate claim.
