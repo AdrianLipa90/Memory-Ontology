@@ -215,7 +215,7 @@ def associativity_holds(a: CollatzPath, b: CollatzPath, c: CollatzPath) -> bool:
 def structure_classification() -> dict:
     return {
         "global_representation_category": "PARTIAL_TYPED_CATEGORY",
-        "retained_history_collatz_sector": "PATH_GROUPOID_ON_VALID_FINITE_SIGNED_COLLATZ_PATHS",
+        "behavioral_reduced_collatz_sector": "PATH_GROUPOID_ON_VALID_FINITE_SIGNED_COLLATZ_PATHS",
         "action_groupoid": False,
         "reason_not_action_groupoid": (
             "no single globally defined group action is established; inverses are "
@@ -223,7 +223,7 @@ def structure_classification() -> dict:
         ),
         "maximal_core_claim": False,
         "relation_to_core": (
-            "certified subgroupoid candidate inside the invertible core after "
+            "certified behavioral subgroupoid candidate inside the invertible core after "
             "objects/sectors are restricted to valid path domains/images"
         ),
         "lossy_projections_included": False,
