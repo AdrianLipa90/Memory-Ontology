@@ -1,0 +1,35 @@
+{
+  "schema": "MEMORY_HOLOGRAPHIC_REPRESENTATION_BRIDGE_V0_3",
+  "date": "2026-09-25",
+  "status": "FRESH_LOCAL_INTEGRATION_PASS",
+  "authority": "CANDIDATE_ONLY",
+  "branch": "feat/gremlin-orbital-ternary-algebra-v0.3-20260925",
+  "test_gate": {
+    "passed": 23,
+    "failed": 0,
+    "elapsed_s": 0.08
+  },
+  "composition": {
+    "representation_category_tests": 12,
+    "holographic_bridge_tests": 11
+  },
+  "verified_behaviors": [
+    "signed ternary orbital projection consumed by existing reconstruction kernel",
+    "successful reconstruction creates typed partial morphism",
+    "partial projection loss degrades support before failure",
+    "insufficient evidence creates no reconstruction arrow",
+    "equal-support conflict creates no reconstruction arrow",
+    "CANDIDATE projection does not count as historical support",
+    "physical-substrate self-promotion fails closed",
+    "non-ternary exact-sector coefficients fail closed",
+    "projection objects remain in same memory fiber",
+    "reconstruction bundle provenance is input-order invariant"
+  ],
+  "claims": {
+    "global_groupoid": false,
+    "physical_quantum_substrate": false,
+    "physical_ternary_substrate": false,
+    "full_branch_pytest": false,
+    "main_mutated": false
+  }
+}
