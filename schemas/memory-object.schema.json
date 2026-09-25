@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AdrianLipa90/Memory-Ontology/schemas/memory-object.schema.json",
+  "title": "Memory Ontology Object v0.1",
+  "type": "object",
+  "required": ["schema_version", "name", "retained_objects", "persistence", "access", "plasticity", "effects", "coupling", "epistemic_status"],
+  "properties": {
+    "schema_version": {"const": "memory-ontology/v0.1"},
+    "name": {"type": "string", "minLength": 1},
+    "description": {"type": "string"},
+    "retained_objects": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["state", "relation", "path", "topology", "operator", "boundary"]}
+    },
+    "persistence": {"enum": ["ephemeral", "transient", "persistent", "structural", "effectively_invariant"]},
+    "access": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["direct", "reconstructive", "implicit", "latent"]}
+    },
+    "plasticity": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["volatile", "adaptive", "consolidating", "append_only", "self_modifying"]}
+    },
+    "effects": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"enum": ["bias", "constraint", "attractor", "routing", "generative"]}
+    },
+    "coupling": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "target", "relation"],
+        "properties": {
+          "source": {"type": "string"},
+          "target": {"type": "string"},
+          "relation": {"type": "string"},
+          "timescale": {"type": ["number", "string", "null"]}
+        },
+        "additionalProperties": true
+      }
+    },
+    "substrate": {"type": "string", "default": "unspecified"},
+    "epistemic_status": {"enum": ["formal_example", "hypothesis", "synthetic_evidence", "empirical_evidence", "validated_domain_model"]},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
