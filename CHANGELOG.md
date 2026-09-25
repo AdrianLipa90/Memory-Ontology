@@ -120,3 +120,43 @@ Added:
   `e797576042d876a289c61c1815b5f0aedf64172f`).
 
 Status: CANDIDATE_ONLY / NO_MAIN_MERGE.
+
+
+## 2026-09-25 — v0.4 Prime–Hilbert–Collatz association/dissociation
+
+Added a new feature branch over the v0.3 orbital/ternary synthesis.
+
+Exact finite-history layer:
+
+- positional-prime ordered history encoding;
+- Hilbert-style prime-position/channel shifts;
+- exact declared-cut dissociation;
+- accelerated odd-Collatz branch retention and exact local reverse branch;
+- exact-rational representation-category composition with explicit metric and
+  sector witnesses;
+- 31/31 targeted association/category tests.
+
+A second adversarial pass exposed an important semantic distinction:
+inverse-pair reduction returns behavioral identity but erases provenance.
+
+The corrected two-layer model is:
+
+```text
+raw validated history category
+    -> exact-backtracking behavioral quotient
+    -> reduced Collatz path groupoid
+```
+
+New gates:
+
+- reduced behavioral groupoid: 14/14 PASS;
+- history/behavior quotient: 8/8 PASS;
+- combined local groupoid+quotient tests: 22/22 PASS;
+- 5000 randomized composable triples PASS;
+- 100 equal-valuation/noninverse witnesses with zero false cancellation;
+- 1000 randomized quotient-functor pairs PASS.
+
+GREMLIN live audits routed to OWL/SPIDER/RAVEN and focused on the exact
+history-category / reduced-groupoid seam.
+
+Status: CANDIDATE_ONLY / NO_MAIN_MERGE.
