@@ -1,13 +1,13 @@
 {
   "schema": "MEMORY_HOLOGRAPHIC_REPRESENTATION_BRIDGE_V0_3",
   "date": "2026-09-25",
-  "status": "FRESH_LOCAL_INTEGRATION_PASS",
+  "status": "FRESH_LOCAL_INTEGRATION_PASS_EXACT_ORBITAL_KERNEL",
   "authority": "CANDIDATE_ONLY",
   "branch": "feat/gremlin-orbital-ternary-algebra-v0.3-20260925",
   "test_gate": {
     "passed": 23,
     "failed": 0,
-    "elapsed_s": 0.08
+    "elapsed_s": 0.07
   },
   "composition": {
     "representation_category_tests": 12,
@@ -31,5 +31,11 @@
     "physical_ternary_substrate": false,
     "full_branch_pytest": false,
     "main_mutated": false
+  },
+  "exact_branch_dependency": {
+    "path": "engines/reconstruction/orbital_reconstruction.py",
+    "git_blob_sha1": "e797576042d876a289c61c1815b5f0aedf64172f",
+    "local_git_blob_sha1": "e797576042d876a289c61c1815b5f0aedf64172f",
+    "byte_identical": true
   }
 }
