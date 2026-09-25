@@ -63,3 +63,40 @@ Added:
 - v0.2 invariant tests.
 
 Epistemic boundary: orbital/holographic is a computational representation formalism here. Physical Aharonov-Bohm, neutrino, FTL/nonlocality or cosmological bindings remain separate hypotheses requiring independent evidence.
+
+
+### Ternary/Stella cross-domain audit v0.2
+
+Integrated the independent ternary audit line into the synthesis branch.
+
+Added:
+
+- exact 27-state Stella combinatorics with 1+6+12+8 shell decomposition;
+- exact outer-shell bijection \(\{\pm1\}^3\leftrightarrow\) cube vertices;
+- exact signed-ternary representation of simple oriented path/cycle support;
+- exact Wilson-loop factorization on the edge-multiplicity-≤1 sector;
+- fail-loud non-closure warning for unrestricted path addition;
+- explicit distinction between signed ternary semantics and \(\mathbb F_3\);
+- source-bound audit receipt and contract tests.
+
+Status: EXACT_SUBSTRUCTURES_IDENTIFIED / FULL_TERNARY_MEMORY_BACKEND_OPEN.
+
+
+## 2026-09-25 — v0.3 branch: GREMLIN orbital–ternary algebraic synthesis
+
+Combined the previously independent orbital-holographic and ternary/Stella
+branches on a new feature branch without mutating main.
+
+GREMLIN/SPIDER/RAVEN/MOLE synthesis identified:
+
+- exact inclusion \(T_3^E\subset\mathbb Z^E\) for signed path support;
+- boundary operator \(Bt\) and exact ternary cycle sector;
+- exact U(1) character \(\chi_\theta(n)=\exp(i n^T\theta)\);
+- exact path-to-orbital phase bridge \(\phi=t^T\theta\pmod{2\pi}\);
+- exact isomorphism between PhaseNav \(\{\pm1\}^3\) and the Stella corner shell;
+- typed partial ternary composition with exact overflow lift into integer winding chains;
+- explicit rejection of silent modulo-3, clipping and saturation defaults.
+
+Reference algebra and 14 targeted tests added.
+
+Status: CANDIDATE_SYNTHESIS / EXACT_SECTOR_BRIDGE / NO_MAIN_MERGE.
