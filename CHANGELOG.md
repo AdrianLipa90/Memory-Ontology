@@ -100,3 +100,23 @@ GREMLIN/SPIDER/RAVEN/MOLE synthesis identified:
 Reference algebra and 14 targeted tests added.
 
 Status: CANDIDATE_SYNTHESIS / EXACT_SECTOR_BRIDGE / NO_MAIN_MERGE.
+
+
+### v0.3 representation-category + holographic bridge
+
+Added:
+
+- category over Memory Ontology with explicit representation fibers;
+- typed partial representation morphisms with observable, error, horizon,
+  invariant and provenance contracts;
+- fail-loud rejection of a global group/groupoid interpretation;
+- exact local groupoid fragment for the PhaseNav outer-shell / Stella
+  corner-shell isomorphism;
+- executable adapter from signed-ternary orbital projections into the existing
+  holographic reconstruction kernel;
+- partial-reconstruction arrows only after support/provenance gates pass;
+- 23/23 fresh local integration tests on a byte-identical copy of branch
+  `orbital_reconstruction.py` (Git blob
+  `e797576042d876a289c61c1815b5f0aedf64172f`).
+
+Status: CANDIDATE_ONLY / NO_MAIN_MERGE.
