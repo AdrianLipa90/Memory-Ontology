@@ -407,3 +407,9 @@ class MemoryRepresentationCategoryV4:
             return self._morphisms[morphism_id]
         except KeyError as exc:
             raise RepresentationCategoryV4Error(f"unknown morphism {morphism_id}") from exc
+
+    def objects(self) -> tuple[RepresentationObjectV4, ...]:
+        return tuple(self._objects[key] for key in sorted(self._objects))
+
+    def morphisms(self) -> tuple[TypedMorphismV4, ...]:
+        return tuple(self._morphisms[key] for key in sorted(self._morphisms))
