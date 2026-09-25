@@ -1,0 +1,41 @@
+{
+  "schema": "COLLATZ_RETAINED_HISTORY_PATH_GROUPOID_V0_4_RECEIPT",
+  "date": "2026-09-25",
+  "status": "TARGETED_AND_RANDOMIZED_PASS",
+  "authority": "CANDIDATE_ONLY",
+  "branch": "feat/prime-hilbert-collatz-association-v0.4-20260925",
+  "targeted_tests": {
+    "passed": 14,
+    "failed": 0,
+    "elapsed_s": 0.4
+  },
+  "randomized_gate": {
+    "seed": 20260925,
+    "composable_triples": 5000,
+    "elapsed_s": 13.768462045998604,
+    "cases_per_s": 363.148765874915,
+    "repeated_equal_valuation_noninverse_witnesses": 100,
+    "status": "PASS"
+  },
+  "classification": {
+    "retained_history_sector": "PATH_GROUPOID_ON_VALID_FINITE_SIGNED_COLLATZ_PATHS",
+    "action_groupoid": false,
+    "maximal_core_claim": false,
+    "relation_to_core": "CERTIFIED_SUBGROUPOID_CANDIDATE_ON_RESTRICTED_VALID_DOMAINS_AND_IMAGES",
+    "lossy_projections_included": false
+  },
+  "exact_laws": {
+    "signed_prime_history_roundtrip": true,
+    "composition_associative_on_tested_valid_paths": true,
+    "left_inverse_identity": true,
+    "right_inverse_identity": true,
+    "declared_cut_dissociation": true,
+    "state_validated_inverse_cancellation": true
+  },
+  "claims": {
+    "collatz_conjecture": false,
+    "global_representation_groupoid": false,
+    "physical_quantum_claim": false,
+    "main_mutated": false
+  }
+}
