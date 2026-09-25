@@ -216,6 +216,8 @@ def structure_classification() -> dict:
     return {
         "global_representation_category": "PARTIAL_TYPED_CATEGORY",
         "behavioral_reduced_collatz_sector": "PATH_GROUPOID_ON_VALID_FINITE_SIGNED_COLLATZ_PATHS",
+        "retained_history_collatz_sector": "PATH_GROUPOID_ON_VALID_FINITE_SIGNED_COLLATZ_PATHS",
+        "legacy_key_semantics": "retained_history_collatz_sector is a compatibility alias for the reduced behavioral groupoid; raw provenance lives in collatz_history_quotient_v04",
         "action_groupoid": False,
         "reason_not_action_groupoid": (
             "no single globally defined group action is established; inverses are "
