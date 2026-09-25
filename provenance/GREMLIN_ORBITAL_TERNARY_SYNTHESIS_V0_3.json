@@ -49,5 +49,32 @@
     "full_phasenav_ternary_isomorphism": false,
     "universal_memory_algebra": false,
     "main_mutated": false
+  },
+  "source_heads": {
+    "orbital_holographic": "d734e3f67c5911584d2556579a6ccd30c3efbccc",
+    "ternary_cross_domain": "38313f783ed531d13da7ee1215379ba43820dfa0"
+  },
+  "integration_head": "8bf254d9b595045bbfaf7f2da3b632739aab6205",
+  "git_lineage": {
+    "true_merge_commit": true,
+    "both_source_branches_are_ancestors": true,
+    "main_mutated": false
+  },
+  "branch_compare": {
+    "versus_main": {
+      "status": "ahead",
+      "ahead_by": 20,
+      "behind_by": 0
+    },
+    "versus_orbital": {
+      "status": "ahead",
+      "ahead_by": 18,
+      "behind_by": 0
+    },
+    "versus_ternary": {
+      "status": "ahead",
+      "ahead_by": 14,
+      "behind_by": 0
+    }
   }
 }
