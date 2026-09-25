@@ -1,0 +1,57 @@
+{
+  "schema_version": "memory-ontology/holographic-v0.2",
+  "memory_id": "example.orbital-holographic.procedure-001",
+  "retained_objects": [
+    "relation",
+    "path",
+    "topology",
+    "operator"
+  ],
+  "orbital_address": {
+    "orbit_class": "procedure-equivalence-class-A",
+    "phase_rad": 0,
+    "scale": "meso",
+    "boundary": "example-context",
+    "relation_signature": "sha256:example-relation-signature",
+    "provenance_commitment": "sha256:example-origin-receipt"
+  },
+  "projections": [
+    {
+      "projection_id": "p1",
+      "invariant": "sha256:memory-invariant-A",
+      "status": "COMMITTED",
+      "weight": 1,
+      "provenance_commitment": "sha256:p1"
+    },
+    {
+      "projection_id": "p2",
+      "invariant": "sha256:memory-invariant-A",
+      "status": "COMMITTED",
+      "weight": 1,
+      "provenance_commitment": "sha256:p2"
+    },
+    {
+      "projection_id": "p3",
+      "invariant": "sha256:memory-invariant-A",
+      "status": "COMMITTED",
+      "weight": 1,
+      "provenance_commitment": "sha256:p3"
+    }
+  ],
+  "reconstruction": {
+    "min_support": 2,
+    "allowed_outputs": [
+      "RECALLED",
+      "RECONSTRUCTED",
+      "INFERRED",
+      "IMAGINED",
+      "INSUFFICIENT_EVIDENCE",
+      "CONFLICT"
+    ]
+  },
+  "epistemic_status": "formal_example",
+  "notes": [
+    "The same invariant is intentionally represented by three projections.",
+    "Physical quantum or nonlocal binding is not assumed by this example."
+  ]
+}

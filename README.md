@@ -72,20 +72,63 @@ The central open quantity is the minimal binaryization resource frontier
 
 This prevents two opposite errors: assuming quantum-native notation proves a physical quantum substrate, or assuming the naive \(2^n\) explicit-amplitude expansion is the optimal classical realization. Structured state families may admit sparse, factored, symbolic or otherwise compressed binary representations. Quantum-native advantage is therefore treated as a benchmarkable claim.
 
+## v0.2 orbital-holographic implementation stack
+
+Version 0.2 keeps the ontology substrate-neutral and adds a computational representation stack above it:
+
+\[
+\text{Memory Ontology Core}
+\rightarrow
+\text{Relational Graph}
+\rightarrow
+\text{Orbital Addressing}
+\rightarrow
+\text{Holographic Projection}
+\rightarrow
+\text{Reconstruction}
+\rightarrow
+\text{Imagination}
+\rightarrow
+\text{GREMLIN}.
+\]
+
+The canonical orbital address is
+
+\[
+\mathcal A(m)=(Q,\Gamma,\mathcal O,\phi,s,B,\Pi),
+\]
+
+where \(\Gamma\) is path structure, \(\mathcal O\) an orbital/equivalence class, \(\phi\) a phase coordinate, \(s\) scale, \(B\) boundary/context, and \(\Pi\) provenance.
+
+A memory is not required to be identical to one storage node. It may be represented by a family of projections whose shared invariant is reconstructable after partial loss. Retrieval states are kept distinct:
+
+\[
+\text{RECALLED}\neq\text{RECONSTRUCTED}\neq\text{INFERRED}\neq\text{IMAGINED}.
+\]
+
+No generated candidate may be promoted to historical recall without verified provenance.
+
 ## Repository layout
 
 - formalism/memory-law-v0.1.md — candidate domain-general memory law and operational criteria.
 - formalism/representation-duality-v0.1.md — Q-native↔binary equivalence and binaryization-cost formalism.
+- formalism/orbital-holographic-memory-v0.2.md — orbital address, projection, reconstruction and provenance invariants.
 - ontology/memory-ontology-v0.1.md — ontological primitives and hierarchy.
 - taxonomy/memory-taxonomy-v0.1.md — multi-axis classification.
 - cross_domain/classical-memory-map-v0.1.md — mapping of conventional memory terms.
 - benchmarks/binaryization-benchmark-spec-v0.1.md — fail-loud comparison protocol.
+- profiles/phasenav/orbital-phase-memory-v0.2.md — optional directed RGB±/phase representation profile.
+- integrations/gremlin/memory-stack-contract-v0.2.md — GREMLIN ingest/reconstruct/imagine/verify contract.
+- engines/reconstruction/orbital_reconstruction.py — dependency-free reference reconstruction kernel.
 - schemas/memory-object.schema.json — machine-readable memory-object schema.
 - schemas/representation-profile.schema.json — representation/evidence contract.
+- schemas/holographic-memory-profile.schema.json — orbital-holographic profile schema.
 - examples/procedural-memory.json — procedural-memory instance.
 - examples/representation-duality.json — current quantum-native representation profile.
+- examples/orbital-holographic-memory.json — v0.2 formal example.
 - tests/test_repository_contract.py — memory-object structural validation.
 - tests/test_representation_contract.py — representation-contract validation.
+- tests/test_orbital_holographic_stack.py — v0.2 reconstruction/provenance invariants.
 - todo/ternary-stella-intuition-v0.1.md — untested balanced-ternary/Stella representation intuition.
 - CHANGELOG.md — append-only change record.
 
@@ -100,6 +143,8 @@ Current position:
 \]
 
 Physical quantum necessity is not assumed. It is a separate empirical claim. Likewise, representation advantage is not inferred from superposition alone: it must survive strong binary baselines under matched accuracy, horizon, observable contract, and readout/sampling costs.
+
+The v0.2 orbital-holographic stack is an implementation formalism. Phase, qxel, Aharonov-Bohm, neutrino, nonlocality or physical-holography bindings require separate evidence and are not asserted by the core ontology.
 
 ## Author
 

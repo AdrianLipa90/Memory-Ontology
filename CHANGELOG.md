@@ -46,3 +46,20 @@ Recorded a non-canonical research TODO for later validation:
 - benchmark questions for information loss, routing utility, compression, and cost versus direct binaryization.
 
 Status: UNTESTED INTUITION / TODO; no quantum-advantage or physical-substrate claim.
+
+## 2026-09-25 — v0.2 branch: orbital-holographic memory stack
+
+Added:
+
+- orbital relational address \(\mathcal A(m)=(Q,\Gamma,\mathcal O,\phi,s,B,\Pi)\);
+- holographic projection/reconstruction contract based on shared invariants rather than single-node authority;
+- explicit RECALLED / RECONSTRUCTED / INFERRED / IMAGINED separation;
+- provenance gate forbidding imagined candidates from being silently promoted to historical recall;
+- dependency-free reference reconstruction kernel;
+- optional PhaseNav directed RGB± phase profile;
+- explicit eight-octant sign-code interpretation \(\{\pm1\}^3\) as a representation cardinality, not a physical flavor claim;
+- GREMLIN integration contract for ingest, graph correlation, reconstruction, candidate completion, verification and receipts;
+- machine-readable holographic-memory profile and formal example;
+- v0.2 invariant tests.
+
+Epistemic boundary: orbital/holographic is a computational representation formalism here. Physical Aharonov-Bohm, neutrino, FTL/nonlocality or cosmological bindings remain separate hypotheses requiring independent evidence.
