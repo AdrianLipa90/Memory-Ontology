@@ -204,7 +204,13 @@ class TypedMorphismV4:
             return False
         return self.error_bound <= e
 
-    def canonical_signature(self) -> dict:
+    def behavioral_signature(self) -> dict:
+        """Declared task-relevant behavior, excluding traversal provenance.
+
+        Equality of these signatures means equality of the declared behavioral
+        contract/metadata only. It is not an extensional proof that two
+        arbitrary implementations compute the same function.
+        """
         return {
             "source_id": self.source_id,
             "target_id": self.target_id,
@@ -217,15 +223,28 @@ class TypedMorphismV4:
             "horizon": self.horizon,
             "source_sector": self.source_sector,
             "target_sector": self.target_sector,
-            "lineage": list(self.lineage),
-            "history_code": self.history_code,
             "invariant_preserved": self.invariant_preserved,
-            "provenance_preserved": self.provenance_preserved,
             "invertible_on_declared_image": self.invertible_on_declared_image,
             "total_on_declared_domain": self.total_on_declared_domain,
-            "metric_witness_ids": list(self.metric_witness_ids),
-            "sector_witness_ids": list(self.sector_witness_ids),
         }
+
+    def historical_signature(self) -> dict:
+        """Behavioral signature plus provenance/history commitments."""
+        out = self.behavioral_signature()
+        out.update(
+            {
+                "lineage": list(self.lineage),
+                "history_code": self.history_code,
+                "provenance_preserved": self.provenance_preserved,
+                "metric_witness_ids": list(self.metric_witness_ids),
+                "sector_witness_ids": list(self.sector_witness_ids),
+            }
+        )
+        return out
+
+    def canonical_signature(self) -> dict:
+        """Backward-compatible canonical signature: historical, not behavioral."""
+        return self.historical_signature()
 
 
 def identity_for(obj: RepresentationObjectV4) -> TypedMorphismV4:
