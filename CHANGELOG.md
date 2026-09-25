@@ -17,3 +17,19 @@ Added:
 - machine-readable JSON schema and example;
 - dependency-free repository contract tests;
 - explicit epistemic boundary between substrate-neutral formalism and physical quantum implementation claims.
+
+
+### Representation-duality extension
+
+Added:
+
+- formal separation of memory law, representation and physical substrate;
+- quantum-native and binary representation families;
+- (epsilon, H)-behavioral equivalence criterion;
+- Q→B binaryization compiler contract;
+- Pareto resource frontier for minimal binaryization cost;
+- explicit-amplitude Theta(2^n p) storage baseline with an explicit warning that it is not a universal classical lower bound;
+- representation evidence regimes from PARITY through theoretical separation, with physical-substrate necessity kept separate;
+- fail-loud binaryization benchmark specification;
+- machine-readable representation profile and validation test;
+- current project position: substrate-neutral law + quantum-native current representation + binaryizability open.
