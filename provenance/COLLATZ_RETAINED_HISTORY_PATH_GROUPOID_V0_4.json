@@ -37,5 +37,24 @@
     "global_representation_groupoid": false,
     "physical_quantum_claim": false,
     "main_mutated": false
+  },
+  "gremlin_live": {
+    "authority": "CANDIDATE_ONLY",
+    "task_event_id": "gremlin:whisper:sha256:f753497102309273b08ab7eb6c927e34699f8d34397c1e2c62776328cfc55df1",
+    "ingest_ack_event_id": "gremlin:whisper:sha256:c9292819ce42a4101d7a07397fe38fb47c58060bec5357cbb1eb6867ea913404",
+    "phasenav36d_event_id": "gremlin:whisper:sha256:e3d31a83e72632b231f399802288983f655a4484eef534ab7e7df2c7590eaba5",
+    "fused_event_id": "gremlin:whisper:sha256:5205624b7b6d30acfc951f16b5f9ffa2b08b8306c3e6d62a5008b6b95df21eb9",
+    "internal_audit_event_id": "gremlin:whisper:sha256:4334c5a436549b72bcad88e378abfa96a209501df0ec281356ecc1df626dcc37",
+    "route_species": [
+      "OWL",
+      "RAVEN"
+    ],
+    "phase_attention_terms": [
+      "equal-valuation",
+      "false-cancel",
+      "composable",
+      "noninverse"
+    ],
+    "interpretation": "GREMLIN targeted the false-cancellation boundary; this is an audit-routing signal, not an independent proof."
   }
 }
