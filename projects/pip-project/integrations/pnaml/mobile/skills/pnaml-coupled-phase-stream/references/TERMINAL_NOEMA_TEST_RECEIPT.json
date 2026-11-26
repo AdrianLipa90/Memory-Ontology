@@ -1,0 +1,10 @@
+{
+  "schema": "NOEMA_TERMINAL_INVENTORY_TEST_V1",
+  "local_adapter_tests": 8,
+  "passed": 8,
+  "test_scope": "actual SQLite fixture, MMAP metadata fixture, virtual QHTRISurface, Terminal36D and vendor MMAP contract test doubles",
+  "full_vendor_execution": "NOT_RUN",
+  "native_host": "UNVERIFIED",
+  "dynamic_hashing": false,
+  "library_write": false
+}

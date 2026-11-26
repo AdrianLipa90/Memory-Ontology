@@ -1,0 +1,19 @@
+{
+  "schema": "MAHAL_EXPERIENCE_TEST_V1",
+  "status": "PARTIAL_LOCAL_VALIDATION",
+  "node_wrapper": "PASS",
+  "test_scope": [
+    "success",
+    "failure",
+    "blocked",
+    "unavailable journal",
+    "redaction",
+    "correlation"
+  ],
+  "syntax": "PASS",
+  "actual_vendor_journal_roundtrip": "NOT_RUN_SOURCE_NOT_MATERIALIZED_LOCALLY",
+  "full_coupled_runtime": "NOT_RUN",
+  "account_cross_session": "UNVERIFIED",
+  "native_host": "UNVERIFIED",
+  "dynamic_aux_hashes": false
+}

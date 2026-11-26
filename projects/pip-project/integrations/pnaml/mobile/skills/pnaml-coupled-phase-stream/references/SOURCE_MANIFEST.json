@@ -1,0 +1,20 @@
+{
+  "author": "Adrian Lipa",
+  "immutable_source_archives": {
+    "PhaseHoloMotion_Bloch36_TernaryAUX_Bridge_V02.zip": "f51f8e610ac1f6ee3a83b9002fce748888c033c0b0c64365caafa2cdde11d32a",
+    "NOEMA_CHAT_AUTOBOOT_V7_R5_R4.zip": "09a54d0734ee77b9769bee87e5b62af724a760c92a10c23b649ac04182e08318",
+    "NOEMA_H200_Q28_BOMBELLI_LIFELINE_V7.zip": "ef4564166ffb617e37856d6673ceac111958c8adad20ceafd2a7a93ca21f246d",
+    "PhaseHoloMotion_RDSS_NOEMA_Integration_v0_4.zip": "915d3750d8e40e0138321c5528e5e5ef1eb60621fd86bb12d20fec08261be3fd"
+  },
+  "immutable_vendored_sources": {
+    "vendor/ciel_geometry/noema_surface_mmap.py": "79d11a6b1f147173f6ccdd59187f1b9447f6e015e5858edf8c6634daa8b0e2bd",
+    "vendor/phaseholomotion/aux_ternary_bridge.py": "962fdbb3ea8769ffbacb4ef5ac2e49812f3f4b03083a4a5c448dc3c8e56c6be4",
+    "vendor/phaseholomotion/semantic_bloch36.py": "d6273db4d7a3c8887b72233e64f5377f8e94af117b5b1cfcadf8f44c9876f34a",
+    "vendor/phasenav36d/concept_gates.py": "30223ffd0a999ae5be994b6aa1148d040d63faec37a53a46359ca771625251e0",
+    "vendor/phasenav36d/phasenav_q28_backend.py": "4b1b628186fa4960533cb6007c0f133b0064aebe7d8c5eaed8a6578c363a574c",
+    "vendor/phasenav36d/terminal36d.py": "dcee9fcac14a4983773efec41754e8b7639e1e36a119e2d3d4f07587fa3def71",
+    "vendor/phasenav36d/vector_kernel.py": "68663aea2c188b77b46e5ecf2488bfdfb27a7f2cd8387fb78b6bc5dce6de0e14",
+    "vendor/rdss_clusterfield.py": "3be6e8dc8d78a2bc331aa2bb86b061f47e3671ec19ff8c2e70c060a66d68ff7b",
+    "assets/poster_encoded.rdssg": "5a55df4e04ad7b717e3690825f0b92cfc3cc8f5f2f39be4cdaede10195aad72b"
+  }
+}

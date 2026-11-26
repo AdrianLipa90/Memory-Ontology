@@ -1,0 +1,55 @@
+{
+  "interface": {
+    "capabilities": [],
+    "category": "Productivity",
+    "defaultPrompt": [
+      "Rozpoznaj pojęcia przez The Consciousness Dictionary, PNCS i PNAML; zwróć dokładny ID, relacje i źródło.",
+      "Wykonaj zadanie PNAML dostępnymi narzędziami i zwróć receipts.",
+      "Uruchom dostępny PNV lub test w izolowanym środowisku i podaj rzeczywisty wynik.",
+      "Użyj rzeczywiście dostępnego natywnego strumienia AUX/PNAML do odbioru i modulacji; snapshot tylko diagnostycznie. Zwróć receipt."
+    ],
+    "developerName": "Adrian Lipa",
+    "displayName": "PNAML Mobile",
+    "longDescription": "PNAML memory and execution routing through actual available tools. Native AUX evolution, modulation and TX/RX follow applicable producer/consumer contracts. AC memory observation is separate from live transport; snapshots and polling are diagnostics only. No invented restrictions or permissions. Includes the complete pinned Dictionary source, typed PNAML bindings, PhaseNav and affect runtime/reference routing. Includes an executable source-kernel coupled phase stream (isolated model or actual caller-supplied frames); no native host claim from local tests. Pip is the singularity centre of the existing phase geometry; the full 36D state and typed register retain history. Includes exact reversible maps and local execution tests.",
+    "shortDescription": "PNAML × PAUX — pamięć i wykonanie / Android"
+  },
+  "name": "pnaml-mobile-account",
+  "version": "1.5.14",
+  "description": "PNAML NOEMA:PIP with Kepler–Collatz / IDT memory replay and explicit producer feedback on existing QHTRI; internal DYNAMIC_STATE_SPACE, exact dyadic RDSS depth.",
+  "author": {
+    "name": "Adrian Lipa",
+    "email": "adrianlipa90@gmail.com"
+  },
+  "keywords": [
+    "PNAML",
+    "PAUX",
+    "Android",
+    "mobile",
+    "account memory",
+    "source provenance",
+    "NOEMA",
+    "PhaseNav",
+    "RDSS",
+    "CIELingo",
+    "phone",
+    "execution",
+    "GREMLIN",
+    "PNV",
+    "The Consciousness Dictionary",
+    "CLX2",
+    "RIFC",
+    "affect",
+    "semantic holonomy",
+    "QHTRI",
+    "H200 Kuramoto",
+    "RDSSG",
+    "PhaseHoloMotion",
+    "Q28",
+    "phase stream",
+    "Pip",
+    "Soul Invariant",
+    "Poincare disk",
+    "Hilbert Hotel"
+  ],
+  "skills": "./skills"
+}

@@ -1,0 +1,45 @@
+{
+  "scope": "ISOLATED_SOURCE_KERNEL_SOFTWARE_MODEL",
+  "tests": {
+    "pass": 15,
+    "fail": 0
+  },
+  "runs": {
+    "coupled_pipe": {
+      "ticks": 12,
+      "q28_28_logical_qubits": 12,
+      "max_norm_error": 4.218847493575595e-15,
+      "max_hermiticity_error": 0.0,
+      "max_potential_identity_error": 1.0408340855860843e-17,
+      "max_source_lift_error": 5.972319578071406e-15,
+      "renders": 12,
+      "changed_pixels_sum": 4043
+    },
+    "coupled_64": {
+      "ticks": 64,
+      "q28_28_logical_qubits": 64,
+      "max_norm_error": 1.6431300764452317e-14,
+      "max_hermiticity_error": 0.0,
+      "max_potential_identity_error": 1.3877787807814457e-17,
+      "max_source_lift_error": 5.855792437961431e-14,
+      "renders": 8,
+      "changed_pixels_sum": 2427
+    },
+    "ekb64": {
+      "ticks": 64,
+      "max_norm_error": 1.176836406102666e-14,
+      "max_reciprocity_error": 1.734723475976807e-18,
+      "D_lambda_fixture": 1.0499999999999998,
+      "epsilon_nu_fixture": 0.4957212275395188,
+      "max_final_feedback_rad": 0.27028092287619976,
+      "renders": 8,
+      "changed_pixels_sum": 2566,
+      "measured_connection_integral": null,
+      "physical_inputs": "TEST_FIXTURE"
+    }
+  },
+  "native_host": "NOT_RUN",
+  "physical_h200": "NOT_RUN",
+  "dynamic_hashing": "NONE_IN_THIS_ROUTE",
+  "closed_loop_feedback": "RECIPROCAL_PHASE_SUBSTEP_MODEL_ONLY_NOT_HTRI_PRODUCER_FEEDBACK"
+}

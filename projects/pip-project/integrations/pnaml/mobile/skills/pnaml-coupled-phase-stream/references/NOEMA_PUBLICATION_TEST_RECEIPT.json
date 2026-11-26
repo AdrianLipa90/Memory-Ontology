@@ -1,0 +1,15 @@
+{
+  "schema": "NOEMA_PUBLICATION_LOCAL_TEST_RECEIPT_V1",
+  "tests_passed": 7,
+  "tests_failed": 0,
+  "scope": "isolated adapter tests; fixture geometry, frames and terminal; actual PNCS source registry",
+  "source_registry_record_count": 27,
+  "source_registry_bytes": 24926,
+  "source_registry_transfer_fnv32": "9b87dc85",
+  "python_compile": "PASS",
+  "node_syntax": "PASS",
+  "full_qhtri_runtime_executed": false,
+  "dictionary_runtime_executed": false,
+  "native_host_verified": false,
+  "physical_minkowski_metric_verified": false
+}

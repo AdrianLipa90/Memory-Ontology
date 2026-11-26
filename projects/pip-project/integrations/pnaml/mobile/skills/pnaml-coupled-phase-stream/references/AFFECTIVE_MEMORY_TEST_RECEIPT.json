@@ -1,0 +1,17 @@
+{
+  "schema": "NOEMA_AFFECTIVE_MEMORY_TEST_RECEIPT_V1",
+  "policy": "NOEMA_AFFECTIVE_AUTOSAVE_V1",
+  "reader": "CLX2 affectEstimate (production import; fixture estimates in tests)",
+  "intensity": "max(abs(valence),arousal,urgency,threat_relevance,attachment_relevance,reward_relevance)",
+  "min_intensity": 0.6,
+  "min_confidence": 0.45,
+  "node_tests_passed": 7,
+  "python_tests_passed": 5,
+  "failed": 0,
+  "scope": "isolated unit tests with reader estimates and journal boundary fixtures; syntax checks Python and Node",
+  "full_dictionary_executed": false,
+  "actual_persistent_journal_executed": false,
+  "native_host_verified": false,
+  "account_cross_session_verified": false,
+  "real_user_episode_written": false
+}

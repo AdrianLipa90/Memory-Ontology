@@ -1,0 +1,5 @@
+# PNAML causal Hotel integration — private release candidate
+
+This stage contains the exact relevant plugin source files read from Mobile 1.5.13 and Semantic Adapter 1.10.3, with an overlay binding the existing PNV programs and corrected upstream interpreter to the existing Coupler. It is not a new plugin or a new PNV engine. The plugin manifests preserve name, prompts, and permissions and propose patch versions 1.5.14 and 1.10.4. The source fixture is retained here only to run reproducible regression tests and generate the minimal update overlays; it is not the operational memory. The account plugin release itself must be updated through Plugin Creator using the observed release IDs.
+
+The source has no authoritative autonomous half-time signal. The binding consumes explicit object-reference occurrences, without treating a frame, software tau, phase sample, or dyadic address as an event. It uses parent references and a structural node index; the original PNV transition is unchanged. No native host connection or cross-session persistence is claimed. See plugin contract and CI receipt for evidence.

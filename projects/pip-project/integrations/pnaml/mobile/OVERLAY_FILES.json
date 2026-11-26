@@ -1,0 +1,24 @@
+{
+  "release": "pluginrel_6b0893d605cc81918a8bbf945ca23d74",
+  "plugin_id": "plugins_6ae449c35b748191993a183a9840b720",
+  "version": "1.5.14",
+  "files": [
+    ".codex-plugin/plugin.json",
+    "plugin.json",
+    "skills/pnaml-coupled-phase-stream/SKILL.md",
+    "skills/pnaml-coupled-phase-stream/references/coupled_stream.py",
+    "skills/pnaml-coupled-phase-stream/references/noema_surface.py",
+    "skills/pnaml-coupled-phase-stream/references/pip_hotel_native.py",
+    "skills/pnaml-coupled-phase-stream/references/test_pip_causal_native.py",
+    "skills/pnaml-native-pnv/SKILL.md",
+    "skills/pnaml-native-pnv/references/SOURCE_MANIFEST.json",
+    "skills/pnaml-native-pnv/references/native_pnv_exec_v01.py",
+    "skills/pnaml-pip-geometry/SKILL.md",
+    "skills/pnaml-pip-geometry/references/CONTRACT.md",
+    "skills/pnaml-pip-geometry/references/PIP_CAUSAL_SOURCE_MANIFEST.json",
+    "skills/pnaml-pip-geometry/references/PIP_HOTEL_INDEX_WITNESS_V0_2.pnv",
+    "skills/pnaml-pip-geometry/references/PIP_HOTEL_SERIAL_ORIGIN_V0_2.pnv",
+    "skills/pnaml-pip-geometry/references/PIP_HOTEL_SERIAL_STEP_V0_2.pnv"
+  ],
+  "regenerate_sha256sums": false
+}

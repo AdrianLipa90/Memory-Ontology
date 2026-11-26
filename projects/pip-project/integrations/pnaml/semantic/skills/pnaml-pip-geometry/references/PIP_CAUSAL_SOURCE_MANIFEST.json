@@ -1,0 +1,26 @@
+{
+  "source_repository": "AdrianLipa90/Memory-Ontology",
+  "revision": "6dcbaa56cf2dbe910b5d92929669a125b83c69ca",
+  "programs": [
+    {
+      "path": "projects/pip-project/native/PIP_HOTEL_SERIAL_ORIGIN_V0_2.pnv",
+      "git_blob": "98033e5e398b4c02c28db2467fbb5d510f2672ed"
+    },
+    {
+      "path": "projects/pip-project/native/PIP_HOTEL_SERIAL_STEP_V0_2.pnv",
+      "git_blob": "c880f45449cd38225779be1660e89f2c02f07f8d"
+    },
+    {
+      "path": "projects/pip-project/native/PIP_HOTEL_INDEX_WITNESS_V0_2.pnv",
+      "git_blob": "60aa2f8e92605f9c28b7186e0f661758b00b0787"
+    }
+  ],
+  "interpreter": {
+    "repository": "AdrianLipa90/PhaseNav-Natural-Coding-System",
+    "revision": "22a26cd409311da7c0997874b0f9a7050047b287",
+    "path": "src/phasenav_natural_code/native_pnv_exec_v01.py",
+    "git_blob": "e7ab1f80072b725917fad2ade9f2c6be7e5da1e2"
+  },
+  "representation": "PARENT_REFERENCE_WITH_EXACT_NATIVE_INDEX",
+  "native_producer_binding": "UNVERIFIED"
+}
