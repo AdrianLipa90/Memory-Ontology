@@ -28,4 +28,6 @@ For finite uniform seeds 1..4096 and H=32 unaccelerated steps, exact rational/Bi
 
 Expansion of active phase and contraction of a history coordinate can coexist in a reversible enlarged space. Projection onto x discards history; reinserting y recovers it exactly in the mathematical model. The history coordinate by itself is passive in this map: it does NOT affect x'. It is a retained record, not yet causal memory under the core law. For causal memory, define an independently justified coupling from retained verified relations to subsequent transitions; test intervention on that coupling while matching active state and input. Do not use parity as proof of semantic relevance or replace source HTRI dynamics with baker dynamics. The source HTRI positive/negative tangent gains motivate comparison only, not an identified conjugacy. Preserve raw historical records distinct from behavioral quotient, PNCS identities and evidence.
 
-See [reference witness](../engines/imaginary_collatz_history_lift.mjs) and [receipt](../benchmarks/imaginary_collatz_history_lift_receipt.json).
+See [reference witness](../native/IMAGINARY_COLLATZ_HISTORY_V0_1.pnv) and [receipt](../benchmarks/imaginary_collatz_history_lift_receipt.json).
+
+**Native migration:** the linked PNV candidate replaces the active prototype source; historical benchmark execution was not PNV. See [migration contract](pncs-pnv-native-migration-v0.1.md) for original source lineage and open native bindings.
