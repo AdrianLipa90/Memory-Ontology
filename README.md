@@ -202,6 +202,10 @@ Memory can modify future transition costs, admissibility, topology, transport or
 - [Joint formalism](formalism/memory-state-space-ontology-v0.1.md)
 - [TIR source-bound geometry](formalism/tir-contextual-relational-geometry-v0.1.md)
 - [Interdisciplinary equation index](formalism/rdss-interdisciplinary-isomorphism-index-v0.1.md)
-- [Finite reference](engines/memory_state_space_reference.mjs) and [executed fixture receipt](benchmarks/memory_state_space_reference_receipt.json)
+- [Finite reference](native/MEMORY_STATE_SPACE_V0_1.pnv) and [executed fixture receipt](benchmarks/memory_state_space_reference_receipt.json)
 
 Current priority: derive source-compatible state-space evolution, spontaneous consolidation, reconstruction, context transport, and the distinction between hidden state and causal memory. The finite reference is a chosen graph constitutive rule, not a derivation of a universal law or an update to native PNAML. General cognition and consciousness are outside this research scope.
+
+## Native implementation authority — PNCS/PNV
+
+[PNCS/PNV implementation policy and migration](formalism/pncs-pnv-native-migration-v0.1.md). PNCS is semantic authority; PNV/1 is the target program representation. The four former JavaScript prototypes are replaced in the active branch by native candidate graphs; historical prototype sources and their actual execution receipts remain in Git history. The native transform bindings and native execution are UNVERIFIED. Existing Python CPU diagnostics are historical evidence, not the target architecture. Notify the author before any proposed language or runtime deviation.
