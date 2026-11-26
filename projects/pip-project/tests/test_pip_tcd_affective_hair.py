@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 import math
 import pytest
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "projects/pip-project"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from affective_hair import project_hair, PALETTE, FIELD_IDS
 from consciousness_dictionary.rifc import AffectiveField
 from consciousness_dictionary.affect_detection import affect_phase36

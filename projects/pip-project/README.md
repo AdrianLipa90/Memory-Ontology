@@ -36,3 +36,7 @@ Status: source-index integration. The original archive remains in the author's L
 ## Affective appearance
 
 [Pip and Ciel — TCD hair projection](PIP_TCD_AFFECTIVE_HAIR_V0_1.md) imports the existing TCD field and dictionary cards, retaining mixed colours from Book I. Candidate read-only presentation, not a new affect law.
+
+## TCD orbital orchestration
+
+[Full dictionary and functional engine views](PIP_TCD_ORBITAL_ORCHESTRATION_V0_1.md) · [native PNV composition](native/PIP_TCD_ORBITAL_ORCHESTRATION_V0_1.pnv). Functional views and dynamic orbital bands are distinct; reuse Identity NEXUS and PNLF, not an independent scheduler.

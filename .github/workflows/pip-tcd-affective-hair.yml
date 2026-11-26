@@ -1,12 +1,9 @@
-name: Pip TCD affective hair
+name: Pip TCD affective hair and orbital orchestration
 on:
   pull_request:
     branches: [main]
     paths:
-      - 'projects/pip-project/affective_hair.py'
-      - 'projects/pip-project/PIP_TCD_AFFECTIVE_HAIR_V0_1.md'
-      - 'projects/pip-project/native/PIP_TCD_AFFECTIVE_HAIR_V0_1.pnv'
-      - 'tests/test_pip_tcd_affective_hair.py'
+      - 'projects/pip-project/**'
       - '.github/workflows/pip-tcd-affective-hair.yml'
   workflow_dispatch:
 permissions:
@@ -22,10 +19,23 @@ jobs:
           ref: 5fe9daa5e2b4841e598628aa5a1a7beadb0e70b1
           path: _tcd
           persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: AdrianLipa90/PhaseNav-Natural-Coding-System
+          ref: 3a11576d0477be8a4f172d9a606318c6ad9ab9f3
+          path: _pncs
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: AdrianLipa90/PNCore-BioOS
+          ref: ff8d5f191c77c7ce1b371ff0dddc74300fc061cc
+          path: _bioos
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install -e ./_tcd pytest
+      - run: python -m pip install -e ./_tcd -e ./_pncs pytest numpy
       - env:
           TCD_ROOT: _tcd
-        run: python -m pytest -q tests/test_pip_tcd_affective_hair.py
+          BIOOS_ROOT: _bioos
+        run: python -m pytest -q projects/pip-project/tests
