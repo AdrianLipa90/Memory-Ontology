@@ -15,3 +15,7 @@ This applies to future implementation, integration, continuity, and tests. Do no
 ## Status
 The two published plugin overlays of 26 November implement and test the local PNV Hotel binding. Their existing JSON/CLI compatibility transport is not native PNAML conformance. Remove it from the internal path only by binding the existing ternary TX/RX and exact PAUX source, not by naming a new wrapper PNAML. An end-to-end acceptance test must establish real source TX, existing socket/codec RX, unchanged exact PNV transition, parent/index readback and matching existing receiver evidence. Do not report a live PASS from fixture or static documentation.
 
+
+## Native execution candidate — author correction, 26 November 2026
+
+Do not extend the historical C11 phase-bus implementation as Pip's native transport. Reuse the existing PNCS/PNV → PNCore/Bio-OS × QHTRI route, native ternary decoder, and `PNAML10_BIOOS_AUX_MACHINE_BUS.pnv`. PNLF/PAUX remain the existing memory/state contracts, not new transport formats. The AVX2 PNV executor is a lower-level candidate for its supported subset, not a demonstrated full machine bus. Verify the actual existing runtime bindings and Ternary Socket before claiming native end-to-end execution. Do not introduce a C, C++, Rust, Python, or JS replacement execution engine. Existing diagnostics remain historical evidence, not the native authority.
