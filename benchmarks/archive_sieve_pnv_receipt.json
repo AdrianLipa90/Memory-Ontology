@@ -1,0 +1,51 @@
+{
+  "schema": "ARCHIVE_SIEVE_STATIC_PNV_SUMMARY_V1",
+  "source": "The Reality of the Imaginary V32, pp.262–265,269–270",
+  "interpreter_git_blob": "c9041234cc66d5670e7b74f0c101434647067341",
+  "program_git_blob": "10c57baee3edeb03a66be718740f592a7d34f994",
+  "program_source_sha256": "875c69ac58d51a1255f117e307deba18fed7d37e3112c6b65a76006bc1c0d699",
+  "full_terminal_receipt_sha256": "2d376dad39fba04089146681e6b981d10998b6ade1ed6eeae23bdc1af18f4f25",
+  "inputs": {
+    "fixture.residual_numerator": 4,
+    "fixture.denominator": 5,
+    "fixture.records": [
+      "synthetic-e1",
+      "synthetic-e2",
+      "synthetic-e3"
+    ]
+  },
+  "operations": 76,
+  "assertions_passed": 12,
+  "negative_controls": {
+    "fixture.residual_numerator=3": "ASSERT failed for W3_OK",
+    "fixture.denominator=6": "ASSERT failed for W3_OK"
+  },
+  "repeat_equal": true,
+  "empty_archive_same_continuation": true,
+  "emitted": {
+    "W3_VALUE": [
+      212,
+      320
+    ],
+    "FULL_NEXT": [
+      956,
+      1280
+    ],
+    "SIEVED_NEXT": [
+      956,
+      1280
+    ],
+    "RESET_NEXT": [
+      8,
+      20
+    ],
+    "AB": 2,
+    "BA": 1,
+    "AA": 2,
+    "COUNTS": [
+      13,
+      21
+    ]
+  },
+  "scope": "Executed original PNCS PNV/1 interpreter on static synthetic data. Small integer arithmetic exactly representable in binary64. Two arithmetic paths share checkpoint operands; record list ablated in separate execution. No actual archive deletion, deserialization/restart, independently evolving NOEMA replicas or native geometry evolution. No dynamic state hashes. This is a compact summary, not the full interpreter receipt."
+}
