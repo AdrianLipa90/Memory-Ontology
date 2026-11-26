@@ -164,3 +164,33 @@ class AdaptiveEdge:
     def phase_weight(self):
         # Candidate coupling, not source CIEL score or physical energy.
         return self.accessibility*self.conductance
+
+
+def ciel_weighted_winding(samples):
+    """CIEL foundation: sum of lifted delta_phi * delta_t / delta_tau / 2pi.
+    This is not ordinary unwrapped turns or Berry holonomy.
+    """
+    return sum(dphi*nonnegative(dt)/positive(dtau) for dphi,dt,dtau in samples)/(2*pi)
+
+
+def ring_intervention(n=36,dt=.01,steps=1000):
+    """Reproduce the independent JS candidate witness using the Python kernel."""
+    initial=tuple(i*.11 for i in range(n))
+    omega=tuple(.1*sin(i) for i in range(n))
+    def simulate(edge,gain):
+        theta=initial
+        for _ in range(steps):
+            w=gain*edge.phase_weight()
+            A=tuple(tuple(w if j==(i+1)%n else 0. for j in range(n)) for i in range(n))
+            theta=phase_step(theta,omega,A,(0.,)*n,dt)
+            edge=edge.elapse(.08,dt)
+        return theta
+    a=AdaptiveEdge("i","i+1",.2,1.)
+    b=a.update("verified-fixture","synthetic-reference",True,.25,1.,1.)
+    x,y=simulate(a,1.),simulate(b,1.)
+    z,q=simulate(a,0.),simulate(b,0.)
+    def rms(v,w): return sqrt(sum((p-r)**2 for p,r in zip(v,w))/n)
+    return dict(rms_gap=rms(x,y),control_gap=rms(z,q),
+                coherence_before=abs(order_parameter(initial)),
+                coherence_unreinforced=abs(order_parameter(x)),
+                coherence_reinforced=abs(order_parameter(y)))
