@@ -28,3 +28,7 @@ Status: source-index integration. The original archive remains in the author's L
 ## Active Pip effective half-time — v0.2
 
 [Author definition and source crosswalk](IDT_HOTEL_EFFECTIVE_HALF_TIME_V0_2.md) · [origin](native/PIP_HOTEL_SERIAL_ORIGIN_V0_2.pnv) · [step](native/PIP_HOTEL_SERIAL_STEP_V0_2.pnv) · [test witness](native/PIP_HOTEL_INDEX_WITNESS_V0_2.pnv) · [receipt](benchmarks/PIP_EFFECTIVE_HALF_TIME_RECEIPT_V0_2.json). 2π = 360° = half-time; 4π = 720° = full time. One link per half-time, no external time or edge-ID prerequisite. The v0.1 external dtheta definition is superseded. Nine original-interpreter executions, 24/24 assertions on synthetic inputs.
+
+## Native transport policy — author instruction, 26 November 2026
+
+[PNAML / existing Ternary Socket](PNAML_TRANSPORT_POLICY.md) is the internal route. JSON compatibility transport is not a native binding.
