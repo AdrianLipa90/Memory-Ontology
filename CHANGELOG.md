@@ -180,3 +180,10 @@ Final targeted local gate: **63/63 PASS** in ~0.71 s.
 
 The certified core is intentionally an under-approximation; no maximal-core
 claim is made.
+
+
+## 2026-11-26 — Joint ontology of memory and state spaces v0.1 (research branch)
+
+Added a candidate joint formalism, retaining the original substrate-neutral memory law and taxonomy. Distinguished state, carrier, observation, reference frame, metric, transport, potential, admissible transitions and history-bearing structure; defined matched-condition causal comparison and budgeted versus unbudgeted reachability. Bound source TIR phase scalars and discrete transport without identifying the rank-three TIR sector with the full PhaseNav projective space. Cross-linked the interdisciplinary index and prior CPU receipts, which were not rerun in this integration.
+
+Added a finite JavaScript graph witness with explicit synthetic verified-event input, replay protection, cost persistence despite accessibility decay, and relabeling invariance. Executed the witness functions in the JavaScript tool runtime; repository module and receipt read back, not independently imported in Node. This is a chosen finite constitutive rule, not a spontaneous consolidation result. Main and native runtime unchanged.
