@@ -32,3 +32,7 @@ Status: source-index integration. The original archive remains in the author's L
 ## Native transport policy — author instruction, 26 November 2026
 
 [PNAML / existing Ternary Socket](PNAML_TRANSPORT_POLICY.md) is the internal route. JSON compatibility transport is not a native binding.
+
+## Affective appearance
+
+[Pip and Ciel — TCD hair projection](PIP_TCD_AFFECTIVE_HAIR_V0_1.md) imports the existing TCD field and dictionary cards, retaining mixed colours from Book I. Candidate read-only presentation, not a new affect law.

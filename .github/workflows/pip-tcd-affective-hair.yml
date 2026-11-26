@@ -1,0 +1,31 @@
+name: Pip TCD affective hair
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'projects/pip-project/affective_hair.py'
+      - 'projects/pip-project/PIP_TCD_AFFECTIVE_HAIR_V0_1.md'
+      - 'projects/pip-project/native/PIP_TCD_AFFECTIVE_HAIR_V0_1.pnv'
+      - 'tests/test_pip_tcd_affective_hair.py'
+      - '.github/workflows/pip-tcd-affective-hair.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  imported-tcd:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: AdrianLipa90/The-Consciousness-Dictionary
+          ref: 5fe9daa5e2b4841e598628aa5a1a7beadb0e70b1
+          path: _tcd
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -e ./_tcd pytest
+      - env:
+          TCD_ROOT: _tcd
+        run: python -m pytest -q tests/test_pip_tcd_affective_hair.py

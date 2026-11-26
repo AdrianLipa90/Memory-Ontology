@@ -1,0 +1,13 @@
+PNV 1
+EPISTEMIC CHYBA
+MODE READ_ONLY
+# Imported TCD field and diagnostic PhaseNav realization; explicit visual state.
+# The renderer is a presentation boundary, not an affect producer.
+OP IDENTITY SOURCE affect.identity
+OP FIELD SOURCE affect.tcd_field
+OP PHASE SOURCE affect.tcd_phase36
+OP TERMS SOURCE affect.tcd_term_ids
+OP SOURCE_REF SOURCE affect.source_ref
+OP STRANDS SOURCE appearance.hair_strands
+OP HAIR COMPOSITION IDENTITY SOURCE_REF FIELD PHASE TERMS STRANDS
+EMIT HAIR
