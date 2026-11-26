@@ -1,0 +1,26 @@
+# Candidate PNCS Hybrid Memory Grammar v0.3 source.
+# Exact commitment occurrence, goal, cue, review condition and evidence travel together.
+# Operator names below are requested bindings, not admitted execution authority.
+PROGRAM prospective_memory
+TASK commitment
+INPUT current_state : STATE
+INPUT current_context : JSON
+INPUT actual_allocation : JSON
+INPUT admissible_routes : GRAPH
+INPUT cue : BOOLEAN
+
+MEMORY commitment RETAINS STATE RELATION OPERATOR BOUNDARY PERSISTENCE PERSISTENT ACCESS DIRECT LATENT PLASTICITY ADAPTIVE APPEND_ONLY EFFECT CONSTRAINT ROUTING EPISTEMIC HYPOTHESIS
+MEMORY commitment_history RETAINS STATE RELATION PATH PERSISTENCE PERSISTENT ACCESS DIRECT PLASTICITY APPEND_ONLY EFFECT CONSTRAINT EPISTEMIC HYPOTHESIS
+
+RECALL commitment_record : JSON FROM commitment MODE DIRECT PROVENANCE RECALLED
+COMPUTE verified_allocation : JSON USING verified_allocation_observation INPUT actual_allocation current_context MODE AUTO
+REQUIRE verified_source ON compute.verified_allocation
+COMPUTE proposal : JSON USING prospective_route_proposal INPUT current_state commitment_record current_context admissible_routes cue MODE AUTO
+WHEN cue ENABLE compute.proposal
+EVENT allocation_event FROM verified_allocation
+TRACE allocation_trace FROM allocation_event INTO commitment_history
+LAW commitment_revision FOR commitment USING evidence_bound_commitment_revision
+TRACE revision_trace FROM allocation_event INTO commitment LAW commitment_revision
+GUIDE compute.proposal USING commitment WHEN cue
+
+RETURN proposal
