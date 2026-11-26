@@ -1,0 +1,93 @@
+{
+  "schema": "TRUTH_SOURCE_CORRECTION_STATIC_PNV_V1_SUMMARY",
+  "interpreter_git_blob": "c9041234cc66d5670e7b74f0c101434647067341",
+  "program_git_blob": "0a179501a60955c084e19295e8f0b98da64d8bb8",
+  "program_source_sha256": "ac7b2e0a6103e21637d9f09c80d75cc163171d2c4f913840f8869b84708b5200",
+  "terminal_receipt_sha256": "5d5b96eb13297087b3052c5a8859a7eab2b2b458a2825f56037dd5b2dc455256",
+  "inputs": {
+    "fixture.origin": "notice-1",
+    "fixture.copy2_origin": "notice-1",
+    "fixture.copy3_origin": "notice-1",
+    "fixture.new_origin": "measurement-1",
+    "fixture.expected_group": [
+      4,
+      5
+    ],
+    "fixture.expected_naive": [
+      64,
+      65
+    ],
+    "fixture.expected_corrected_group": [
+      4,
+      20
+    ],
+    "fixture.expected_corrected_naive": [
+      64,
+      80
+    ],
+    "fixture.expected_habit1": [
+      13,
+      20
+    ],
+    "fixture.expected_habit2": [
+      43,
+      80
+    ],
+    "fixture.expected_habit3": [
+      145,
+      320
+    ],
+    "fixture.claim_before": "clock-slow-now",
+    "fixture.claim_after": "clock-slow-now",
+    "fixture.status_before": "SUPPORTED_IN_FIXTURE",
+    "fixture.status_after": "CONTRADICTED_IN_FIXTURE",
+    "fixture.historical_report": "notice-1:reported-slow",
+    "fixture.historical_report_after": "notice-1:reported-slow"
+  },
+  "emitted": {
+    "POST_GROUP": [
+      4,
+      5
+    ],
+    "POST_NAIVE": [
+      64,
+      65
+    ],
+    "CORR_GROUP": [
+      4,
+      20
+    ],
+    "CORR_NAIVE": [
+      64,
+      80
+    ],
+    "HABIT1": [
+      13,
+      20
+    ],
+    "HABIT2": [
+      43,
+      80
+    ],
+    "HABIT3": [
+      145,
+      320
+    ],
+    "STATUS_AFTER": "CONTRADICTED_IN_FIXTURE",
+    "HISTORY_PRESERVED": true
+  },
+  "operations": 77,
+  "assertions": 13,
+  "negative_controls": {
+    "fixture.copy2_origin": "ASSERT failed for COPY2_MATCH",
+    "fixture.copy3_origin": "ASSERT failed for COPY3_MATCH",
+    "fixture.new_origin": "ASSERT failed for NEW_DISTINCT",
+    "fixture.expected_corrected_group": "ASSERT failed for CORR_GROUP_OK",
+    "fixture.expected_habit2": "ASSERT failed for HABIT2_OK",
+    "fixture.claim_after": "ASSERT failed for CLAIM_SAME",
+    "fixture.status_after": "ASSERT failed for STATUS_CHANGED",
+    "fixture.historical_report_after": "ASSERT failed for HISTORY_PRESERVED"
+  },
+  "repeat_equal": true,
+  "scope": "Original PNCS PNV/1 interpreter, synthetic data only. Source grouping is declared by fixture, distinct origin IDs do not establish independence. Computes rational-pair odds readouts and recurrence by small exact integer differences. Status change supplied, not inferred. Not a general Bayesian or dependency propagation engine. Static receipt hashes only; no live AUX or actual history mutation."
+}
