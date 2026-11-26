@@ -1,0 +1,54 @@
+{
+  "schema": "PNAML_CONDITIONAL_CONTRACTION_REPLICATION_V1",
+  "scope": "Isolated local CPU Model AST from PNAML Mobile 1.5.8 plus locally transcribed HTRI kernel; same protocol as pnaml_conditional_contraction_receipt.json. Seed 42 from completed prior run; seeds 43 and 44 executed separately with OPENBLAS_NUM_THREADS=1 and OMP_NUM_THREADS=1. No native execution: PNAML Mobile skill is available but pnaml_coupled_run / authenticated host route was not exposed; no local H200 or /dev/shm/noema_surface mount.",
+  "warmup": 64,
+  "train": 192,
+  "follow": 1024,
+  "dt": 0.01,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "runs": [
+    {
+      "seed": 42,
+      "initial_gap": 57.77037742371057,
+      "final_gap": 23.08406992860966,
+      "replay_gap": 22.27426257500856,
+      "aggregate_final_gap": 0.6078852380875623,
+      "phase_rms": 0.020020993065638322,
+      "retention": 0.3995831593638735,
+      "replay_retention": 0.385565467430486,
+      "source_replay_error": 1.1102230246251565e-16,
+      "conditional_bound_violation": 0
+    },
+    {
+      "seed": 43,
+      "initial_gap": 57.25672166279111,
+      "final_gap": 22.828044969217313,
+      "replay_gap": 21.954070241011422,
+      "aggregate_final_gap": 0.6198284099449496,
+      "phase_rms": 0.018392760516883558,
+      "cpu_elapsed_seconds": 19.604660070000136,
+      "retention": 0.398696333046472,
+      "replay_retention": 0.38343219107632753,
+      "source_replay_error": 1.1102230246251565e-16,
+      "conditional_bound_violation": 0
+    },
+    {
+      "seed": 44,
+      "initial_gap": 56.848063995163066,
+      "final_gap": 22.152263915795924,
+      "replay_gap": 21.344785511000325,
+      "aggregate_final_gap": 0.6356490604259116,
+      "phase_rms": 0.0169113713709111,
+      "cpu_elapsed_seconds": 18.862864969999464,
+      "retention": 0.38967490463141813,
+      "replay_retention": 0.3754707550430645,
+      "source_replay_error": 1.1102230246251565e-16,
+      "conditional_bound_violation": 0
+    }
+  ],
+  "conclusion": "Finite causal retention replicated. Free coupling gaps exceed imposed identical-phase replay controls at the final step; this is not a proof of spontaneous multistability or an asymptotic attractor. No artificial journal events."
+}
