@@ -1,0 +1,294 @@
+{
+  "scope": "Synthetic offline graph decision prediction; held-out preference labels generated from independent latent tolerance, not human measurements; no native runtime.",
+  "trainPerRegime": 1200,
+  "testPerRegime": 2400,
+  "shiftTest": 2400,
+  "calibration": "maximize accuracy on feasible detours; k grid 0..8 step .05; first tie",
+  "results": {
+    "stationary": {
+      "current": {
+        "k": 3.8000000000000003,
+        "accuracy": 0.7745740498034076,
+        "test": {
+          "n": 1511,
+          "tp": 546,
+          "tn": 621,
+          "fp": 151,
+          "fn": 193,
+          "accuracy": 0.7723362011912641,
+          "paidPremium": 578.0591240658423,
+          "hold": 418,
+          "rev": 201,
+          "violations": 0
+        }
+      },
+      "historyD": {
+        "k": 3.85,
+        "accuracy": 0.9030144167758847,
+        "test": {
+          "n": 1511,
+          "tp": 646,
+          "tn": 708,
+          "fp": 64,
+          "fn": 93,
+          "accuracy": 0.8960953011250827,
+          "paidPremium": 725.6429712556771,
+          "hold": 418,
+          "rev": 201,
+          "violations": 0
+        }
+      },
+      "willOnly": {
+        "k": 1.3,
+        "accuracy": 0.7260812581913499,
+        "test": {
+          "n": 1511,
+          "tp": 468,
+          "tn": 657,
+          "fp": 115,
+          "fn": 271,
+          "accuracy": 0.7445400397088021,
+          "paidPremium": 458.8071401530875,
+          "hold": 418,
+          "rev": 201,
+          "violations": 0
+        }
+      },
+      "willD": {
+        "k": 1.5,
+        "accuracy": 0.8165137614678899,
+        "test": {
+          "n": 1511,
+          "tp": 578,
+          "tn": 658,
+          "fp": 114,
+          "fn": 161,
+          "accuracy": 0.8180013236267373,
+          "paidPremium": 731.5087543294302,
+          "hold": 418,
+          "rev": 201,
+          "violations": 0
+        }
+      },
+      "shuffledD": {
+        "k": 1.2000000000000002,
+        "accuracy": 0.7103538663171691,
+        "test": {
+          "n": 1511,
+          "tp": 422,
+          "tn": 640,
+          "fp": 132,
+          "fn": 317,
+          "accuracy": 0.7028457974851092,
+          "paidPremium": 508.7687563314102,
+          "hold": 418,
+          "rev": 201,
+          "violations": 0
+        }
+      },
+      "boundedWillD": {
+        "k": 6,
+        "accuracy": 0.8676277850589778,
+        "test": {
+          "n": 1511,
+          "tp": 660,
+          "tn": 637,
+          "fp": 135,
+          "fn": 79,
+          "accuracy": 0.8583719391131701,
+          "paidPremium": 895.7485894224143,
+          "hold": 418,
+          "rev": 201,
+          "violations": 0
+        }
+      }
+    },
+    "age": {
+      "current": {
+        "k": 3,
+        "accuracy": 0.8453473132372215,
+        "test": {
+          "n": 1511,
+          "tp": 394,
+          "tn": 845,
+          "fp": 150,
+          "fn": 122,
+          "accuracy": 0.8199867637326274,
+          "paidPremium": 361.88785962378563,
+          "hold": 418,
+          "rev": 201,
+          "violations": 0
+        }
+      },
+      "historyD": {
+        "k": 2.6,
+        "accuracy": 0.9030144167758847,
+        "test": {
+          "n": 1511,
+          "tp": 403,
+          "tn": 945,
+          "fp": 50,
+          "fn": 113,
+          "accuracy": 0.8921244209133025,
+          "paidPremium": 315.52169639840656,
+          "hold": 418,
+          "rev": 201,
+          "violations": 0
+        }
+      },
+      "willOnly": {
+        "k": 1.05,
+        "accuracy": 0.8322411533420708,
+        "test": {
+          "n": 1511,
+          "tp": 364,
+          "tn": 892,
+          "fp": 103,
+          "fn": 152,
+          "accuracy": 0.8312375909993381,
+          "paidPremium": 302.60895415558446,
+          "hold": 418,
+          "rev": 201,
+          "violations": 0
+        }
+      },
+      "willD": {
+        "k": 1.2000000000000002,
+        "accuracy": 0.9030144167758847,
+        "test": {
+          "n": 1511,
+          "tp": 442,
+          "tn": 899,
+          "fp": 96,
+          "fn": 74,
+          "accuracy": 0.8874917273328922,
+          "paidPremium": 486.13206375008446,
+          "hold": 418,
+          "rev": 201,
+          "violations": 0
+        }
+      },
+      "shuffledD": {
+        "k": 0.9500000000000001,
+        "accuracy": 0.8152031454783748,
+        "test": {
+          "n": 1511,
+          "tp": 314,
+          "tn": 889,
+          "fp": 106,
+          "fn": 202,
+          "accuracy": 0.7961614824619457,
+          "paidPremium": 302.14032829841557,
+          "hold": 418,
+          "rev": 201,
+          "violations": 0
+        }
+      },
+      "boundedWillD": {
+        "k": 4,
+        "accuracy": 0.9200524246395806,
+        "test": {
+          "n": 1511,
+          "tp": 454,
+          "tn": 929,
+          "fp": 66,
+          "fn": 62,
+          "accuracy": 0.9152878888153541,
+          "paidPremium": 418.1158007015003,
+          "hold": 418,
+          "rev": 201,
+          "violations": 0
+        }
+      }
+    },
+    "shift": {
+      "current": {
+        "n": 1485,
+        "tp": 494,
+        "tn": 650,
+        "fp": 79,
+        "fn": 262,
+        "accuracy": 0.7703703703703704,
+        "paidPremium": 374.3045017235447,
+        "hold": 465,
+        "rev": 203,
+        "violations": 0
+      },
+      "historyD": {
+        "n": 1485,
+        "tp": 475,
+        "tn": 725,
+        "fp": 4,
+        "fn": 281,
+        "accuracy": 0.8080808080808081,
+        "paidPremium": 328.07973949713625,
+        "hold": 465,
+        "rev": 203,
+        "violations": 0
+      },
+      "willOnly": {
+        "n": 1485,
+        "tp": 419,
+        "tn": 654,
+        "fp": 75,
+        "fn": 337,
+        "accuracy": 0.7225589225589225,
+        "paidPremium": 321.267370678671,
+        "hold": 465,
+        "rev": 203,
+        "violations": 0
+      },
+      "willD": {
+        "n": 1485,
+        "tp": 521,
+        "tn": 690,
+        "fp": 39,
+        "fn": 235,
+        "accuracy": 0.8154882154882155,
+        "paidPremium": 483.3163986025843,
+        "hold": 465,
+        "rev": 203,
+        "violations": 0
+      },
+      "shuffledD": {
+        "n": 1485,
+        "tp": 357,
+        "tn": 648,
+        "fp": 81,
+        "fn": 399,
+        "accuracy": 0.6767676767676768,
+        "paidPremium": 320.83154444475673,
+        "hold": 465,
+        "rev": 203,
+        "violations": 0
+      },
+      "boundedWillD": {
+        "n": 1485,
+        "tp": 533,
+        "tn": 712,
+        "fp": 17,
+        "fn": 223,
+        "accuracy": 0.8383838383838383,
+        "paidPremium": 435.0566622121723,
+        "hold": 465,
+        "rev": 203,
+        "violations": 0
+      }
+    }
+  },
+  "intervention": {
+    "path": [
+      "x",
+      "a",
+      "g"
+    ],
+    "cost": 2,
+    "premium": 1,
+    "Dlow": 0.21428571428571427,
+    "Dhigh": 0.7857142857142857,
+    "lowAccepted": false,
+    "highAccepted": true
+  },
+  "limitations": "Bounded model uses known generating saturation timescale 1.8 and is oracle-form baseline; not fair evidence of discovered saturation. All policies revise verified cancellation and HOLD unknown/unaffordable; only feasible detours scored. D from 12 synthetic prior Bernoulli observations; true determination not measured. No full temporal learning or graph discovery.",
+  "execution": "Executed functions in JavaScript runtime; serialized module not independently imported."
+}
