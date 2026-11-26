@@ -187,3 +187,7 @@ claim is made.
 Added a candidate joint formalism, retaining the original substrate-neutral memory law and taxonomy. Distinguished state, carrier, observation, reference frame, metric, transport, potential, admissible transitions and history-bearing structure; defined matched-condition causal comparison and budgeted versus unbudgeted reachability. Bound source TIR phase scalars and discrete transport without identifying the rank-three TIR sector with the full PhaseNav projective space. Cross-linked the interdisciplinary index and prior CPU receipts, which were not rerun in this integration.
 
 Added a finite JavaScript graph witness with explicit synthetic verified-event input, replay protection, cost persistence despite accessibility decay, and relabeling invariance. Executed the witness functions in the JavaScript tool runtime; repository module and receipt read back, not independently imported in Node. This is a chosen finite constitutive rule, not a spontaneous consolidation result. Main and native runtime unchanged.
+
+## 2026-11-26 — PNCS/PNV migration
+
+Author correction: PNCS/PNV, not JavaScript or Python. Four PNV/1 candidate graphs replace the four JavaScript prototype files. Historical sources retained in Git history and receipts unchanged. Grammar/dependency inspection only; native transform binding and execution remain open. See [migration contract](formalism/pncs-pnv-native-migration-v0.1.md). No new Python implementation. Existing CPU diagnostics are evidence rather than native implementation authority.
