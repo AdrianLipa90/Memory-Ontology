@@ -39,3 +39,7 @@ Full coupling gap 57.7703774 initially, 23.0840699 at 1024 (39.9583%); replay ga
 ## Implication for state-space ontology
 
 Distinguish contraction of a conditional geometry update from the stability of the combined \((\phi,g)\) state. The latter includes the backreaction of geometry on phase dynamics and cannot be inferred from the former. Future tests: multiple seeds and horizons; recurrence and return after perturbation in autonomous dynamics; compare frozen and feedback-conditioned phases; examine whether separate topology or operator memory is required. Do not insert a double well merely to obtain a positive result.
+
+## Replication addendum — 2026-11-26
+
+The earlier timeout is resolved for the three-seed protocol: seeds 43 and 44 completed in separate isolated CPU executions with single-thread BLAS. Final free retention 39.9583%, 39.8696%, 38.9675% for seeds 42,43,44; matched phase replay 38.5565%, 38.3432%, 37.5471%; phase RMS .02002099, .01839276, .01691137 rad. All three reconstructed source updates within 1.12e-16; no positive conditional contraction violation. See [replication receipt](../benchmarks/pnaml_conditional_contraction_replication_receipt.json). Prior partial receipt is preserved as historical evidence. Native NOEMA execution was requested and route discovery attempted but no callable native operator or authenticated host transport was available. No hardware validation or spontaneous multistability established.
