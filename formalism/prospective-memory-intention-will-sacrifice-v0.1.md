@@ -37,7 +37,7 @@ M_pros=(owner,goal_id,context,cue,conditional_response,review_condition,occurren
 
 ## Executed finite policy fixture
 
-See [reference](../engines/prospective_memory_commitment.mjs) and [receipt](../benchmarks/prospective_memory_commitment_receipt.json). Deterministic factorial decision table: 4 availability conditions × 3 durations (1,2,4) × 3 D (.25,.5,1) × 4 detour premiums (.5,1,2,4) = 144 cases; repeated identical open/cancelled outcomes are not independent samples. Goal route cost 1+premium, hard budget 4, alternative cost 1. All policies handle verified cancellation explicitly. Local cheapest baseline favors alternative on ties; rigid original route holds when blocked; replan selects all feasible goal routes; W*D policy additionally applies its willingness threshold. No claim of optimized policy or empirical superiority.
+See [reference](../native/PROSPECTIVE_MEMORY_COMMITMENT_V0_1.pnv) and [receipt](../benchmarks/prospective_memory_commitment_receipt.json). Deterministic factorial decision table: 4 availability conditions × 3 durations (1,2,4) × 3 D (.25,.5,1) × 4 detour premiums (.5,1,2,4) = 144 cases; repeated identical open/cancelled outcomes are not independent samples. Goal route cost 1+premium, hard budget 4, alternative cost 1. All policies handle verified cancellation explicitly. Local cheapest baseline favors alternative on ties; rigid original route holds when blocked; replan selects all feasible goal routes; W*D policy additionally applies its willingness threshold. No claim of optimized policy or empirical superiority.
 
 | Policy | Goal arrivals | Alternative | HOLD | Revision | Sum paid premiums |
 |---|---:|---:|---:|---:|---:|
@@ -55,3 +55,5 @@ Bind exact cue/goal identity and verified history to the existing memory registe
 ## Follow-up
 
 [Determination and time-dependent commitment v0.2](prospective-memory-determination-v0.2.md) tests independently estimated history-based determination, time-independent versus linear-time versus bounded readouts, and a matched-state causal intervention. The original author postulates remain unchanged; the new filter is a candidate operational readout.
+
+**Native migration:** the linked PNV candidate replaces the active prototype source; historical benchmark execution was not PNV. See [migration contract](pncs-pnv-native-migration-v0.1.md) for original source lineage and open native bindings.
