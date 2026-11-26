@@ -1,0 +1,27 @@
+PNV 1
+EPISTEMIC CHYBA
+MODE INTERNAL_EXECUTION
+# Serial occurrence step, IDT 00F / 05H. Input projections belong to the same NOW node.
+# The edge is a supplied realized IDT occurrence; elapsed activity is not phase.
+OP NOW_BEFORE SOURCE now.node
+OP WINDING_BEFORE SOURCE now.winding
+OP SIGN_BEFORE SOURCE now.spinor_i_sign
+OP THETA_BEFORE SOURCE now.theta
+OP EDGE SOURCE idt.edge_id
+OP DTHETA SOURCE idt.dtheta
+OP OBJECT SOURCE next.object
+# Occupied Hotel is the former frontier, not a separate log.
+OP HOTEL IDENTITY NOW_BEFORE
+OP WINDING DIFFERENCE WINDING_BEFORE -1
+OP SIGN DIFFERENCE 0 SIGN_BEFORE
+OP NEG_DTHETA DIFFERENCE 0 DTHETA
+OP THETA DIFFERENCE THETA_BEFORE NEG_DTHETA
+OP NOW COMPOSITION HOTEL EDGE WINDING SIGN THETA OBJECT
+# Serial index is a coordinate of NOW, not another history structure.
+OP INDEX IDENTITY WINDING
+EMIT HOTEL
+EMIT NOW
+EMIT INDEX
+EMIT WINDING
+EMIT SIGN
+EMIT THETA

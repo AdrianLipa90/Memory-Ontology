@@ -1,0 +1,82 @@
+{
+  "scope": "STATIC_SYNTHETIC_SERIAL_FIXTURE",
+  "interpreter_blob": "c9041234cc66d5670e7b74f0c101434647067341",
+  "source_sha256": {
+    "origin": "1a70345004c5cf9ebeba6cd54ebc495179981d289f03aac45791b57328bf033a",
+    "step": "b9e3ec7e39e09b9f738186c1a288bc9eb4fda918f8dc4ff989d440b4abbe27a8",
+    "witness": "7d08da9981be480d1e8fdf9c436c3817ce72c17e1a01ffc39b3f110d9bbce9a2"
+  },
+  "execution_count": 9,
+  "witness_assertions": 16,
+  "negative_controls": [
+    {
+      "changed": "observation.hotel",
+      "error": "ASSERT failed for EXPECTED_PAST"
+    },
+    {
+      "changed": "observation.index",
+      "error": "ASSERT failed for INDEX_MATCH"
+    },
+    {
+      "changed": "observation.sign",
+      "error": "ASSERT failed for SPIN_LIFT"
+    },
+    {
+      "changed": "observation.theta",
+      "error": "ASSERT failed for ELAPSED_MATCH"
+    }
+  ],
+  "rows": [
+    [
+      0,
+      1,
+      0,
+      "A",
+      "781b16e061062a7b2bd20470a01018027b8426444d56dd09f9f6f860631bcd7e",
+      null
+    ],
+    [
+      1,
+      -1,
+      1,
+      "B",
+      "1fe64a6d1472d967e4000cc3cbcdb6dd887f41ca848453cff2be1c18e28d9101",
+      "6ebb3b6775acba4bd110ed5f51bc01a6842b3e9f42be6191cfc1d72cb9a52719"
+    ],
+    [
+      2,
+      1,
+      3,
+      "A",
+      "e45847cf643f311392ea0e1aa7d5959ea71274f97fd6e63ee7ec7b9f94dbddf1",
+      "0da8209eb0f5fd946a86b069ca1bca23bfb6f7999516ca8d1454889f08a68d27"
+    ],
+    [
+      3,
+      -1,
+      7,
+      "C",
+      "2070976777877b4a9e376496c5ed42b2f88d3ae7206d340fd10c1a42614a0609",
+      "7529759592e2e29c7350a79d6127e6c1ade4ca43880a4cc7fe4d80f871c3e817"
+    ],
+    [
+      4,
+      1,
+      8,
+      "A",
+      "9fe4bf99baf40b436ecb357cdb3076425c53249bb26bbd02b4d0727fca4d3aff",
+      "cea0c74204e3b77e94ba709da966623159c67cb3f7b2f9465647a2cb968cc8cf"
+    ]
+  ],
+  "row_columns": [
+    "index",
+    "spinor_i_sign",
+    "theta",
+    "object",
+    "execution_receipt_sha256",
+    "witness_receipt_sha256"
+  ],
+  "native_callbacks": 0,
+  "live_aux": false,
+  "full_local_receipt_sha256": "3380ee594c9afc5149d0d21ed4516ebb39b889a20bdd7ba3e01dc0295f7ced54"
+}
