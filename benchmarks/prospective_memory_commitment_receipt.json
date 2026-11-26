@@ -1,0 +1,129 @@
+{
+  "scope": "deterministic factorial policy fixture, not independent stochastic trials or native runtime",
+  "factors": {
+    "dur": [
+      1,
+      2,
+      4
+    ],
+    "det": [
+      0.25,
+      0.5,
+      1
+    ],
+    "premiums": [
+      0.5,
+      1,
+      2,
+      4
+    ],
+    "conditions": [
+      "open",
+      "detour",
+      "blocked_unknown",
+      "unavailable_verified"
+    ],
+    "budget": 4
+  },
+  "n": 144,
+  "stats": {
+    "local": {
+      "arrived": 0,
+      "alternative": 108,
+      "hold": 0,
+      "revised": 36,
+      "failed": 0,
+      "paidPremium": 0
+    },
+    "rigid": {
+      "arrived": 36,
+      "alternative": 0,
+      "hold": 72,
+      "revised": 36,
+      "failed": 0,
+      "paidPremium": 0
+    },
+    "replan": {
+      "arrived": 63,
+      "alternative": 0,
+      "hold": 45,
+      "revised": 36,
+      "failed": 0,
+      "paidPremium": 31.5
+    },
+    "will": {
+      "arrived": 53,
+      "alternative": 0,
+      "hold": 55,
+      "revised": 36,
+      "failed": 0,
+      "paidPremium": 16
+    }
+  },
+  "byDuration": [
+    {
+      "t": 1,
+      "eligible": 12,
+      "arrived": 3
+    },
+    {
+      "t": 2,
+      "eligible": 12,
+      "arrived": 6
+    },
+    {
+      "t": 4,
+      "eligible": 12,
+      "arrived": 8
+    }
+  ],
+  "byDetermination": [
+    {
+      "D": 0.25,
+      "eligible": 12,
+      "arrived": 3
+    },
+    {
+      "D": 0.5,
+      "eligible": 12,
+      "arrived": 6
+    },
+    {
+      "D": 1,
+      "eligible": 12,
+      "arrived": 8
+    }
+  ],
+  "causal": [
+    {
+      "t": 1,
+      "W": 1,
+      "P": 0.5,
+      "status": "hold",
+      "paid": 0,
+      "reason": "premium exceeds willingness"
+    },
+    {
+      "t": 4,
+      "W": 4,
+      "P": 2,
+      "status": "arrived",
+      "paid": 1,
+      "reason": "goal route"
+    }
+  ],
+  "frameCovarianceError": 0,
+  "clockIntegral": 3.5,
+  "clockSplitIntegral": 3.5,
+  "tests": [
+    "verified unavailability revision",
+    "unresolved blockage HOLD",
+    "cost threshold and hard limit",
+    "matched-state history intervention",
+    "transport covariance",
+    "clock subdivision invariance",
+    "zero intention zero accumulation"
+  ],
+  "notes": "Costs synthetic; readiness scale and policy chosen, not derived; all policies share hard cost budget and evidence handling. No empirical behavioral claim.",
+  "execution": "Executed JavaScript tool runtime. Serialized module readback to be checked; no Node import test."
+}
