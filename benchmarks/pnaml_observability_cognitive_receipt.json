@@ -1,0 +1,114 @@
+{
+  "schema": "PNAML_ISO49_25_34_31_CPU_V1",
+  "scope": "Executed local CPU Model AST from PNAML Mobile 1.5.8 and locally transcribed HTRI kernel; frozen phase tangent (core, frequencies and g fixed), nonlinear gauge-shift test, effective complete graph, separate synthetic reaction-diffusion and signed associative references. Repository port not independently run. No native H200, MAHAL, semantic recall or attention task.",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "observability": {
+    "phase_variables": 1152,
+    "lanes": 36,
+    "horizons": [
+      8,
+      32,
+      128
+    ],
+    "ranks_at_relative_1e_2": [
+      36,
+      36,
+      67
+    ],
+    "ranks_at_relative_1e_6": [
+      95,
+      106,
+      132
+    ],
+    "ranks_at_relative_1e_12": [
+      141,
+      176,
+      211
+    ],
+    "rank_at_128_relative_1e_10": [
+      187,
+      181,
+      184
+    ],
+    "control_identical_batch_rank": 36,
+    "hidden_batch_shift_dim": 31,
+    "nonlinear_hidden_rms": 0.02,
+    "max_projected_phase_diff": 1.1368683772161603e-13,
+    "max_batch_coupling_diff": 4.6629367034256575e-15,
+    "noise_1e_4_recoverable_squared_norm_fraction": [
+      0.08500803786158204,
+      0.08192408091166488,
+      0.08671257605168663
+    ],
+    "sensor": {
+      "added_scalar_contrasts": 31,
+      "old_gain": 1.4704902034045842e-15,
+      "min_new_gain": 0.9999999999999905,
+      "blind_subspace_reconstruction_error": 1.0712243158805422e-15
+    }
+  },
+  "hodge": {
+    "vertices": 36,
+    "edges": 630,
+    "cycle_dimension": 595,
+    "uniform_cycle_norm": 0.00010618903720931357,
+    "uniform_cycle_fraction": 0.9999999999999997,
+    "source_state_cycle_fraction": 0.22657537002395858,
+    "source_state_gradient_norm": 0.16279025620376467,
+    "source_state_cycle_norm": 0.08811011265627317,
+    "commuting_uniform_cycle": 0,
+    "continuity_error": 1.6653345369377348e-16
+  },
+  "turing": {
+    "model": "Schnakenberg candidate, a=.1 b=.9, Du=.05 Dv=2; equal diffusion control Du=Dv=.05",
+    "homogeneous_growth": -0.1,
+    "unstable_modes": 35,
+    "peak_growth": 0.41084985833528265,
+    "initial_std": 0.0001047454118957765,
+    "final_std": 1.7047168082067516,
+    "equal_control_unstable_modes": 0,
+    "equal_control_final_std": 1.9157941967650846e-10
+  },
+  "unitary_control": {
+    "trials": 64,
+    "initial_fidelity": 0.8548502410633451,
+    "final_fidelity": 0.8548502410633442,
+    "max_change": 2.6645352591003757e-15
+  },
+  "associative": {
+    "trials_per_method": 3072,
+    "patterns_per_seed": 4,
+    "corruption": [
+      0.1,
+      0.2,
+      0.3,
+      0.4
+    ],
+    "hebb_exact": [
+      0.21875,
+      0.1953125,
+      0.15364583333333334,
+      0.14583333333333334
+    ],
+    "projection_exact": [
+      0.9609375,
+      0.8138020833333334,
+      0.515625,
+      0.33203125
+    ],
+    "nearest_unique_correct": [
+      0.99609375,
+      0.9778645833333334,
+      0.859375,
+      0.7356770833333334
+    ],
+    "hebb_template_stability": 0.25,
+    "projection_template_stability": 1,
+    "shuffled_exact": 0,
+    "notes": "Separate signed network; source phase snapshots binarized by cos>=0. Exact recall remains worse than nearest-neighbor; not native HTRI consolidation."
+  }
+}
