@@ -51,3 +51,7 @@ Of 36 detour cases, W*D reaches 17 versus 27 for budget-only replan. With matche
 ## Next validation
 
 Bind exact cue/goal identity and verified history to the existing memory register. Define measurable determination from independently observed effort/resource allocation, and test held-out replan tasks with identical access budgets and nontrivial alternatives. Model commitment revision and costs separately from accumulation; compare against no-history control and fixed threshold. Imaginary Collatz opens alternatives, admits relevant verified relations, then consolidates a revised path while preserving the historical goal occurrence. No arithmetic parity implies successful fulfilment.
+
+## Follow-up
+
+[Determination and time-dependent commitment v0.2](prospective-memory-determination-v0.2.md) tests independently estimated history-based determination, time-independent versus linear-time versus bounded readouts, and a matched-state causal intervention. The original author postulates remain unchanged; the new filter is a candidate operational readout.
