@@ -1,0 +1,33 @@
+name: Full repository audit
+on:
+  push:
+    branches: [audit/full-repo-e2e-20261126]
+permissions:
+  contents: read
+jobs:
+  repository-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 0f62ba7e08fda0229db10e17ee57a67d93614bc0
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify exact source and inventory
+        run: |
+          git rev-parse HEAD
+          git ls-files
+      - name: Install test dependencies
+        run: python -m pip install pytest numpy jsonschema
+      - name: Compile existing source
+        run: python -m compileall -q algebra engines tests
+      - name: Run all existing tests
+        run: python -m pytest -ra -v --junitxml=repo-tests.xml tests
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: repo-tests
+          path: repo-tests.xml
