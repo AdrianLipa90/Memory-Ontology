@@ -1,0 +1,30 @@
+name: Memory Ontology and Pip native E2E
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  repository-and-pip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: AdrianLipa90/PhaseNav-Natural-Coding-System
+          ref: 7f3a274164633d0a835b523c40dabdb9f18a1685
+          path: .pncs-reference
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pytest
+      - name: Run all Memory Ontology tests and Pip native programs
+        env:
+          PNCS_NATIVE_EXEC_PATH: ${{ github.workspace }}/.pncs-reference/src/phasenav_natural_code/native_pnv_exec_v01.py
+        run: python -m pytest -q tests
