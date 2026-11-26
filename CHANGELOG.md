@@ -195,3 +195,9 @@ Author correction: PNCS/PNV, not JavaScript or Python. Four PNV/1 candidate grap
 ## 2026-11-26 — Archive sieve, correction recurrence and PNAML rank–GUIDE–PNV (research consolidation)
 
 Added archive projection and checkpoint continuation, truth/source-aware consolidation, dependency repair workload and correction recurrence contracts; six static PNV fixtures and their compact evidence records. Full recorded sieve, checkpoint, truth and correction-replay receipts archived. Added the local rank–GUIDE–PNV observation witness, two PNV observation programs, complete recorded AUX/rank and GUIDE/PNV receipts, and PNCS–PNAML source-binding specification. The recorded local witness reports 9/9 checks; the rank/restore experiment reports 18 ordered observations across three local generations and three verified synthetic journals. Preserved differing tie-break behavior, unknown coherence representation gap, original planner provenance mismatch, and separation between acknowledgement, learned relation and future action. Source and receipt readback performed; no fresh repository-wide regression or live native binding demonstrated. Author-requested merge to main of research candidates; no plugin or other repository changes.
+
+## 2026-11-26 — Pip Project
+
+- Integrate Book I V15 / Pip edition through `projects/pip-project/`: exact source archive locator, 25-chapter navigation index, selected narrative relations and the author's dated Hotel/index clarification.
+- Retain the original A0_TO_HILBERT_NATIVE.pnv byte-for-byte; readback blob matches source aa1eb9aed0a83a346f334c4594028f7e469d16a2.
+- Preserve earlier source editions and their terminology. No native execution, new runtime, user journal mutation, or full ZIP upload is claimed. The original archive remains available in the author's Library.
