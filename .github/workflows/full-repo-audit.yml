@@ -20,14 +20,30 @@ jobs:
           git rev-parse HEAD
           git ls-files
       - name: Install test dependencies
-        run: python -m pip install pytest numpy jsonschema
+        run: python -m pip install pytest numpy scipy jsonschema coverage
       - name: Compile existing source
         run: python -m compileall -q algebra engines tests
       - name: Run all existing tests
-        run: python -m pytest -ra -v --junitxml=repo-tests.xml tests
+        run: |
+          python -m coverage run --source=algebra,engines -m pytest -ra -v --junitxml=repo-tests.xml tests
+          python -m coverage report -m
+          python -m coverage json -o repo-coverage.json
       - name: Upload test report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: repo-tests
-          path: repo-tests.xml
+          path: |
+            repo-tests.xml
+            repo-coverage.json
+      - name: Execute existing FOLD Collatz witness
+        run: python engines/fold_collatz_witness.py
+      - name: Archive exact audited source
+        if: always()
+        run: git archive --format=zip -o audited-source.zip HEAD
+      - name: Upload exact source for local replay
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: audited-source
+          path: audited-source.zip
