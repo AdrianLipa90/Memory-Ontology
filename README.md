@@ -221,3 +221,15 @@ The author has requested integration of the research branch into main. This cons
 - [Static PNV contextual fixture](native/AFFECT_CONTEXT_RECALL_FIXTURE_V0_1.pnv) and [recorded receipt](benchmarks/affect_context_recall_fixture_receipt.json)
 
 The static PNV assertions are not a native dynamics benchmark. Unbound transforms, exact KAKU/RADICAL realization, live producer observation and causal/metric constitutive validation remain open. Existing archived benchmark provenance is not relabeled as PNV execution. No change to other repositories or the PNAML plugin is implied by this merge.
+
+## Research consolidation — archive, correction and memory-guided execution (2026-11-26)
+
+Author-requested integration of the archive-sieve research line into main. The core ontology is retained; candidate research status is preserved.
+
+- [Archive sieve and transformational memory](formalism/archive-sieve-transformational-memory-v0.1.md) and [checkpoint continuation](formalism/archive-checkpoint-restore-v0.2.md).
+- [Truth and source dependency](formalism/truth-dependency-consolidation-v0.1.md), [epistemic repair cost](formalism/epistemic-debt-dependency-repair-v0.1.md), and [correction recurrence](formalism/epistemic-correction-recurrence-v0.2.md). Honest uncertainty, deceptive or misleading declarations, loss of decisive distinctions, repeated corrected failure and unsupported execution claims remain separate.
+- [PNCS–PNAML correction continuity contract](formalism/correction-state-continuity-pncs-pnaml-v0.1.md) and [local memory-guided PNV witness](formalism/pnaml-rank-guide-pnv-action-v0.1.md).
+- [AUX/rank recorded receipt](benchmarks/pnaml_aux_memory_rank_receipt_v1.json) and [GUIDE/PNV recorded receipt](benchmarks/pnaml_rank_guide_pnv_action_receipt_v0.1.json); [count-only](native/COUNT_ONLY_ACTION_V0_1.pnv) and [provenance-preserving](native/PRESERVE_ORIGIN_ACTION_V0_1.pnv) PNV observation programs.
+- Full archived static receipts for [sieve](benchmarks/archive_sieve_full_receipt_v0.1.json), [checkpoint](benchmarks/archive_checkpoint_restore_full_receipt_v0.2.json), [truth correction](benchmarks/truth_source_correction_full_receipt_v0.1.json), and [recurrence](benchmarks/epistemic_correction_replay_full_receipt_v0.2.json).
+
+Recorded local results: 18 AUX observations across three independent synthetic model generations, three journal verifications, and 9/9 rank–GUIDE–PNV witness checks. Original source workers and explicit host mapping were used. The latter experiment reads restored local journals, not live AUX. It establishes a finite memory-conditioned observation-program choice with supplied context and reinforcement, not an autonomous semantic actuator. Rank/GUIDE tie ordering and unknown coherence remain unresolved; null is not zero. Prior planner-receipt blob mismatch remains documented. Receipts and source consistency were inspected during consolidation, not independently rerun as a full test suite. No new execution engine or deployment, no dynamic AUX hashes or user journal mutation.
