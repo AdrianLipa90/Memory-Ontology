@@ -1,0 +1,32 @@
+{
+  "scope": "deterministic finite graph fixture; explicit externally supplied verification, no native HTRI/TIR execution",
+  "checks": {
+    "matched_initial_state": true,
+    "original_immutable": true,
+    "history_changes_cost": true,
+    "unchanged_topology": true,
+    "budgeted_reachability_changes": true,
+    "unverified_no_weight_update": true,
+    "replay_idempotent": true,
+    "decay_keeps_geometry": true,
+    "relabel_invariance": true,
+    "disconnected_excluded": true,
+    "conflicting_replay_rejected": true
+  },
+  "initial_cost": 3,
+  "learned_cost": 2.5,
+  "access_before_decay": 0.55,
+  "access_after_decay": 1.133634492341207e-9,
+  "initial_budget_reachable": [
+    "a",
+    "b",
+    "x"
+  ],
+  "learned_budget_reachable": [
+    "a",
+    "b",
+    "x",
+    "z"
+  ],
+  "execution": "Functions JavaScript runtime; witness executed before serialization. Committed module verified by readback, not Node-import tested."
+}
