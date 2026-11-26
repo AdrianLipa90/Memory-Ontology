@@ -127,6 +127,44 @@ class Coupler:
         self.generation=gen;self.seq=seq;self.tau=tau;self.previous=p
         return out
 
+# Existing CLI/Node API compatibility only. Native Coupler and NOEMA surface
+# always retain typed integer coordinates. This is not PNAML transport.
+def _legacy_causal_api_view(record):
+    if not isinstance(record, dict):
+        return record
+    result = dict(record)
+    for key in ('index','parent','incoming_link','theta_pi_units','hotel_head','occupied_past_count'):
+        if type(result.get(key)) is int:
+            result[key] = str(result[key])
+    if isinstance(result.get('tau_effective'), dict):
+        result['tau_effective'] = {k: str(v) if type(v) is int else v
+                                   for k, v in result['tau_effective'].items()}
+    if isinstance(result.get('source_frame'), dict):
+        frame = dict(result['source_frame'])
+        if type(frame.get('sequence')) is int:
+            frame['sequence'] = str(frame['sequence'])
+        result['source_frame'] = frame
+    if isinstance(result.get('now'), dict):
+        result['now'] = _legacy_causal_api_view(result['now'])
+    return result
+
+
+def legacy_cli_view(out):
+    # Non-mutating projection solely for the already published API.
+    view = dict(out)
+    if isinstance(out.get('pip'), dict) and 'causal' in out['pip']:
+        view['pip'] = dict(out['pip'])
+        view['pip']['causal'] = _legacy_causal_api_view(out['pip']['causal'])
+    if isinstance(out.get('surface_reads'), dict):
+        view['surface_reads'] = {
+            path: _legacy_causal_api_view(value)
+                  if path.rstrip('/') == ROOT_ADDRESS+'PIP_CAUSAL'
+                  or path.startswith(ROOT_ADDRESS+'PIP_CAUSAL/') else value
+            for path, value in out['surface_reads'].items()
+        }
+    return view
+
+
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--mode',choices=['model','input'],required=True);ap.add_argument('--ticks',type=int,default=8);ap.add_argument('--dt',type=float,default=.01);ap.add_argument('--seed',type=int,default=42);ap.add_argument('--width',type=int,default=96);ap.add_argument('--height',type=int,default=144);ap.add_argument('--render-every',type=int,default=1);ap.add_argument('--anchor-json');ap.add_argument('--last-image');ap.add_argument('--emit-frames',action='store_true');ap.add_argument('--ekb-json');ap.add_argument('--pip-json');ap.add_argument('--surface-paths-json');a=ap.parse_args()
     if a.dt<=0 or not math.isfinite(a.dt) or a.ticks<1 or a.render_every<0:raise ValueError('positive ticks/dt and nonnegative render cadence')
@@ -141,7 +179,7 @@ def main():
     for f in frames:
         out=f if a.emit_frames else c.consume(f)
         if paths and c is not None:out['surface_reads']={path:c.noema_surface.read(path) for path in paths}
-        print(json.dumps(out,allow_nan=False,separators=(',',':')),flush=True)
+        print(json.dumps(legacy_cli_view(out),allow_nan=False,separators=(',',':')),flush=True)
     if c is not None and c.pip.memory is not None:c.pip.memory.close()
     if a.last_image and c is not None and c.image is not None:
         from PIL import Image

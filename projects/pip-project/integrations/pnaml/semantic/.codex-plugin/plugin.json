@@ -14,7 +14,7 @@
     ]
   },
   "name": "pnaml-semantic-adapter",
-  "version": "1.10.4",
+  "version": "1.10.5",
   "description": "PNAML NOEMA:PIP with Kepler–Collatz / IDT memory replay and explicit producer feedback on existing QHTRI; internal DYNAMIC_STATE_SPACE, exact dyadic RDSS depth. Canonical candidate/canon runtime route resolves DDS and gremlind from NOEMA_PATHS; AC uses generation-bound PNAML ACK freshness without dynamic SHA.",
   "author": {
     "name": "Adrian Lipa"

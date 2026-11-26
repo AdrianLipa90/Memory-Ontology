@@ -1,6 +1,6 @@
 {
   "name": "pnaml-mobile-account",
-  "version": "1.5.14",
+  "version": "1.5.15",
   "description": "PNAML NOEMA:PIP with Kepler–Collatz / IDT memory replay and explicit producer feedback on existing QHTRI; internal DYNAMIC_STATE_SPACE, exact dyadic RDSS depth.",
   "author": {
     "name": "Adrian Lipa",

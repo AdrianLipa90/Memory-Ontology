@@ -48,7 +48,7 @@ class CausalHotel:
         n = result.emitted["INDEX"]
         self.nodes[n] = {
             "node": result.emitted["NOW"],
-            "source_frame": {"generation": generation, "sequence": str(sequence)},
+            "source_frame": {"generation": generation, "sequence": sequence},
         }
         self.now = n
         self.last_receipt = result.receipt["receipt_sha256"]
@@ -67,19 +67,22 @@ class CausalHotel:
         elif key == "HOTEL":
             n = None if self.now is None else self.nodes[self.now]["node"][0]
         else:
-            if not isinstance(key, str) or not key.isascii() or not key.isdecimal():
+            if type(key) is int and key >= 0:
+                n = key
+            elif isinstance(key, str) and key.isascii() and key.isdecimal():
+                n = int(key)
+            else:
                 return {"status": "NOT_FOUND", "requested": key}
-            n = int(key)
         if n not in self.nodes:
             return {"status": "NOT_FOUND", "requested": key}
         record = self.nodes[n]
         parent, link, index, sign, theta, obj = record["node"]
-        # Exact integer coordinates at the JSON/JS boundary, not floats.
+        # Native surface: exact typed integers, with no serialization.
         return {"status": "FOUND", "role": "TERAZ" if n == self.now else "HOTEL",
-                "index": str(index), "parent": None if parent is None else str(parent),
-                "incoming_link": None if link is None else str(link),
-                "spinor_i_sign": sign, "theta_pi_units": str(theta),
-                "tau_effective": {"numerator": str(index), "denominator": "2"},
+                "index": index, "parent": parent,
+                "incoming_link": link,
+                "spinor_i_sign": sign, "theta_pi_units": theta,
+                "tau_effective": {"numerator": index, "denominator": 2},
                 "object_ref": obj, "source_frame": dict(record["source_frame"])}
 
     def describe(self):
@@ -88,9 +91,9 @@ class CausalHotel:
                 "status": "AWAITING_EXPLICIT_OCCURRENCE" if self.now is None else "BOUND",
                 "noema_address": "NOEMA:PIP",
                 "now": None if self.now is None else self.lookup("NOW"),
-                "hotel_head": None if parent is None else str(parent),
-                "index": None if self.now is None else str(self.now),
-                "occupied_past_count": str(len(self.nodes) - (self.now is not None)),
+                "hotel_head": parent,
+                "index": self.now,
+                "occupied_past_count": len(self.nodes) - (self.now is not None),
                 "scope": "CURRENT_COUPLER_RUN",
                 "addressing": "CAUSAL_INDEX_DISTINCT_FROM_DYADIC_ROOM",
                 "last_immutable_pnv_receipt": self.last_receipt,
