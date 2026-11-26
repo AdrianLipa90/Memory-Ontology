@@ -1,0 +1,55 @@
+{
+  "schema": "PNAML_MORI_ZWANZIG_FROZEN_TANGENT_V1",
+  "scope": "Executed CPU PNAML Mobile 1.5.8 Model AST with locally transcribed HTRI kernel; frozen phase tangent and separate nonlinear counterfactual. Repo port not separately executed.",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "source_ticks": 256,
+  "dt": 0.01,
+  "steps": 128,
+  "held_out_perturbations_per_seed": 64,
+  "phase_variables": 1152,
+  "core_fixed": 12,
+  "resolved": 36,
+  "hidden_dimensions": 1116,
+  "mean_rms": {
+    "0": 0.0000016495909939688383,
+    "4": 0.0000015232407254879478,
+    "16": 0.0000011798890101651927,
+    "32": 8.015176988095516e-7,
+    "64": 2.901655209493831e-7,
+    "128": 3.10285612397072e-18,
+    "fit_markov": 6.967663911303524e-7
+  },
+  "kernel_norms_first": [
+    0.0000026262441743270643,
+    0.000002464078256052627,
+    0.0000024995089381677976
+  ],
+  "kernel_norms_last": [
+    0.000002766981286335736,
+    0.0000025628273146423335,
+    0.0000025856236481152038
+  ],
+  "max_identical_batch_control": 8.887601214602151e-16,
+  "max_jacobian_fd_rms": 2.1732779290920237e-10,
+  "mean_omitted_hidden_forcing_error": 0.00000839012348648732,
+  "nonlinear": {
+    "initial_projection_rms_max": 2.064789320163467e-14,
+    "initial_coupling_rms": 0,
+    "hidden_phase_perturbation_rms": 0.001,
+    "first_step_phase_rms": [
+      7.125707925624541e-8,
+      8.446874046453412e-8,
+      8.817237668773313e-8
+    ],
+    "step64_phase_rms": [
+      0.000005522828583483704,
+      0.000004600994257385756,
+      0.000005983981879008216
+    ]
+  },
+  "notes": "The tangent projection is exact for the frozen linear system, not a nonlinear closure. Kernel growth over 127 steps is not evidence of unlimited retention. No semantic memory, H200, native Coupler or MAHAL tested."
+}
