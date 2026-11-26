@@ -189,3 +189,19 @@ Adrian Lipa
 ## RDSS Book I V32 — candidate memory mechanics integration
 
 See [equation and mechanism crosswalk](formalism/rdss-book-v32-mechanics-crosswalk.md), [reference kernel](engines/rdss_memory_mechanics_v32.py), [tests](tests/test_rdss_memory_mechanics_v32.py), and [FOLD–Collatz candidate](formalism/fold-collatz-memory-dynamics-candidate-v0.4.md). These are optional computational reference realizations, not modifications of the substrate-neutral core law or physical evidence.
+
+
+## Joint ontology of memory and state spaces — v0.1 (candidate)
+
+The current research scope is the coupled ontology of memory and history-conditioned state spaces:
+\[
+\mathfrak X_t=(\Sigma_t,G_t,\nabla_t,V_t,M_t).
+\]
+Memory can modify future transition costs, admissibility, topology, transport or dynamics; these are distinct effects, not assumed to occur together. State, carrier, coordinate frame, observed projection, history and memory remain distinct. The existing substrate-neutral law and six retained-object primitives are unchanged.
+
+- [Joint formalism](formalism/memory-state-space-ontology-v0.1.md)
+- [TIR source-bound geometry](formalism/tir-contextual-relational-geometry-v0.1.md)
+- [Interdisciplinary equation index](formalism/rdss-interdisciplinary-isomorphism-index-v0.1.md)
+- [Finite reference](engines/memory_state_space_reference.mjs) and [executed fixture receipt](benchmarks/memory_state_space_reference_receipt.json)
+
+Current priority: derive source-compatible state-space evolution, spontaneous consolidation, reconstruction, context transport, and the distinction between hidden state and causal memory. The finite reference is a chosen graph constitutive rule, not a derivation of a universal law or an update to native PNAML. General cognition and consciousness are outside this research scope.
