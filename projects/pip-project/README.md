@@ -20,3 +20,7 @@ Connect to the existing [memory law](../../formalism/memory-law-v0.1.md), [imagi
 The existing NOEMA address is NOEMA:PIP. The current connector's logical surface is DYNAMIC_STATE_SPACE. Neither the source index nor this integration creates a new QHTRI owner or an independent memory system. Source scenes are not inserted as observed events in an operational journal. The author-requested language distinction is retained: language is a description/interface, not an additional behavioral law. No new guards, mandatory gates or executable language implementation are introduced.
 
 Status: source-index integration. The original archive remains in the author's Library; the GitHub project references it and includes the original PNV source. Full binary archive transfer and native execution are not part of the verified commit.
+
+## IDT structural Hotel — executable serial specialization
+
+[Source crosswalk and representation](IDT_HOTEL_OCCURRENCE_V0_1.md) · [origin](native/PIP_HOTEL_SERIAL_ORIGIN_V0_1.pnv) · [step](native/PIP_HOTEL_SERIAL_STEP_V0_1.pnv) · [witness](native/PIP_HOTEL_INDEX_WITNESS_V0_1.pnv) · [recorded evidence](benchmarks/PIP_HOTEL_IDT_RECEIPT_V0_1.json). The active candidate transition represents the occupied Hotel as the former NOW node, with its causal parent chain, not a separately maintained guest register. Nine original-interpreter executions, 16/16 witness assertions and 4/4 negative observation controls. Native producer binding and concurrent frontier remain open.
