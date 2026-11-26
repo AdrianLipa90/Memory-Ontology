@@ -11,6 +11,9 @@ permissions:
 jobs:
   imported-tcd:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        variant: [mobile, semantic]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
@@ -35,7 +38,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install -e ./_tcd -e ./_pncs pytest numpy
+      - run: python -m pip install -r projects/pip-project/integrations/pnaml/${{ matrix.variant }}/skills/pnaml-coupled-phase-stream/references/requirements.txt
       - env:
           TCD_ROOT: _tcd
           BIOOS_ROOT: _bioos
+          PNAML_VARIANT: ${{ matrix.variant }}
+          OPENBLAS_NUM_THREADS: '1'
         run: python -m pytest -q projects/pip-project/tests

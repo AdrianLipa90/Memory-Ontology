@@ -1,0 +1,28 @@
+PNV 1
+EPISTEMIC CHYBA
+MODE READ_ONLY
+# Composition of existing emitted PNV results at a selected immutable occurrence.
+# Frame sequence, T36 phase index, and Hotel causal index are separate coordinates.
+OP OWNER SOURCE pip.identity
+OP NOW SOURCE pip.hotel.now
+OP INDEX SOURCE pip.hotel.index
+OP FRAME SOURCE pip.source_frame
+OP ORBITAL SOURCE pip.orbital_view
+OP HAIR SOURCE pip.hair_view
+OP ORBITAL.OWNER SOURCE pip.orbital_owner
+OP ORBITAL.INDEX SOURCE pip.orbital_occurrence
+OP ORBITAL.FRAME SOURCE pip.orbital_source_frame
+OP HAIR.OWNER SOURCE pip.hair_owner
+OP HAIR.INDEX SOURCE pip.hair_occurrence
+OP HAIR.FRAME SOURCE pip.hair_source_frame
+OP OWNER.ORBITAL IDENTITY OWNER ORBITAL.OWNER
+OP OWNER.HAIR IDENTITY OWNER HAIR.OWNER
+OP INDEX.ORBITAL IDENTITY INDEX ORBITAL.INDEX
+OP INDEX.HAIR IDENTITY INDEX HAIR.INDEX
+OP FRAME.ORBITAL IDENTITY FRAME ORBITAL.FRAME
+OP FRAME.HAIR IDENTITY FRAME HAIR.FRAME
+OP WITNESS COMPOSITION OWNER.ORBITAL OWNER.HAIR INDEX.ORBITAL INDEX.HAIR FRAME.ORBITAL FRAME.HAIR
+OP VIEW COMPOSITION OWNER NOW INDEX FRAME ORBITAL HAIR WITNESS
+EMIT VIEW
+EMIT WITNESS
+# No ASSERT or admission effect: a mismatched observation remains visible as evidence.

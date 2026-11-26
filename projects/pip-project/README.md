@@ -40,3 +40,5 @@ Status: source-index integration. The original archive remains in the author's L
 ## TCD orbital orchestration
 
 [Full dictionary and functional engine views](PIP_TCD_ORBITAL_ORCHESTRATION_V0_1.md) · [native PNV composition](native/PIP_TCD_ORBITAL_ORCHESTRATION_V0_1.pnv). Functional views and dynamic orbital bands are distinct; reuse Identity NEXUS and PNLF, not an independent scheduler.
+
+[Selected occurrence composition](PIP_TCD_SELECTED_OCCURRENCE_V0_1.md) joins the actual orbital and appearance results to the same selected Hotel occurrence without adding a new runtime gate.
