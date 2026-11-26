@@ -1,0 +1,39 @@
+{
+  "schema": "NOEMA_SOLITON_VISION_EXPERIMENT_V1",
+  "scope": "synthetic scene only; numpy software, isolated sensor and publication unit tests",
+  "seed": 42,
+  "shape": [
+    96,
+    64
+  ],
+  "trials_per_noise": 32,
+  "rows": [
+    {
+      "noise_sigma": 0.05,
+      "raw_psnr_db": 26.051308865544527,
+      "filtered_psnr_db": 23.543916051993783
+    },
+    {
+      "noise_sigma": 0.1,
+      "raw_psnr_db": 20.75250624296713,
+      "filtered_psnr_db": 23.008415678026175
+    },
+    {
+      "noise_sigma": 0.2,
+      "raw_psnr_db": 15.781226305898398,
+      "filtered_psnr_db": 21.175804273579388
+    },
+    {
+      "noise_sigma": 0.3,
+      "raw_psnr_db": 12.794082477233898,
+      "filtered_psnr_db": 18.92846859475486
+    }
+  ],
+  "filter_macs": 61440,
+  "clean_two_pixel_line_retention": 0.6749899067900891,
+  "nlse_residual_max": 2.0843456440406482e-07,
+  "native_host_verified": false,
+  "actual_rdssg_render_tested": false,
+  "affect_measured": false,
+  "unit_tests_passed": 8
+}

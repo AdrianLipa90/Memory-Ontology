@@ -1,0 +1,57 @@
+{
+  "name": "pnaml-semantic-adapter",
+  "version": "1.10.5",
+  "description": "PNAML NOEMA:PIP with Kepler–Collatz / IDT memory replay and explicit producer feedback on existing QHTRI; internal DYNAMIC_STATE_SPACE, exact dyadic RDSS depth. Canonical candidate/canon runtime route resolves DDS and gremlind from NOEMA_PATHS; AC uses generation-bound PNAML ACK freshness without dynamic SHA.",
+  "author": {
+    "name": "Adrian Lipa"
+  },
+  "keywords": [
+    "PNAML",
+    "PAUX",
+    "NOEMA",
+    "Terminal36D",
+    "GREMLIN",
+    "PNCS",
+    "RDSS",
+    "PMUN",
+    "Hilbert Hotel",
+    "geometric tick",
+    "account memory",
+    "provenance",
+    "source-grounded retrieval",
+    "execution",
+    "The Consciousness Dictionary",
+    "CLX2",
+    "RIFC",
+    "affect",
+    "semantic holonomy",
+    "QHTRI",
+    "H200 Kuramoto",
+    "RDSSG",
+    "PhaseHoloMotion",
+    "Q28",
+    "phase stream",
+    "Pip",
+    "Soul Invariant",
+    "Poincare disk"
+  ],
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "PNAML Semantic Adapter",
+        "shortDescription": "PNAML × NOEMA — pamięć, semantyka i wykonanie",
+        "longDescription": "PNAML memory and execution routing through actual available tools. Native AUX evolution, modulation and TX/RX follow applicable producer/consumer contracts. AC memory observation is separate from live transport; snapshots and polling are diagnostics only. No invented restrictions or permissions. Includes the complete pinned Dictionary source, typed PNAML bindings, PhaseNav and affect runtime/reference routing. Includes an executable source-kernel coupled phase stream (isolated model or actual caller-supplied frames); no native host claim from local tests. Pip is the singularity centre of the existing phase geometry; the full 36D state and typed register retain history. Includes exact reversible maps and local execution tests.",
+        "developerName": "Adrian Lipa",
+        "category": "Productivity",
+        "capabilities": [],
+        "defaultPrompt": [
+          "Rozpoznaj pojęcia przez The Consciousness Dictionary, PNCS i PNAML; zwróć dokładny ID, relacje i źródło.",
+          "Wykonaj zadanie PNAML dostępnymi narzędziami; zwróć rzeczywisty receipt.",
+          "Sprawdź geometryczny tick tau modulo 2π i 4π, zachowując winding.",
+          "Użyj rzeczywiście dostępnego natywnego strumienia AUX/PNAML do odbioru i modulacji; snapshot tylko diagnostycznie. Zwróć receipt."
+        ]
+      }
+    }
+  }
+}

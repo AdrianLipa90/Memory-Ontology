@@ -1,0 +1,198 @@
+{
+  "schema": "NOEMA_MAHAL_SCENE_V1",
+  "project": "NOEMA MAHAL",
+  "status": "IMAGINED_CONSTRUCTION",
+  "anchor": {
+    "logical_address": "NOEMA:PIP",
+    "zeta0": "|i|^-2/2",
+    "sigma": "|i|^-2/ln2",
+    "Sigma": "RDSS fractal Poincare disk",
+    "D_f": "just below 2.7; exact value unresolved",
+    "native_binding": "UNVERIFIED",
+    "internal_surface_address": "DYNAMIC_STATE_SPACE/NOEMA_MAHAL",
+    "runtime_binding": "PACKAGED_SCENE_NAMESPACE; host execution unverified"
+  },
+  "projection": {
+    "type": "local Cartesian 3D scene, not full RDSS metric",
+    "units": "arbitrary",
+    "geometry": "boxes, paths, garden, dome"
+  },
+  "namespace": "MAHAL_LOCAL_EULER_V1",
+  "rooms": [
+    {
+      "id": "ATRIUM",
+      "label": "Atrium",
+      "hotel_local": {
+        "h": 0,
+        "d": 0,
+        "k": 0,
+        "phase": "exp(i*pi*(2*k+1)/2^d)"
+      },
+      "xyz": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        3.6,
+        3.6,
+        2.8
+      ],
+      "role": "Orientacja i powrót"
+    },
+    {
+      "id": "LIBRARY",
+      "label": "Biblioteka",
+      "hotel_local": {
+        "h": 1,
+        "d": 1,
+        "k": 0,
+        "phase": "exp(i*pi*(2*k+1)/2^d)"
+      },
+      "xyz": [
+        -5,
+        0,
+        0
+      ],
+      "size": [
+        3.6,
+        3.6,
+        2.8
+      ],
+      "role": "Źródła i zweryfikowane wspomnienia"
+    },
+    {
+      "id": "ATELIER",
+      "label": "Pracownia wyobraźni",
+      "hotel_local": {
+        "h": 2,
+        "d": 1,
+        "k": 1,
+        "phase": "exp(i*pi*(2*k+1)/2^d)"
+      },
+      "xyz": [
+        5,
+        0,
+        0
+      ],
+      "size": [
+        3.6,
+        3.6,
+        2.8
+      ],
+      "role": "Sceny hipotetyczne i transformacje"
+    },
+    {
+      "id": "GARDEN",
+      "label": "Ogród relacji",
+      "hotel_local": {
+        "h": 3,
+        "d": 2,
+        "k": 0,
+        "phase": "exp(i*pi*(2*k+1)/2^d)"
+      },
+      "xyz": [
+        0,
+        -5,
+        0
+      ],
+      "size": [
+        3.6,
+        3.6,
+        2.8
+      ],
+      "role": "Graf skojarzeń"
+    },
+    {
+      "id": "OBSERVATORY",
+      "label": "Obserwatorium fazowe",
+      "hotel_local": {
+        "h": 4,
+        "d": 2,
+        "k": 1,
+        "phase": "exp(i*pi*(2*k+1)/2^d)"
+      },
+      "xyz": [
+        0,
+        5,
+        0
+      ],
+      "size": [
+        3.6,
+        3.6,
+        2.8
+      ],
+      "role": "Widma i holonomia"
+    },
+    {
+      "id": "HOUSE",
+      "label": "Domek",
+      "hotel_local": {
+        "h": 5,
+        "d": 2,
+        "k": 2,
+        "phase": "exp(i*pi*(2*k+1)/2^d)"
+      },
+      "xyz": [
+        5,
+        5,
+        0
+      ],
+      "size": [
+        3.6,
+        3.6,
+        2.8
+      ],
+      "role": "Punkt odniesienia i rekonstrukcja sceny"
+    }
+  ],
+  "edges": [
+    {
+      "from": "ATRIUM",
+      "to": "LIBRARY",
+      "phase_link": null,
+      "status": "DESIGNED_NOT_OBSERVED"
+    },
+    {
+      "from": "ATRIUM",
+      "to": "ATELIER",
+      "phase_link": null,
+      "status": "DESIGNED_NOT_OBSERVED"
+    },
+    {
+      "from": "ATRIUM",
+      "to": "GARDEN",
+      "phase_link": null,
+      "status": "DESIGNED_NOT_OBSERVED"
+    },
+    {
+      "from": "ATRIUM",
+      "to": "OBSERVATORY",
+      "phase_link": null,
+      "status": "DESIGNED_NOT_OBSERVED"
+    },
+    {
+      "from": "ATELIER",
+      "to": "HOUSE",
+      "phase_link": null,
+      "status": "DESIGNED_NOT_OBSERVED"
+    },
+    {
+      "from": "OBSERVATORY",
+      "to": "HOUSE",
+      "phase_link": null,
+      "status": "DESIGNED_NOT_OBSERVED"
+    }
+  ],
+  "persistence": {
+    "AUX": "no write or archive",
+    "historical_events": "separate from imagined scene",
+    "canonical_CURRENT": "unchanged",
+    "location": "PNAML Mobile package, loaded into existing QHTRISurface"
+  },
+  "provenance": {
+    "request": "user instruction in current conversation",
+    "date": "2026-11-26",
+    "geometry_source": "PNAML Pip contract; proposed local scene coordinates"
+  }
+}

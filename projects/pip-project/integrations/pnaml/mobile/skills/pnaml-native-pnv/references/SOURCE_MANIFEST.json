@@ -1,0 +1,29 @@
+{
+  "schema": "PNAML_NATIVE_PNV_TERMINAL_SOURCE_V1",
+  "interpreter": {
+    "repository": "AdrianLipa90/PhaseNav-Natural-Coding-System",
+    "revision": "22a26cd409311da7c0997874b0f9a7050047b287",
+    "path": "src/phasenav_natural_code/native_pnv_exec_v01.py",
+    "git_blob": "e7ab1f80072b725917fad2ade9f2c6be7e5da1e2"
+  },
+  "programs": [
+    {
+      "repository": "AdrianLipa90/Memory-Ontology",
+      "ref": "research/fold-collatz-memory-dynamics",
+      "path": "native/MEMORY_CAUSAL_OBSERVATION_GATE_V0_1.pnv",
+      "git_blob": "cb176e74dfa26cb91b23b82272b4df3d5df61607"
+    },
+    {
+      "repository": "AdrianLipa90/Memory-Ontology",
+      "ref": "research/fold-collatz-memory-dynamics",
+      "path": "native/IMAGINARY_COLLATZ_HISTORY_V0_1.pnv",
+      "git_blob": "f2e974336a9cdedf4aa502ebb47317c05c7ce66e"
+    }
+  ],
+  "execution": "EXISTING_UPSTREAM_INTERPRETER_IN_LOCAL_TERMINAL",
+  "native_noema_verified": false,
+  "mcp_connector_added": false,
+  "new_interpreter_implementation": false,
+  "new_transform_bindings": false,
+  "historical_receipt_interpreter_blob": "c9041234cc66d5670e7b74f0c101434647067341"
+}
