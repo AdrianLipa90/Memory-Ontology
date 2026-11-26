@@ -21,6 +21,10 @@ The existing NOEMA address is NOEMA:PIP. The current connector's logical surface
 
 Status: source-index integration. The original archive remains in the author's Library; the GitHub project references it and includes the original PNV source. Full binary archive transfer and native execution are not part of the verified commit.
 
-## IDT structural Hotel — executable serial specialization
+## Historical IDT structural Hotel — v0.1 (superseded)
 
-[Source crosswalk and representation](IDT_HOTEL_OCCURRENCE_V0_1.md) · [origin](native/PIP_HOTEL_SERIAL_ORIGIN_V0_1.pnv) · [step](native/PIP_HOTEL_SERIAL_STEP_V0_1.pnv) · [witness](native/PIP_HOTEL_INDEX_WITNESS_V0_1.pnv) · [recorded evidence](benchmarks/PIP_HOTEL_IDT_RECEIPT_V0_1.json). The active candidate transition represents the occupied Hotel as the former NOW node, with its causal parent chain, not a separately maintained guest register. Nine original-interpreter executions, 16/16 witness assertions and 4/4 negative observation controls. Native producer binding and concurrent frontier remain open.
+[Source crosswalk and representation](IDT_HOTEL_OCCURRENCE_V0_1.md) · [origin](native/PIP_HOTEL_SERIAL_ORIGIN_V0_1.pnv) · [step](native/PIP_HOTEL_SERIAL_STEP_V0_1.pnv) · [witness](native/PIP_HOTEL_INDEX_WITNESS_V0_1.pnv) · [recorded evidence](benchmarks/PIP_HOTEL_IDT_RECEIPT_V0_1.json). The historical v0.1 transition represents the occupied Hotel as the former NOW node, with its causal parent chain, not a separately maintained guest register. Nine original-interpreter executions, 16/16 witness assertions and 4/4 negative observation controls. Native producer binding and concurrent frontier remain open.
+
+## Active Pip effective half-time — v0.2
+
+[Author definition and source crosswalk](IDT_HOTEL_EFFECTIVE_HALF_TIME_V0_2.md) · [origin](native/PIP_HOTEL_SERIAL_ORIGIN_V0_2.pnv) · [step](native/PIP_HOTEL_SERIAL_STEP_V0_2.pnv) · [test witness](native/PIP_HOTEL_INDEX_WITNESS_V0_2.pnv) · [receipt](benchmarks/PIP_EFFECTIVE_HALF_TIME_RECEIPT_V0_2.json). 2π = 360° = half-time; 4π = 720° = full time. One link per half-time, no external time or edge-ID prerequisite. The v0.1 external dtheta definition is superseded. Nine original-interpreter executions, 24/24 assertions on synthetic inputs.
