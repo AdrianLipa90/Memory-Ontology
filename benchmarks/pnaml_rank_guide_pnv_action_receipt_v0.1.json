@@ -1,0 +1,711 @@
+{
+  "schema": "PNAML_RANK_GUIDE_PNV_ACTION_LOCAL_WITNESS_V0_1",
+  "scope": "Recovered synthetic journals copied locally. Host glue explicitly maps room IDs to two synthetic PNV observation programs; no native binding or live AUX; no semantic agent action, no new callbacks. Rank scores copied into existing PNCS RouteState, not learned by GUIDE itself. Static PNV inputs only; immutable journal event integrity checked. No hashes of dynamic fields.",
+  "procedural_runtime_git_blob": "0f15643bea303cd5327e896521e37080230f1c4e",
+  "cases": {
+    "baseline": {
+      "rank": [
+        {
+          "room_id": "a",
+          "content_id": "fixture:old-route",
+          "a": 0.6,
+          "rho": 1,
+          "F": 0.15,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        },
+        {
+          "room_id": "b",
+          "content_id": "fixture:corrected-route",
+          "a": 0.4,
+          "rho": 1,
+          "F": 0.1,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        }
+      ],
+      "guide": "a",
+      "executed_program": "COUNT_ONLY_ACTION_V0_1.pnv",
+      "outputs": {
+        "copies": {
+          "emitted": {
+            "COUNT": 3
+          },
+          "receipt": {
+            "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+            "program_source_sha256": "11597c77bf8b0b3b867bd9394e069b11da619767477cb4211c98066ed99a002b",
+            "program_graph_sha256": "0f6a98c05a9d87f8baf3761b71564c9c4cebcda84504e2a49154adde0696173b",
+            "pnv_version": 1,
+            "epistemic": "CHYBA",
+            "mode": "READ_ONLY",
+            "trace": [
+              {
+                "op": "COUNT",
+                "opcode": "SOURCE",
+                "result_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+              }
+            ],
+            "assertions": [],
+            "emitted": [
+              [
+                "COUNT",
+                "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+              ]
+            ],
+            "effect_boundary": {
+              "shell": false,
+              "subprocess": false,
+              "network": false,
+              "git": false,
+              "device": false,
+              "arbitrary_filesystem": false,
+              "external_effects": false,
+              "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+              "interpreter_shell": false,
+              "interpreter_subprocess": false,
+              "interpreter_network": false,
+              "interpreter_git": false,
+              "interpreter_device": false,
+              "interpreter_arbitrary_filesystem": false,
+              "interpreter_external_effects": false,
+              "callbacks_invoked": [],
+              "callback_effects_verified": true
+            },
+            "external_semantics_injected": true,
+            "unknown_semantics_fail_closed": true,
+            "deterministic_receipt": true,
+            "callback_determinism_verified": true,
+            "receipt_sha256": "a68cc72d1cdf39517ddc612d234d3c105a73972a9daffcd9e2545abcc05b0d48"
+          }
+        },
+        "independent": {
+          "emitted": {
+            "COUNT": 3
+          },
+          "receipt": {
+            "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+            "program_source_sha256": "11597c77bf8b0b3b867bd9394e069b11da619767477cb4211c98066ed99a002b",
+            "program_graph_sha256": "0f6a98c05a9d87f8baf3761b71564c9c4cebcda84504e2a49154adde0696173b",
+            "pnv_version": 1,
+            "epistemic": "CHYBA",
+            "mode": "READ_ONLY",
+            "trace": [
+              {
+                "op": "COUNT",
+                "opcode": "SOURCE",
+                "result_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+              }
+            ],
+            "assertions": [],
+            "emitted": [
+              [
+                "COUNT",
+                "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+              ]
+            ],
+            "effect_boundary": {
+              "shell": false,
+              "subprocess": false,
+              "network": false,
+              "git": false,
+              "device": false,
+              "arbitrary_filesystem": false,
+              "external_effects": false,
+              "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+              "interpreter_shell": false,
+              "interpreter_subprocess": false,
+              "interpreter_network": false,
+              "interpreter_git": false,
+              "interpreter_device": false,
+              "interpreter_arbitrary_filesystem": false,
+              "interpreter_external_effects": false,
+              "callbacks_invoked": [],
+              "callback_effects_verified": true
+            },
+            "external_semantics_injected": true,
+            "unknown_semantics_fail_closed": true,
+            "deterministic_receipt": true,
+            "callback_determinism_verified": true,
+            "receipt_sha256": "a68cc72d1cdf39517ddc612d234d3c105a73972a9daffcd9e2545abcc05b0d48"
+          }
+        }
+      },
+      "history": [
+        "NOEMA:PIP:MEM:a",
+        "NOEMA:PIP:MEM:b"
+      ],
+      "journal_verified": "PASS",
+      "same_origin_distinction_preserved": false
+    },
+    "visit_only": {
+      "rank": [
+        {
+          "room_id": "a",
+          "content_id": "fixture:old-route",
+          "a": 0.6,
+          "rho": 1,
+          "F": 0.15,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        },
+        {
+          "room_id": "b",
+          "content_id": "fixture:corrected-route",
+          "a": 0.4,
+          "rho": 1,
+          "F": 0.1,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        }
+      ],
+      "guide": "a",
+      "executed_program": "COUNT_ONLY_ACTION_V0_1.pnv",
+      "outputs": {
+        "copies": {
+          "emitted": {
+            "COUNT": 3
+          },
+          "receipt": {
+            "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+            "program_source_sha256": "11597c77bf8b0b3b867bd9394e069b11da619767477cb4211c98066ed99a002b",
+            "program_graph_sha256": "0f6a98c05a9d87f8baf3761b71564c9c4cebcda84504e2a49154adde0696173b",
+            "pnv_version": 1,
+            "epistemic": "CHYBA",
+            "mode": "READ_ONLY",
+            "trace": [
+              {
+                "op": "COUNT",
+                "opcode": "SOURCE",
+                "result_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+              }
+            ],
+            "assertions": [],
+            "emitted": [
+              [
+                "COUNT",
+                "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+              ]
+            ],
+            "effect_boundary": {
+              "shell": false,
+              "subprocess": false,
+              "network": false,
+              "git": false,
+              "device": false,
+              "arbitrary_filesystem": false,
+              "external_effects": false,
+              "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+              "interpreter_shell": false,
+              "interpreter_subprocess": false,
+              "interpreter_network": false,
+              "interpreter_git": false,
+              "interpreter_device": false,
+              "interpreter_arbitrary_filesystem": false,
+              "interpreter_external_effects": false,
+              "callbacks_invoked": [],
+              "callback_effects_verified": true
+            },
+            "external_semantics_injected": true,
+            "unknown_semantics_fail_closed": true,
+            "deterministic_receipt": true,
+            "callback_determinism_verified": true,
+            "receipt_sha256": "a68cc72d1cdf39517ddc612d234d3c105a73972a9daffcd9e2545abcc05b0d48"
+          }
+        },
+        "independent": {
+          "emitted": {
+            "COUNT": 3
+          },
+          "receipt": {
+            "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+            "program_source_sha256": "11597c77bf8b0b3b867bd9394e069b11da619767477cb4211c98066ed99a002b",
+            "program_graph_sha256": "0f6a98c05a9d87f8baf3761b71564c9c4cebcda84504e2a49154adde0696173b",
+            "pnv_version": 1,
+            "epistemic": "CHYBA",
+            "mode": "READ_ONLY",
+            "trace": [
+              {
+                "op": "COUNT",
+                "opcode": "SOURCE",
+                "result_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+              }
+            ],
+            "assertions": [],
+            "emitted": [
+              [
+                "COUNT",
+                "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+              ]
+            ],
+            "effect_boundary": {
+              "shell": false,
+              "subprocess": false,
+              "network": false,
+              "git": false,
+              "device": false,
+              "arbitrary_filesystem": false,
+              "external_effects": false,
+              "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+              "interpreter_shell": false,
+              "interpreter_subprocess": false,
+              "interpreter_network": false,
+              "interpreter_git": false,
+              "interpreter_device": false,
+              "interpreter_arbitrary_filesystem": false,
+              "interpreter_external_effects": false,
+              "callbacks_invoked": [],
+              "callback_effects_verified": true
+            },
+            "external_semantics_injected": true,
+            "unknown_semantics_fail_closed": true,
+            "deterministic_receipt": true,
+            "callback_determinism_verified": true,
+            "receipt_sha256": "a68cc72d1cdf39517ddc612d234d3c105a73972a9daffcd9e2545abcc05b0d48"
+          }
+        }
+      },
+      "history": [
+        "NOEMA:PIP:MEM:a",
+        "NOEMA:PIP:MEM:b",
+        "NOEMA:PIP:MEM:visit-b"
+      ],
+      "journal_verified": "PASS",
+      "same_origin_distinction_preserved": false
+    },
+    "reinforced": {
+      "rank": [
+        {
+          "room_id": "b",
+          "content_id": "fixture:corrected-route",
+          "a": 0.7,
+          "rho": 1,
+          "F": 0.175,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        },
+        {
+          "room_id": "a",
+          "content_id": "fixture:old-route",
+          "a": 0.6,
+          "rho": 1,
+          "F": 0.15,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        }
+      ],
+      "guide": "b",
+      "executed_program": "PRESERVE_ORIGIN_ACTION_V0_1.pnv",
+      "outputs": {
+        "copies": {
+          "emitted": {
+            "RECORD": [
+              3,
+              [
+                "s1",
+                "s1",
+                "s1"
+              ],
+              "SAME_ORIGIN",
+              "SYNTHETIC"
+            ]
+          },
+          "receipt": {
+            "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+            "program_source_sha256": "0cd0f0d58d0d71b0e5e95fbd360fda3d47c72d59147ff25030b1703d423f1405",
+            "program_graph_sha256": "96ae36f5dce948514e4385403529a7ed1649db32ea006fbd162b1972bed198a9",
+            "pnv_version": 1,
+            "epistemic": "CHYBA",
+            "mode": "READ_ONLY",
+            "trace": [
+              {
+                "op": "COUNT",
+                "opcode": "SOURCE",
+                "result_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+              },
+              {
+                "op": "ORIGINS",
+                "opcode": "SOURCE",
+                "result_sha256": "4505968c06bc3020deaf73079a4cf151ecbb2c1192742e1c18de7b57ea1391de"
+              },
+              {
+                "op": "INDEPENDENCE",
+                "opcode": "SOURCE",
+                "result_sha256": "1cdafea58d9ac819522a5659bdffacc231ed224826e66cdb3c58bc2ce88644fd"
+              },
+              {
+                "op": "STATUS",
+                "opcode": "SOURCE",
+                "result_sha256": "743c332eeb67c866ecdc424354fef74eccc0a88635a9304f20ad2f472907245e"
+              },
+              {
+                "op": "RECORD",
+                "opcode": "COMPOSITION",
+                "result_sha256": "401ba85d9df458490d9fe00945d45a0e9ccb3f99e81688b781fb35781089a818"
+              }
+            ],
+            "assertions": [],
+            "emitted": [
+              [
+                "RECORD",
+                "401ba85d9df458490d9fe00945d45a0e9ccb3f99e81688b781fb35781089a818"
+              ]
+            ],
+            "effect_boundary": {
+              "shell": false,
+              "subprocess": false,
+              "network": false,
+              "git": false,
+              "device": false,
+              "arbitrary_filesystem": false,
+              "external_effects": false,
+              "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+              "interpreter_shell": false,
+              "interpreter_subprocess": false,
+              "interpreter_network": false,
+              "interpreter_git": false,
+              "interpreter_device": false,
+              "interpreter_arbitrary_filesystem": false,
+              "interpreter_external_effects": false,
+              "callbacks_invoked": [],
+              "callback_effects_verified": true
+            },
+            "external_semantics_injected": true,
+            "unknown_semantics_fail_closed": true,
+            "deterministic_receipt": true,
+            "callback_determinism_verified": true,
+            "receipt_sha256": "bf25d7909f048888d401f4e3cfdffd83e8a957e0c7cd55762905f8b66088da67"
+          }
+        },
+        "independent": {
+          "emitted": {
+            "RECORD": [
+              3,
+              [
+                "s1",
+                "s2",
+                "s3"
+              ],
+              "ASSUMED_CONDITIONALLY_INDEPENDENT",
+              "SYNTHETIC"
+            ]
+          },
+          "receipt": {
+            "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+            "program_source_sha256": "0cd0f0d58d0d71b0e5e95fbd360fda3d47c72d59147ff25030b1703d423f1405",
+            "program_graph_sha256": "96ae36f5dce948514e4385403529a7ed1649db32ea006fbd162b1972bed198a9",
+            "pnv_version": 1,
+            "epistemic": "CHYBA",
+            "mode": "READ_ONLY",
+            "trace": [
+              {
+                "op": "COUNT",
+                "opcode": "SOURCE",
+                "result_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+              },
+              {
+                "op": "ORIGINS",
+                "opcode": "SOURCE",
+                "result_sha256": "ae772788372b2c38e171ab1cf6a3b7ef9032a929af75ae14f8492426a6f08f15"
+              },
+              {
+                "op": "INDEPENDENCE",
+                "opcode": "SOURCE",
+                "result_sha256": "8e3944e67a127e2b9e392cd8a0285f9bc2197fe5de4fd0f69250105b515b8d7b"
+              },
+              {
+                "op": "STATUS",
+                "opcode": "SOURCE",
+                "result_sha256": "743c332eeb67c866ecdc424354fef74eccc0a88635a9304f20ad2f472907245e"
+              },
+              {
+                "op": "RECORD",
+                "opcode": "COMPOSITION",
+                "result_sha256": "1860ab9413e861cf62cefe3fbf4e91a29073e901f2bc864ee8fa6531876e6cf3"
+              }
+            ],
+            "assertions": [],
+            "emitted": [
+              [
+                "RECORD",
+                "1860ab9413e861cf62cefe3fbf4e91a29073e901f2bc864ee8fa6531876e6cf3"
+              ]
+            ],
+            "effect_boundary": {
+              "shell": false,
+              "subprocess": false,
+              "network": false,
+              "git": false,
+              "device": false,
+              "arbitrary_filesystem": false,
+              "external_effects": false,
+              "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+              "interpreter_shell": false,
+              "interpreter_subprocess": false,
+              "interpreter_network": false,
+              "interpreter_git": false,
+              "interpreter_device": false,
+              "interpreter_arbitrary_filesystem": false,
+              "interpreter_external_effects": false,
+              "callbacks_invoked": [],
+              "callback_effects_verified": true
+            },
+            "external_semantics_injected": true,
+            "unknown_semantics_fail_closed": true,
+            "deterministic_receipt": true,
+            "callback_determinism_verified": true,
+            "receipt_sha256": "bdc2475188045f8cd546a584ae72070eeed3bff1163851a70ae351723f55e1fa"
+          }
+        }
+      },
+      "history": [
+        "NOEMA:PIP:MEM:a",
+        "NOEMA:PIP:MEM:b",
+        "NOEMA:PIP:MEM:reinforce-b"
+      ],
+      "journal_verified": "PASS",
+      "same_origin_distinction_preserved": true
+    },
+    "changed_context": {
+      "rank": [
+        {
+          "room_id": "a",
+          "content_id": "fixture:old-route",
+          "a": 0.6,
+          "rho": 1,
+          "F": 0.15,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        },
+        {
+          "room_id": "b",
+          "content_id": "fixture:corrected-route",
+          "a": 0.7,
+          "rho": 1,
+          "F": 0.0,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        }
+      ],
+      "guide": "a",
+      "executed_program": "COUNT_ONLY_ACTION_V0_1.pnv",
+      "outputs": {
+        "copies": {
+          "emitted": {
+            "COUNT": 3
+          },
+          "receipt": {
+            "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+            "program_source_sha256": "11597c77bf8b0b3b867bd9394e069b11da619767477cb4211c98066ed99a002b",
+            "program_graph_sha256": "0f6a98c05a9d87f8baf3761b71564c9c4cebcda84504e2a49154adde0696173b",
+            "pnv_version": 1,
+            "epistemic": "CHYBA",
+            "mode": "READ_ONLY",
+            "trace": [
+              {
+                "op": "COUNT",
+                "opcode": "SOURCE",
+                "result_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+              }
+            ],
+            "assertions": [],
+            "emitted": [
+              [
+                "COUNT",
+                "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+              ]
+            ],
+            "effect_boundary": {
+              "shell": false,
+              "subprocess": false,
+              "network": false,
+              "git": false,
+              "device": false,
+              "arbitrary_filesystem": false,
+              "external_effects": false,
+              "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+              "interpreter_shell": false,
+              "interpreter_subprocess": false,
+              "interpreter_network": false,
+              "interpreter_git": false,
+              "interpreter_device": false,
+              "interpreter_arbitrary_filesystem": false,
+              "interpreter_external_effects": false,
+              "callbacks_invoked": [],
+              "callback_effects_verified": true
+            },
+            "external_semantics_injected": true,
+            "unknown_semantics_fail_closed": true,
+            "deterministic_receipt": true,
+            "callback_determinism_verified": true,
+            "receipt_sha256": "a68cc72d1cdf39517ddc612d234d3c105a73972a9daffcd9e2545abcc05b0d48"
+          }
+        },
+        "independent": {
+          "emitted": {
+            "COUNT": 3
+          },
+          "receipt": {
+            "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+            "program_source_sha256": "11597c77bf8b0b3b867bd9394e069b11da619767477cb4211c98066ed99a002b",
+            "program_graph_sha256": "0f6a98c05a9d87f8baf3761b71564c9c4cebcda84504e2a49154adde0696173b",
+            "pnv_version": 1,
+            "epistemic": "CHYBA",
+            "mode": "READ_ONLY",
+            "trace": [
+              {
+                "op": "COUNT",
+                "opcode": "SOURCE",
+                "result_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+              }
+            ],
+            "assertions": [],
+            "emitted": [
+              [
+                "COUNT",
+                "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+              ]
+            ],
+            "effect_boundary": {
+              "shell": false,
+              "subprocess": false,
+              "network": false,
+              "git": false,
+              "device": false,
+              "arbitrary_filesystem": false,
+              "external_effects": false,
+              "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+              "interpreter_shell": false,
+              "interpreter_subprocess": false,
+              "interpreter_network": false,
+              "interpreter_git": false,
+              "interpreter_device": false,
+              "interpreter_arbitrary_filesystem": false,
+              "interpreter_external_effects": false,
+              "callbacks_invoked": [],
+              "callback_effects_verified": true
+            },
+            "external_semantics_injected": true,
+            "unknown_semantics_fail_closed": true,
+            "deterministic_receipt": true,
+            "callback_determinism_verified": true,
+            "receipt_sha256": "a68cc72d1cdf39517ddc612d234d3c105a73972a9daffcd9e2545abcc05b0d48"
+          }
+        }
+      },
+      "history": [
+        "NOEMA:PIP:MEM:a",
+        "NOEMA:PIP:MEM:b",
+        "NOEMA:PIP:MEM:reinforce-b"
+      ],
+      "journal_verified": "PASS",
+      "same_origin_distinction_preserved": false
+    }
+  },
+  "counterfactual": {
+    "guide": "a",
+    "emitted": {
+      "COUNT": 3
+    },
+    "factual_unchanged": true,
+    "factual_guide": "b",
+    "receipt": {
+      "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+      "program_source_sha256": "11597c77bf8b0b3b867bd9394e069b11da619767477cb4211c98066ed99a002b",
+      "program_graph_sha256": "0f6a98c05a9d87f8baf3761b71564c9c4cebcda84504e2a49154adde0696173b",
+      "pnv_version": 1,
+      "epistemic": "CHYBA",
+      "mode": "READ_ONLY",
+      "trace": [
+        {
+          "op": "COUNT",
+          "opcode": "SOURCE",
+          "result_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+        }
+      ],
+      "assertions": [],
+      "emitted": [
+        [
+          "COUNT",
+          "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce"
+        ]
+      ],
+      "effect_boundary": {
+        "shell": false,
+        "subprocess": false,
+        "network": false,
+        "git": false,
+        "device": false,
+        "arbitrary_filesystem": false,
+        "external_effects": false,
+        "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+        "interpreter_shell": false,
+        "interpreter_subprocess": false,
+        "interpreter_network": false,
+        "interpreter_git": false,
+        "interpreter_device": false,
+        "interpreter_arbitrary_filesystem": false,
+        "interpreter_external_effects": false,
+        "callbacks_invoked": [],
+        "callback_effects_verified": true
+      },
+      "external_semantics_injected": true,
+      "unknown_semantics_fail_closed": true,
+      "deterministic_receipt": true,
+      "callback_determinism_verified": true,
+      "receipt_sha256": "a68cc72d1cdf39517ddc612d234d3c105a73972a9daffcd9e2545abcc05b0d48"
+    }
+  },
+  "checks": {
+    "baseline_a": true,
+    "visit_only_a": true,
+    "reinforced_b": true,
+    "changed_context_a": true,
+    "counterfactual_a": true,
+    "factual_unchanged": true,
+    "baseline_loses_distinction": true,
+    "corrected_preserves_distinction": true,
+    "all_rank_guide_agree": true
+  },
+  "boundary_controls": {
+    "tie": {
+      "rank_order": [
+        "b",
+        "a"
+      ],
+      "guide": "a"
+    },
+    "unknown": {
+      "rank": [
+        {
+          "room_id": "a",
+          "content_id": "fixture:old-route",
+          "a": 0.6,
+          "rho": 1,
+          "F": 0.0,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        },
+        {
+          "room_id": "b",
+          "content_id": "fixture:corrected-route",
+          "a": 0.7,
+          "rho": null,
+          "F": null,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        }
+      ],
+      "guide_initialization": "TypeError: float() argument must be a string or a real number, not 'NoneType'"
+    }
+  },
+  "fixture_parameters": {
+    "t": 0.06,
+    "x0": 1,
+    "d_eff": 3,
+    "F0": 1,
+    "distance": 1,
+    "rho": 1
+  },
+  "live_aux_read": false,
+  "dynamic_hashing": false
+}

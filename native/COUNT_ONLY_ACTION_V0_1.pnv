@@ -1,0 +1,6 @@
+PNV 1
+EPISTEMIC CHYBA
+MODE READ_ONLY
+# Synthetic count-only observation contract.
+OP COUNT SOURCE evidence.transmission_count
+EMIT COUNT
