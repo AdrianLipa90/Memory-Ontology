@@ -1,0 +1,10 @@
+PNV 1
+EPISTEMIC CHYBA
+MODE READ_ONLY
+# Synthetic provenance-aware observation contract.
+OP COUNT SOURCE evidence.transmission_count
+OP ORIGINS SOURCE evidence.origin_ids
+OP INDEPENDENCE SOURCE evidence.independence_status
+OP STATUS SOURCE evidence.verification_status
+OP RECORD COMPOSITION COUNT ORIGINS INDEPENDENCE STATUS
+EMIT RECORD
