@@ -1,0 +1,51 @@
+{
+  "scope": "STATIC_SYNTHETIC_FIXTURE",
+  "interpreter_blob": "c9041234cc66d5670e7b74f0c101434647067341",
+  "theta_unit": "pi",
+  "execution_count": 9,
+  "witness_assertions": 24,
+  "source_sha256": {
+    "origin": "bf371138daabbdf404b99c039c1a62cc30ab57322489fff6fdfdca3438eea4f3",
+    "step": "cc8466332441e7e00c6a99ccf075aa55b169294488c4ddb3df84abdaae037eb7",
+    "witness": "b18d2815e489109177c3303c914b8115300877257b7e582fe9da383ddbaa07d4"
+  },
+  "rows": [
+    [
+      0,
+      1,
+      0,
+      "A"
+    ],
+    [
+      1,
+      -1,
+      2,
+      "B"
+    ],
+    [
+      2,
+      1,
+      4,
+      "A"
+    ],
+    [
+      3,
+      -1,
+      6,
+      "C"
+    ],
+    [
+      4,
+      1,
+      8,
+      "A"
+    ]
+  ],
+  "row_columns": [
+    "index",
+    "spinor_i_sign",
+    "theta_pi_units",
+    "object"
+  ],
+  "full_local_receipt_sha256": "42fea6b419f7e84865b7526002d41c1717a1669081b9fcf0b6e2f0bd1f8ec95d"
+}
