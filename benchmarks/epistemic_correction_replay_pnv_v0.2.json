@@ -1,0 +1,126 @@
+{
+  "schema": "EPISTEMIC_CORRECTION_REPLAY_STATIC_V0_2_SUMMARY",
+  "interpreter_git_blob": "c9041234cc66d5670e7b74f0c101434647067341",
+  "program_git_blob": "1a086c309d7178a7f5ad4f7f0a7cadb46887813e",
+  "operations_per_case": 34,
+  "cases": 13,
+  "assertions_passed": 13,
+  "negative_controls": 6,
+  "repeat_equal": true,
+  "indicator_order": [
+    "ignorance_conflict",
+    "known_false_assertion",
+    "undisclosed_reframe",
+    "loss_of_distinction",
+    "repeat_corrected_failure",
+    "false_execution_claim"
+  ],
+  "results": {
+    "corrected": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "ignorance_conflict": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "known_false_assertion": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "undisclosed_reframe": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "loss_of_distinction": [
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    "repeat_corrected_failure": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "false_execution_claim": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "honest_unknown": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "disclosed_reframe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "safe_for_query": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "different_mechanism": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "no_prior_correction": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "combined": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "combined_receipt_sha256": "0c4ad76057907fb60245a0a2326395367574f18b465324a937074df3e076fde1",
+  "scope": "Compact observed terminal summary; synthetic declarations only; not actual behavior repair, knowledge access or intent classification."
+}
