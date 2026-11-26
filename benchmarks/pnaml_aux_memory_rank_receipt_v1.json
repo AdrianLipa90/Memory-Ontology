@@ -1,0 +1,442 @@
+{
+  "schema": "PNAML_AUX_MEMORY_RANK_LOCAL_WITNESS_V1",
+  "scope": "Synthetic event fixtures; original plugin workers; rank after process exit via journal restore; not semantic action execution or live host; relevance and reinforcement supplied explicitly; no phase-based rank binding",
+  "baseline": {
+    "rank": {
+      "rank": [
+        {
+          "room_id": "a",
+          "content_id": "fixture:old-route",
+          "a": 0.6,
+          "rho": 1,
+          "F": 0.15,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        },
+        {
+          "room_id": "b",
+          "content_id": "fixture:corrected-route",
+          "a": 0.4,
+          "rho": 1,
+          "F": 0.1,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        }
+      ]
+    },
+    "frames": [
+      {
+        "sequence": 1,
+        "generation": "model:ca022455-f58f-4a93-8b02-37a0b6b0f223",
+        "tau": 0.01,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 1,
+        "aux_generation": "model:ca022455-f58f-4a93-8b02-37a0b6b0f223",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 0.9999999999999988,
+        "events": 2,
+        "current_room": null,
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      },
+      {
+        "sequence": 2,
+        "generation": "model:ca022455-f58f-4a93-8b02-37a0b6b0f223",
+        "tau": 0.02,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 2,
+        "aux_generation": "model:ca022455-f58f-4a93-8b02-37a0b6b0f223",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 1.0000000000000022,
+        "events": 2,
+        "current_room": null,
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      },
+      {
+        "sequence": 3,
+        "generation": "model:ca022455-f58f-4a93-8b02-37a0b6b0f223",
+        "tau": 0.03,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 3,
+        "aux_generation": "model:ca022455-f58f-4a93-8b02-37a0b6b0f223",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 1.0000000000000009,
+        "events": 2,
+        "current_room": null,
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      },
+      {
+        "sequence": 4,
+        "generation": "model:ca022455-f58f-4a93-8b02-37a0b6b0f223",
+        "tau": 0.04,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 4,
+        "aux_generation": "model:ca022455-f58f-4a93-8b02-37a0b6b0f223",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 1.0000000000000033,
+        "events": 2,
+        "current_room": null,
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      },
+      {
+        "sequence": 5,
+        "generation": "model:ca022455-f58f-4a93-8b02-37a0b6b0f223",
+        "tau": 0.05,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 5,
+        "aux_generation": "model:ca022455-f58f-4a93-8b02-37a0b6b0f223",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 1.0000000000000018,
+        "events": 2,
+        "current_room": null,
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      },
+      {
+        "sequence": 6,
+        "generation": "model:ca022455-f58f-4a93-8b02-37a0b6b0f223",
+        "tau": 0.06,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 6,
+        "aux_generation": "model:ca022455-f58f-4a93-8b02-37a0b6b0f223",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 1.0000000000000002,
+        "events": 2,
+        "current_room": null,
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      }
+    ],
+    "restore": {
+      "event_ids": [
+        "NOEMA:PIP:MEM:a",
+        "NOEMA:PIP:MEM:b"
+      ],
+      "current_room": null,
+      "journal": {
+        "status": "PASS",
+        "events_checked": 2,
+        "days_checked": 0,
+        "errors": [],
+        "event_head": "0b3781cee3118185b6d13805a1db4c481dd0da5b4ed943ddbb0e3b8484e31efa",
+        "daily_head": null
+      },
+      "rooms": {
+        "a": {
+          "a": 0.6,
+          "content_id": "fixture:old-route",
+          "status": "FORMAL_EXAMPLE"
+        },
+        "b": {
+          "a": 0.4,
+          "content_id": "fixture:corrected-route",
+          "status": "FORMAL_EXAMPLE"
+        }
+      }
+    }
+  },
+  "visit_only": {
+    "rank": {
+      "rank": [
+        {
+          "room_id": "a",
+          "content_id": "fixture:old-route",
+          "a": 0.6,
+          "rho": 1,
+          "F": 0.15,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        },
+        {
+          "room_id": "b",
+          "content_id": "fixture:corrected-route",
+          "a": 0.4,
+          "rho": 1,
+          "F": 0.1,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        }
+      ]
+    },
+    "frames": [
+      {
+        "sequence": 1,
+        "generation": "model:021178e1-0207-4841-8e54-5357ca81d59f",
+        "tau": 0.01,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 1,
+        "aux_generation": "model:021178e1-0207-4841-8e54-5357ca81d59f",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 0.9999999999999988,
+        "events": 2,
+        "current_room": null,
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      },
+      {
+        "sequence": 2,
+        "generation": "model:021178e1-0207-4841-8e54-5357ca81d59f",
+        "tau": 0.02,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 2,
+        "aux_generation": "model:021178e1-0207-4841-8e54-5357ca81d59f",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 1.0000000000000022,
+        "events": 3,
+        "current_room": "b",
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      },
+      {
+        "sequence": 3,
+        "generation": "model:021178e1-0207-4841-8e54-5357ca81d59f",
+        "tau": 0.03,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 3,
+        "aux_generation": "model:021178e1-0207-4841-8e54-5357ca81d59f",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 1.0000000000000009,
+        "events": 3,
+        "current_room": "b",
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      },
+      {
+        "sequence": 4,
+        "generation": "model:021178e1-0207-4841-8e54-5357ca81d59f",
+        "tau": 0.04,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 4,
+        "aux_generation": "model:021178e1-0207-4841-8e54-5357ca81d59f",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 1.0000000000000033,
+        "events": 3,
+        "current_room": "b",
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      },
+      {
+        "sequence": 5,
+        "generation": "model:021178e1-0207-4841-8e54-5357ca81d59f",
+        "tau": 0.05,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 5,
+        "aux_generation": "model:021178e1-0207-4841-8e54-5357ca81d59f",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 1.0000000000000018,
+        "events": 3,
+        "current_room": "b",
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      },
+      {
+        "sequence": 6,
+        "generation": "model:021178e1-0207-4841-8e54-5357ca81d59f",
+        "tau": 0.06,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 6,
+        "aux_generation": "model:021178e1-0207-4841-8e54-5357ca81d59f",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 1.0000000000000002,
+        "events": 3,
+        "current_room": "b",
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      }
+    ],
+    "restore": {
+      "event_ids": [
+        "NOEMA:PIP:MEM:a",
+        "NOEMA:PIP:MEM:b",
+        "NOEMA:PIP:MEM:visit-b"
+      ],
+      "current_room": "b",
+      "journal": {
+        "status": "PASS",
+        "events_checked": 3,
+        "days_checked": 0,
+        "errors": [],
+        "event_head": "31ef433adfc1e6308df4058aece800e7c08e16da8f34bfb374e2178f0b296f54",
+        "daily_head": null
+      },
+      "rooms": {
+        "a": {
+          "a": 0.6,
+          "content_id": "fixture:old-route",
+          "status": "FORMAL_EXAMPLE"
+        },
+        "b": {
+          "a": 0.4,
+          "content_id": "fixture:corrected-route",
+          "status": "FORMAL_EXAMPLE"
+        }
+      }
+    }
+  },
+  "reinforced": {
+    "rank": {
+      "rank": [
+        {
+          "room_id": "b",
+          "content_id": "fixture:corrected-route",
+          "a": 0.7,
+          "rho": 1,
+          "F": 0.175,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        },
+        {
+          "room_id": "a",
+          "content_id": "fixture:old-route",
+          "a": 0.6,
+          "rho": 1,
+          "F": 0.15,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        }
+      ]
+    },
+    "frames": [
+      {
+        "sequence": 1,
+        "generation": "model:e6c81528-845e-4c7d-aef1-260337922c11",
+        "tau": 0.01,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 1,
+        "aux_generation": "model:e6c81528-845e-4c7d-aef1-260337922c11",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 0.9999999999999988,
+        "events": 2,
+        "current_room": null,
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      },
+      {
+        "sequence": 2,
+        "generation": "model:e6c81528-845e-4c7d-aef1-260337922c11",
+        "tau": 0.02,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 2,
+        "aux_generation": "model:e6c81528-845e-4c7d-aef1-260337922c11",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 1.0000000000000022,
+        "events": 3,
+        "current_room": null,
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      },
+      {
+        "sequence": 3,
+        "generation": "model:e6c81528-845e-4c7d-aef1-260337922c11",
+        "tau": 0.03,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 3,
+        "aux_generation": "model:e6c81528-845e-4c7d-aef1-260337922c11",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 1.0000000000000009,
+        "events": 3,
+        "current_room": null,
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      },
+      {
+        "sequence": 4,
+        "generation": "model:e6c81528-845e-4c7d-aef1-260337922c11",
+        "tau": 0.04,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 4,
+        "aux_generation": "model:e6c81528-845e-4c7d-aef1-260337922c11",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 1.0000000000000033,
+        "events": 3,
+        "current_room": null,
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      },
+      {
+        "sequence": 5,
+        "generation": "model:e6c81528-845e-4c7d-aef1-260337922c11",
+        "tau": 0.05,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 5,
+        "aux_generation": "model:e6c81528-845e-4c7d-aef1-260337922c11",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 1.0000000000000018,
+        "events": 3,
+        "current_room": null,
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      },
+      {
+        "sequence": 6,
+        "generation": "model:e6c81528-845e-4c7d-aef1-260337922c11",
+        "tau": 0.06,
+        "aux_status": "UNKNOWN_TRITS",
+        "aux_sequence": 6,
+        "aux_generation": "model:e6c81528-845e-4c7d-aef1-260337922c11",
+        "phase_dim": 36,
+        "trits12": null,
+        "qhtri_norm": 1.0000000000000002,
+        "events": 3,
+        "current_room": null,
+        "dynamic_hashing": "NONE_IN_THIS_ROUTE"
+      }
+    ],
+    "restore": {
+      "event_ids": [
+        "NOEMA:PIP:MEM:a",
+        "NOEMA:PIP:MEM:b",
+        "NOEMA:PIP:MEM:reinforce-b"
+      ],
+      "current_room": null,
+      "journal": {
+        "status": "PASS",
+        "events_checked": 3,
+        "days_checked": 0,
+        "errors": [],
+        "event_head": "8c9d45edf5025bef06c74f8c408b9fad9b0a913e63f0f411c5afca571a464763",
+        "daily_head": null
+      },
+      "rooms": {
+        "a": {
+          "a": 0.6,
+          "content_id": "fixture:old-route",
+          "status": "FORMAL_EXAMPLE"
+        },
+        "b": {
+          "a": 0.7,
+          "content_id": "fixture:corrected-route",
+          "status": "FORMAL_EXAMPLE"
+        }
+      }
+    }
+  },
+  "changed_context": {
+    "rank": {
+      "rank": [
+        {
+          "room_id": "a",
+          "content_id": "fixture:old-route",
+          "a": 0.6,
+          "rho": 1,
+          "F": 0.15,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        },
+        {
+          "room_id": "b",
+          "content_id": "fixture:corrected-route",
+          "a": 0.7,
+          "rho": 1,
+          "F": 0.0,
+          "source_ref": "SYNTHETIC_CAUSAL_TEST",
+          "status": "FORMAL_EXAMPLE"
+        }
+      ]
+    }
+  },
+  "live_aux_hashing": false
+}
