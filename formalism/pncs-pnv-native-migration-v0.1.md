@@ -46,3 +46,7 @@ determination.comparable_opportunities = independently observed admissible compa
 ## Next work / verification boundary
 
 Resolve source KAKU and RADICAL identities via exact PNCS/PNV authoring, bind only actual admitted operators, run native interpreter and inverse-lineage tests through existing NOEMA/PNAML path, compare emitted results to historical receipts. If a binding or runtime is unavailable, report the specific limitation before changing implementation language. Do not promote candidate status on the basis of structural inspection. The branch is a research proposal and must remain distinct from a validated native runtime.
+
+## Follow-up v0.2
+
+[PNCS Memory Grammar and PNLF integration](pncs-memory-pnlf-integration-v0.2.md) links the pre-existing native semantic grammar, exact CLX2 source terms, orbital/liminal memory and a callback-free PNV observation gate. Two new PNCS source candidates and one PNV gate; native admission/execution remains open. Includes the migration ledger for the 12 earlier Python diagnostic files.
