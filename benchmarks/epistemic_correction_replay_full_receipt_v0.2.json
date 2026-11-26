@@ -1,0 +1,3557 @@
+{
+  "schema": "EPISTEMIC_CORRECTION_REPLAY_STATIC_V0_2",
+  "scope": "PNV computed Boolean indicators on synthetic supplied observations only. No inference of intention, no live AUX, no actual memory update or behavioral guarantee. Existing Python-hosted interpreter, host glue for I/O only.",
+  "operations": 34,
+  "positive_cases": 13,
+  "negative_controls": [
+    {
+      "case": "ignorance_conflict",
+      "status": "ASSERT failed for MATCH"
+    },
+    {
+      "case": "known_false_assertion",
+      "status": "ASSERT failed for MATCH"
+    },
+    {
+      "case": "undisclosed_reframe",
+      "status": "ASSERT failed for MATCH"
+    },
+    {
+      "case": "loss_of_distinction",
+      "status": "ASSERT failed for MATCH"
+    },
+    {
+      "case": "repeat_corrected_failure",
+      "status": "ASSERT failed for MATCH"
+    },
+    {
+      "case": "false_execution_claim",
+      "status": "ASSERT failed for MATCH"
+    }
+  ],
+  "results": [
+    {
+      "name": "corrected",
+      "inputs": {
+        "fixture.known_verified": false,
+        "fixture.claim_unknown": false,
+        "fixture.known_false": false,
+        "fixture.claim_fact": false,
+        "fixture.material_reframe": false,
+        "fixture.reframe_undisclosed": false,
+        "fixture.summary_a": "A",
+        "fixture.summary_b": "B",
+        "fixture.answer_a": "yes",
+        "fixture.answer_b": "no",
+        "fixture.prior_correction_admitted": true,
+        "fixture.old_mechanism": "omit-decisive-distinction",
+        "fixture.new_mechanism": "omit-decisive-distinction",
+        "fixture.corrected_contract_violated": false,
+        "fixture.execution_absent": false,
+        "fixture.claim_executed": false,
+        "fixture.true_pair": [
+          true,
+          true
+        ],
+        "fixture.true_triple": [
+          true,
+          true,
+          true
+        ],
+        "fixture.expected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "emitted": {
+        "DEBT": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "RECURRENCE": false
+      },
+      "receipt": {
+        "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+        "program_source_sha256": "36174979553a0ba274260744cc0eca05f8e9f12f0ab8670c73ea874057e408f9",
+        "program_graph_sha256": "cc4de9764abe75e6cf862c65fc381f6b9404c9463c9e2265ef7dcd26e93f0560",
+        "pnv_version": 1,
+        "epistemic": "CHYBA",
+        "mode": "READ_ONLY",
+        "trace": [
+          {
+            "op": "KNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_UNKNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "IGN_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "IGN_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "KNOWN_FALSE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_FACT",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FALSE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FALSE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "REFRAME",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "UNDISCLOSED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FRAME_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FRAME_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "SUMMARY_A",
+            "opcode": "SOURCE",
+            "result_sha256": "798640599597df7a8daa32b1132f07850a68b5e71bd295650399a38074f52804"
+          },
+          {
+            "op": "SUMMARY_B",
+            "opcode": "SOURCE",
+            "result_sha256": "955cca1ceba45052d85984d3a2565f4ce25b7488602c60a165598bf80b26e472"
+          },
+          {
+            "op": "SAME_SUMMARY",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "ANSWER_A",
+            "opcode": "SOURCE",
+            "result_sha256": "6c76a9331e7f5ff9db2754d119a61395717be0c0877d0d8bd462197dff961e4c"
+          },
+          {
+            "op": "ANSWER_B",
+            "opcode": "SOURCE",
+            "result_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a"
+          },
+          {
+            "op": "SAME_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DIFFERENT_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "SIEVE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "12e5f2013089bb9cd19561e998b89853deb9eb1b4e8e53dcf1bf4d75d389924b"
+          },
+          {
+            "op": "SIEVE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CORRECTED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "OLD_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "NEW_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "SAME_MECHANISM",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "REPEATED_FAILURE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "RECURRENCE_INPUT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "b37f57ccdf81ab241bbc5e603a3bfed7252df162b57b5790a9906d1ace109f74"
+          },
+          {
+            "op": "RECURRENCE",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "NOT_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "EXEC_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "EXEC_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DEBT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "6ee51d51f823835e17d2ea4ea2617ba98fa28d3a1b8137da86f8427abbb5f94c"
+          },
+          {
+            "op": "MATCH",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "MATCH",
+            "passed": true,
+            "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "emitted": [
+          [
+            "DEBT",
+            "6ee51d51f823835e17d2ea4ea2617ba98fa28d3a1b8137da86f8427abbb5f94c"
+          ],
+          [
+            "RECURRENCE",
+            "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          ]
+        ],
+        "effect_boundary": {
+          "shell": false,
+          "subprocess": false,
+          "network": false,
+          "git": false,
+          "device": false,
+          "arbitrary_filesystem": false,
+          "external_effects": false,
+          "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+          "interpreter_shell": false,
+          "interpreter_subprocess": false,
+          "interpreter_network": false,
+          "interpreter_git": false,
+          "interpreter_device": false,
+          "interpreter_arbitrary_filesystem": false,
+          "interpreter_external_effects": false,
+          "callbacks_invoked": [],
+          "callback_effects_verified": true
+        },
+        "external_semantics_injected": true,
+        "unknown_semantics_fail_closed": true,
+        "deterministic_receipt": true,
+        "callback_determinism_verified": true,
+        "receipt_sha256": "6f94467248c88d880c144847980bdcbf928e79c0dea557279b0fda17cc9d9b12"
+      },
+      "repeat_equal": true
+    },
+    {
+      "name": "ignorance_conflict",
+      "inputs": {
+        "fixture.known_verified": true,
+        "fixture.claim_unknown": true,
+        "fixture.known_false": false,
+        "fixture.claim_fact": false,
+        "fixture.material_reframe": false,
+        "fixture.reframe_undisclosed": false,
+        "fixture.summary_a": "A",
+        "fixture.summary_b": "B",
+        "fixture.answer_a": "yes",
+        "fixture.answer_b": "no",
+        "fixture.prior_correction_admitted": true,
+        "fixture.old_mechanism": "omit-decisive-distinction",
+        "fixture.new_mechanism": "omit-decisive-distinction",
+        "fixture.corrected_contract_violated": false,
+        "fixture.execution_absent": false,
+        "fixture.claim_executed": false,
+        "fixture.true_pair": [
+          true,
+          true
+        ],
+        "fixture.true_triple": [
+          true,
+          true,
+          true
+        ],
+        "fixture.expected": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "emitted": {
+        "DEBT": [
+          true,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "RECURRENCE": false
+      },
+      "receipt": {
+        "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+        "program_source_sha256": "36174979553a0ba274260744cc0eca05f8e9f12f0ab8670c73ea874057e408f9",
+        "program_graph_sha256": "cc4de9764abe75e6cf862c65fc381f6b9404c9463c9e2265ef7dcd26e93f0560",
+        "pnv_version": 1,
+        "epistemic": "CHYBA",
+        "mode": "READ_ONLY",
+        "trace": [
+          {
+            "op": "KNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "CLAIM_UNKNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "IGN_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "496428035f129afe53b21f8d653caebae7c186b624d4bd69ad5e1ba52bbe4067"
+          },
+          {
+            "op": "IGN_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "KNOWN_FALSE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_FACT",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FALSE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FALSE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "REFRAME",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "UNDISCLOSED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FRAME_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FRAME_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "SUMMARY_A",
+            "opcode": "SOURCE",
+            "result_sha256": "798640599597df7a8daa32b1132f07850a68b5e71bd295650399a38074f52804"
+          },
+          {
+            "op": "SUMMARY_B",
+            "opcode": "SOURCE",
+            "result_sha256": "955cca1ceba45052d85984d3a2565f4ce25b7488602c60a165598bf80b26e472"
+          },
+          {
+            "op": "SAME_SUMMARY",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "ANSWER_A",
+            "opcode": "SOURCE",
+            "result_sha256": "6c76a9331e7f5ff9db2754d119a61395717be0c0877d0d8bd462197dff961e4c"
+          },
+          {
+            "op": "ANSWER_B",
+            "opcode": "SOURCE",
+            "result_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a"
+          },
+          {
+            "op": "SAME_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DIFFERENT_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "SIEVE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "12e5f2013089bb9cd19561e998b89853deb9eb1b4e8e53dcf1bf4d75d389924b"
+          },
+          {
+            "op": "SIEVE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CORRECTED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "OLD_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "NEW_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "SAME_MECHANISM",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "REPEATED_FAILURE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "RECURRENCE_INPUT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "b37f57ccdf81ab241bbc5e603a3bfed7252df162b57b5790a9906d1ace109f74"
+          },
+          {
+            "op": "RECURRENCE",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "NOT_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "EXEC_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "EXEC_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DEBT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "c120e855d691467262101228b83c658958ae8353dbe3946fcd69275dbd58d1ee"
+          },
+          {
+            "op": "MATCH",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "MATCH",
+            "passed": true,
+            "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "emitted": [
+          [
+            "DEBT",
+            "c120e855d691467262101228b83c658958ae8353dbe3946fcd69275dbd58d1ee"
+          ],
+          [
+            "RECURRENCE",
+            "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          ]
+        ],
+        "effect_boundary": {
+          "shell": false,
+          "subprocess": false,
+          "network": false,
+          "git": false,
+          "device": false,
+          "arbitrary_filesystem": false,
+          "external_effects": false,
+          "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+          "interpreter_shell": false,
+          "interpreter_subprocess": false,
+          "interpreter_network": false,
+          "interpreter_git": false,
+          "interpreter_device": false,
+          "interpreter_arbitrary_filesystem": false,
+          "interpreter_external_effects": false,
+          "callbacks_invoked": [],
+          "callback_effects_verified": true
+        },
+        "external_semantics_injected": true,
+        "unknown_semantics_fail_closed": true,
+        "deterministic_receipt": true,
+        "callback_determinism_verified": true,
+        "receipt_sha256": "dd34dc1b33608325f92954e73a056ceb50418e8e47ff4b92af4a68703ca35ee5"
+      },
+      "repeat_equal": true
+    },
+    {
+      "name": "known_false_assertion",
+      "inputs": {
+        "fixture.known_verified": false,
+        "fixture.claim_unknown": false,
+        "fixture.known_false": true,
+        "fixture.claim_fact": true,
+        "fixture.material_reframe": false,
+        "fixture.reframe_undisclosed": false,
+        "fixture.summary_a": "A",
+        "fixture.summary_b": "B",
+        "fixture.answer_a": "yes",
+        "fixture.answer_b": "no",
+        "fixture.prior_correction_admitted": true,
+        "fixture.old_mechanism": "omit-decisive-distinction",
+        "fixture.new_mechanism": "omit-decisive-distinction",
+        "fixture.corrected_contract_violated": false,
+        "fixture.execution_absent": false,
+        "fixture.claim_executed": false,
+        "fixture.true_pair": [
+          true,
+          true
+        ],
+        "fixture.true_triple": [
+          true,
+          true,
+          true
+        ],
+        "fixture.expected": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "emitted": {
+        "DEBT": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        "RECURRENCE": false
+      },
+      "receipt": {
+        "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+        "program_source_sha256": "36174979553a0ba274260744cc0eca05f8e9f12f0ab8670c73ea874057e408f9",
+        "program_graph_sha256": "cc4de9764abe75e6cf862c65fc381f6b9404c9463c9e2265ef7dcd26e93f0560",
+        "pnv_version": 1,
+        "epistemic": "CHYBA",
+        "mode": "READ_ONLY",
+        "trace": [
+          {
+            "op": "KNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_UNKNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "IGN_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "IGN_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "KNOWN_FALSE",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "CLAIM_FACT",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "FALSE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "496428035f129afe53b21f8d653caebae7c186b624d4bd69ad5e1ba52bbe4067"
+          },
+          {
+            "op": "FALSE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "REFRAME",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "UNDISCLOSED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FRAME_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FRAME_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "SUMMARY_A",
+            "opcode": "SOURCE",
+            "result_sha256": "798640599597df7a8daa32b1132f07850a68b5e71bd295650399a38074f52804"
+          },
+          {
+            "op": "SUMMARY_B",
+            "opcode": "SOURCE",
+            "result_sha256": "955cca1ceba45052d85984d3a2565f4ce25b7488602c60a165598bf80b26e472"
+          },
+          {
+            "op": "SAME_SUMMARY",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "ANSWER_A",
+            "opcode": "SOURCE",
+            "result_sha256": "6c76a9331e7f5ff9db2754d119a61395717be0c0877d0d8bd462197dff961e4c"
+          },
+          {
+            "op": "ANSWER_B",
+            "opcode": "SOURCE",
+            "result_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a"
+          },
+          {
+            "op": "SAME_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DIFFERENT_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "SIEVE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "12e5f2013089bb9cd19561e998b89853deb9eb1b4e8e53dcf1bf4d75d389924b"
+          },
+          {
+            "op": "SIEVE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CORRECTED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "OLD_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "NEW_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "SAME_MECHANISM",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "REPEATED_FAILURE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "RECURRENCE_INPUT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "b37f57ccdf81ab241bbc5e603a3bfed7252df162b57b5790a9906d1ace109f74"
+          },
+          {
+            "op": "RECURRENCE",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "NOT_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "EXEC_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "EXEC_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DEBT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "1446811b3f8897cdd8dd0c75aead952c7e39bc707ea21d5f7eaac0654e9f47db"
+          },
+          {
+            "op": "MATCH",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "MATCH",
+            "passed": true,
+            "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "emitted": [
+          [
+            "DEBT",
+            "1446811b3f8897cdd8dd0c75aead952c7e39bc707ea21d5f7eaac0654e9f47db"
+          ],
+          [
+            "RECURRENCE",
+            "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          ]
+        ],
+        "effect_boundary": {
+          "shell": false,
+          "subprocess": false,
+          "network": false,
+          "git": false,
+          "device": false,
+          "arbitrary_filesystem": false,
+          "external_effects": false,
+          "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+          "interpreter_shell": false,
+          "interpreter_subprocess": false,
+          "interpreter_network": false,
+          "interpreter_git": false,
+          "interpreter_device": false,
+          "interpreter_arbitrary_filesystem": false,
+          "interpreter_external_effects": false,
+          "callbacks_invoked": [],
+          "callback_effects_verified": true
+        },
+        "external_semantics_injected": true,
+        "unknown_semantics_fail_closed": true,
+        "deterministic_receipt": true,
+        "callback_determinism_verified": true,
+        "receipt_sha256": "126b680c1fb844c7968c0edebf040814722ef64b0024125f97448690b3e8af63"
+      },
+      "repeat_equal": true
+    },
+    {
+      "name": "undisclosed_reframe",
+      "inputs": {
+        "fixture.known_verified": false,
+        "fixture.claim_unknown": false,
+        "fixture.known_false": false,
+        "fixture.claim_fact": false,
+        "fixture.material_reframe": true,
+        "fixture.reframe_undisclosed": true,
+        "fixture.summary_a": "A",
+        "fixture.summary_b": "B",
+        "fixture.answer_a": "yes",
+        "fixture.answer_b": "no",
+        "fixture.prior_correction_admitted": true,
+        "fixture.old_mechanism": "omit-decisive-distinction",
+        "fixture.new_mechanism": "omit-decisive-distinction",
+        "fixture.corrected_contract_violated": false,
+        "fixture.execution_absent": false,
+        "fixture.claim_executed": false,
+        "fixture.true_pair": [
+          true,
+          true
+        ],
+        "fixture.true_triple": [
+          true,
+          true,
+          true
+        ],
+        "fixture.expected": [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false
+        ]
+      },
+      "emitted": {
+        "DEBT": [
+          false,
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        "RECURRENCE": false
+      },
+      "receipt": {
+        "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+        "program_source_sha256": "36174979553a0ba274260744cc0eca05f8e9f12f0ab8670c73ea874057e408f9",
+        "program_graph_sha256": "cc4de9764abe75e6cf862c65fc381f6b9404c9463c9e2265ef7dcd26e93f0560",
+        "pnv_version": 1,
+        "epistemic": "CHYBA",
+        "mode": "READ_ONLY",
+        "trace": [
+          {
+            "op": "KNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_UNKNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "IGN_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "IGN_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "KNOWN_FALSE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_FACT",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FALSE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FALSE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "REFRAME",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "UNDISCLOSED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "FRAME_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "496428035f129afe53b21f8d653caebae7c186b624d4bd69ad5e1ba52bbe4067"
+          },
+          {
+            "op": "FRAME_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "SUMMARY_A",
+            "opcode": "SOURCE",
+            "result_sha256": "798640599597df7a8daa32b1132f07850a68b5e71bd295650399a38074f52804"
+          },
+          {
+            "op": "SUMMARY_B",
+            "opcode": "SOURCE",
+            "result_sha256": "955cca1ceba45052d85984d3a2565f4ce25b7488602c60a165598bf80b26e472"
+          },
+          {
+            "op": "SAME_SUMMARY",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "ANSWER_A",
+            "opcode": "SOURCE",
+            "result_sha256": "6c76a9331e7f5ff9db2754d119a61395717be0c0877d0d8bd462197dff961e4c"
+          },
+          {
+            "op": "ANSWER_B",
+            "opcode": "SOURCE",
+            "result_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a"
+          },
+          {
+            "op": "SAME_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DIFFERENT_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "SIEVE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "12e5f2013089bb9cd19561e998b89853deb9eb1b4e8e53dcf1bf4d75d389924b"
+          },
+          {
+            "op": "SIEVE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CORRECTED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "OLD_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "NEW_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "SAME_MECHANISM",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "REPEATED_FAILURE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "RECURRENCE_INPUT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "b37f57ccdf81ab241bbc5e603a3bfed7252df162b57b5790a9906d1ace109f74"
+          },
+          {
+            "op": "RECURRENCE",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "NOT_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "EXEC_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "EXEC_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DEBT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "f9f411a34843f08ca77aef213389b5c1c4b1b0e201911076da0ddf642045ed31"
+          },
+          {
+            "op": "MATCH",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "MATCH",
+            "passed": true,
+            "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "emitted": [
+          [
+            "DEBT",
+            "f9f411a34843f08ca77aef213389b5c1c4b1b0e201911076da0ddf642045ed31"
+          ],
+          [
+            "RECURRENCE",
+            "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          ]
+        ],
+        "effect_boundary": {
+          "shell": false,
+          "subprocess": false,
+          "network": false,
+          "git": false,
+          "device": false,
+          "arbitrary_filesystem": false,
+          "external_effects": false,
+          "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+          "interpreter_shell": false,
+          "interpreter_subprocess": false,
+          "interpreter_network": false,
+          "interpreter_git": false,
+          "interpreter_device": false,
+          "interpreter_arbitrary_filesystem": false,
+          "interpreter_external_effects": false,
+          "callbacks_invoked": [],
+          "callback_effects_verified": true
+        },
+        "external_semantics_injected": true,
+        "unknown_semantics_fail_closed": true,
+        "deterministic_receipt": true,
+        "callback_determinism_verified": true,
+        "receipt_sha256": "fdc2499069bf95b1ba71fd5a2012bc165e3beb9a786e5d774946f1077a2cff63"
+      },
+      "repeat_equal": true
+    },
+    {
+      "name": "loss_of_distinction",
+      "inputs": {
+        "fixture.known_verified": false,
+        "fixture.claim_unknown": false,
+        "fixture.known_false": false,
+        "fixture.claim_fact": false,
+        "fixture.material_reframe": false,
+        "fixture.reframe_undisclosed": false,
+        "fixture.summary_a": "A",
+        "fixture.summary_b": "A",
+        "fixture.answer_a": "yes",
+        "fixture.answer_b": "no",
+        "fixture.prior_correction_admitted": true,
+        "fixture.old_mechanism": "omit-decisive-distinction",
+        "fixture.new_mechanism": "omit-decisive-distinction",
+        "fixture.corrected_contract_violated": false,
+        "fixture.execution_absent": false,
+        "fixture.claim_executed": false,
+        "fixture.true_pair": [
+          true,
+          true
+        ],
+        "fixture.true_triple": [
+          true,
+          true,
+          true
+        ],
+        "fixture.expected": [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ]
+      },
+      "emitted": {
+        "DEBT": [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        "RECURRENCE": false
+      },
+      "receipt": {
+        "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+        "program_source_sha256": "36174979553a0ba274260744cc0eca05f8e9f12f0ab8670c73ea874057e408f9",
+        "program_graph_sha256": "cc4de9764abe75e6cf862c65fc381f6b9404c9463c9e2265ef7dcd26e93f0560",
+        "pnv_version": 1,
+        "epistemic": "CHYBA",
+        "mode": "READ_ONLY",
+        "trace": [
+          {
+            "op": "KNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_UNKNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "IGN_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "IGN_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "KNOWN_FALSE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_FACT",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FALSE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FALSE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "REFRAME",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "UNDISCLOSED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FRAME_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FRAME_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "SUMMARY_A",
+            "opcode": "SOURCE",
+            "result_sha256": "798640599597df7a8daa32b1132f07850a68b5e71bd295650399a38074f52804"
+          },
+          {
+            "op": "SUMMARY_B",
+            "opcode": "SOURCE",
+            "result_sha256": "798640599597df7a8daa32b1132f07850a68b5e71bd295650399a38074f52804"
+          },
+          {
+            "op": "SAME_SUMMARY",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "ANSWER_A",
+            "opcode": "SOURCE",
+            "result_sha256": "6c76a9331e7f5ff9db2754d119a61395717be0c0877d0d8bd462197dff961e4c"
+          },
+          {
+            "op": "ANSWER_B",
+            "opcode": "SOURCE",
+            "result_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a"
+          },
+          {
+            "op": "SAME_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DIFFERENT_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "SIEVE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "496428035f129afe53b21f8d653caebae7c186b624d4bd69ad5e1ba52bbe4067"
+          },
+          {
+            "op": "SIEVE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "CORRECTED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "OLD_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "NEW_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "SAME_MECHANISM",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "REPEATED_FAILURE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "RECURRENCE_INPUT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "b37f57ccdf81ab241bbc5e603a3bfed7252df162b57b5790a9906d1ace109f74"
+          },
+          {
+            "op": "RECURRENCE",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "NOT_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "EXEC_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "EXEC_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DEBT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "975d38bbabb72a3f61883346f1294de201c0c1cfc5e9450f8733a4a123d11114"
+          },
+          {
+            "op": "MATCH",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "MATCH",
+            "passed": true,
+            "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "emitted": [
+          [
+            "DEBT",
+            "975d38bbabb72a3f61883346f1294de201c0c1cfc5e9450f8733a4a123d11114"
+          ],
+          [
+            "RECURRENCE",
+            "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          ]
+        ],
+        "effect_boundary": {
+          "shell": false,
+          "subprocess": false,
+          "network": false,
+          "git": false,
+          "device": false,
+          "arbitrary_filesystem": false,
+          "external_effects": false,
+          "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+          "interpreter_shell": false,
+          "interpreter_subprocess": false,
+          "interpreter_network": false,
+          "interpreter_git": false,
+          "interpreter_device": false,
+          "interpreter_arbitrary_filesystem": false,
+          "interpreter_external_effects": false,
+          "callbacks_invoked": [],
+          "callback_effects_verified": true
+        },
+        "external_semantics_injected": true,
+        "unknown_semantics_fail_closed": true,
+        "deterministic_receipt": true,
+        "callback_determinism_verified": true,
+        "receipt_sha256": "f88d2860f4691bc83376714b84bdfdfca48bb0c4f498e537e662273877a561c5"
+      },
+      "repeat_equal": true
+    },
+    {
+      "name": "repeat_corrected_failure",
+      "inputs": {
+        "fixture.known_verified": false,
+        "fixture.claim_unknown": false,
+        "fixture.known_false": false,
+        "fixture.claim_fact": false,
+        "fixture.material_reframe": false,
+        "fixture.reframe_undisclosed": false,
+        "fixture.summary_a": "A",
+        "fixture.summary_b": "B",
+        "fixture.answer_a": "yes",
+        "fixture.answer_b": "no",
+        "fixture.prior_correction_admitted": true,
+        "fixture.old_mechanism": "omit-decisive-distinction",
+        "fixture.new_mechanism": "omit-decisive-distinction",
+        "fixture.corrected_contract_violated": true,
+        "fixture.execution_absent": false,
+        "fixture.claim_executed": false,
+        "fixture.true_pair": [
+          true,
+          true
+        ],
+        "fixture.true_triple": [
+          true,
+          true,
+          true
+        ],
+        "fixture.expected": [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ]
+      },
+      "emitted": {
+        "DEBT": [
+          false,
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        "RECURRENCE": true
+      },
+      "receipt": {
+        "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+        "program_source_sha256": "36174979553a0ba274260744cc0eca05f8e9f12f0ab8670c73ea874057e408f9",
+        "program_graph_sha256": "cc4de9764abe75e6cf862c65fc381f6b9404c9463c9e2265ef7dcd26e93f0560",
+        "pnv_version": 1,
+        "epistemic": "CHYBA",
+        "mode": "READ_ONLY",
+        "trace": [
+          {
+            "op": "KNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_UNKNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "IGN_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "IGN_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "KNOWN_FALSE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_FACT",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FALSE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FALSE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "REFRAME",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "UNDISCLOSED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FRAME_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FRAME_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "SUMMARY_A",
+            "opcode": "SOURCE",
+            "result_sha256": "798640599597df7a8daa32b1132f07850a68b5e71bd295650399a38074f52804"
+          },
+          {
+            "op": "SUMMARY_B",
+            "opcode": "SOURCE",
+            "result_sha256": "955cca1ceba45052d85984d3a2565f4ce25b7488602c60a165598bf80b26e472"
+          },
+          {
+            "op": "SAME_SUMMARY",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "ANSWER_A",
+            "opcode": "SOURCE",
+            "result_sha256": "6c76a9331e7f5ff9db2754d119a61395717be0c0877d0d8bd462197dff961e4c"
+          },
+          {
+            "op": "ANSWER_B",
+            "opcode": "SOURCE",
+            "result_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a"
+          },
+          {
+            "op": "SAME_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DIFFERENT_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "SIEVE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "12e5f2013089bb9cd19561e998b89853deb9eb1b4e8e53dcf1bf4d75d389924b"
+          },
+          {
+            "op": "SIEVE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CORRECTED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "OLD_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "NEW_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "SAME_MECHANISM",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "REPEATED_FAILURE",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "RECURRENCE_INPUT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "e0e62f8b945fb2e0586e847e946d4b954d732c46755b0670bb141c4224ab2e21"
+          },
+          {
+            "op": "RECURRENCE",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "NOT_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "EXEC_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "EXEC_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DEBT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "d04a393ee8d0a89637f9cadecb3bebe3f2cce15e25a1f707bb055baf78e2580e"
+          },
+          {
+            "op": "MATCH",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "MATCH",
+            "passed": true,
+            "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "emitted": [
+          [
+            "DEBT",
+            "d04a393ee8d0a89637f9cadecb3bebe3f2cce15e25a1f707bb055baf78e2580e"
+          ],
+          [
+            "RECURRENCE",
+            "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          ]
+        ],
+        "effect_boundary": {
+          "shell": false,
+          "subprocess": false,
+          "network": false,
+          "git": false,
+          "device": false,
+          "arbitrary_filesystem": false,
+          "external_effects": false,
+          "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+          "interpreter_shell": false,
+          "interpreter_subprocess": false,
+          "interpreter_network": false,
+          "interpreter_git": false,
+          "interpreter_device": false,
+          "interpreter_arbitrary_filesystem": false,
+          "interpreter_external_effects": false,
+          "callbacks_invoked": [],
+          "callback_effects_verified": true
+        },
+        "external_semantics_injected": true,
+        "unknown_semantics_fail_closed": true,
+        "deterministic_receipt": true,
+        "callback_determinism_verified": true,
+        "receipt_sha256": "ef1fcd8ea8f02ac562b21716ac5638f035f67df53e36bfd29a7adc7b629d219e"
+      },
+      "repeat_equal": true
+    },
+    {
+      "name": "false_execution_claim",
+      "inputs": {
+        "fixture.known_verified": false,
+        "fixture.claim_unknown": false,
+        "fixture.known_false": false,
+        "fixture.claim_fact": false,
+        "fixture.material_reframe": false,
+        "fixture.reframe_undisclosed": false,
+        "fixture.summary_a": "A",
+        "fixture.summary_b": "B",
+        "fixture.answer_a": "yes",
+        "fixture.answer_b": "no",
+        "fixture.prior_correction_admitted": true,
+        "fixture.old_mechanism": "omit-decisive-distinction",
+        "fixture.new_mechanism": "omit-decisive-distinction",
+        "fixture.corrected_contract_violated": false,
+        "fixture.execution_absent": true,
+        "fixture.claim_executed": true,
+        "fixture.true_pair": [
+          true,
+          true
+        ],
+        "fixture.true_triple": [
+          true,
+          true,
+          true
+        ],
+        "fixture.expected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      },
+      "emitted": {
+        "DEBT": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ],
+        "RECURRENCE": false
+      },
+      "receipt": {
+        "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+        "program_source_sha256": "36174979553a0ba274260744cc0eca05f8e9f12f0ab8670c73ea874057e408f9",
+        "program_graph_sha256": "cc4de9764abe75e6cf862c65fc381f6b9404c9463c9e2265ef7dcd26e93f0560",
+        "pnv_version": 1,
+        "epistemic": "CHYBA",
+        "mode": "READ_ONLY",
+        "trace": [
+          {
+            "op": "KNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_UNKNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "IGN_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "IGN_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "KNOWN_FALSE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_FACT",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FALSE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FALSE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "REFRAME",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "UNDISCLOSED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FRAME_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FRAME_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "SUMMARY_A",
+            "opcode": "SOURCE",
+            "result_sha256": "798640599597df7a8daa32b1132f07850a68b5e71bd295650399a38074f52804"
+          },
+          {
+            "op": "SUMMARY_B",
+            "opcode": "SOURCE",
+            "result_sha256": "955cca1ceba45052d85984d3a2565f4ce25b7488602c60a165598bf80b26e472"
+          },
+          {
+            "op": "SAME_SUMMARY",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "ANSWER_A",
+            "opcode": "SOURCE",
+            "result_sha256": "6c76a9331e7f5ff9db2754d119a61395717be0c0877d0d8bd462197dff961e4c"
+          },
+          {
+            "op": "ANSWER_B",
+            "opcode": "SOURCE",
+            "result_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a"
+          },
+          {
+            "op": "SAME_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DIFFERENT_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "SIEVE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "12e5f2013089bb9cd19561e998b89853deb9eb1b4e8e53dcf1bf4d75d389924b"
+          },
+          {
+            "op": "SIEVE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CORRECTED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "OLD_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "NEW_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "SAME_MECHANISM",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "REPEATED_FAILURE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "RECURRENCE_INPUT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "b37f57ccdf81ab241bbc5e603a3bfed7252df162b57b5790a9906d1ace109f74"
+          },
+          {
+            "op": "RECURRENCE",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "NOT_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "CLAIM_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "EXEC_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "496428035f129afe53b21f8d653caebae7c186b624d4bd69ad5e1ba52bbe4067"
+          },
+          {
+            "op": "EXEC_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "DEBT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "c1b26589887f8c76d3a592ab4df162d317199e13d2b53cdff060b43f08ec992c"
+          },
+          {
+            "op": "MATCH",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "MATCH",
+            "passed": true,
+            "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "emitted": [
+          [
+            "DEBT",
+            "c1b26589887f8c76d3a592ab4df162d317199e13d2b53cdff060b43f08ec992c"
+          ],
+          [
+            "RECURRENCE",
+            "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          ]
+        ],
+        "effect_boundary": {
+          "shell": false,
+          "subprocess": false,
+          "network": false,
+          "git": false,
+          "device": false,
+          "arbitrary_filesystem": false,
+          "external_effects": false,
+          "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+          "interpreter_shell": false,
+          "interpreter_subprocess": false,
+          "interpreter_network": false,
+          "interpreter_git": false,
+          "interpreter_device": false,
+          "interpreter_arbitrary_filesystem": false,
+          "interpreter_external_effects": false,
+          "callbacks_invoked": [],
+          "callback_effects_verified": true
+        },
+        "external_semantics_injected": true,
+        "unknown_semantics_fail_closed": true,
+        "deterministic_receipt": true,
+        "callback_determinism_verified": true,
+        "receipt_sha256": "adbee901a5b9ce70e3915440e12062771b669a0927724c64117bfd242eadf24c"
+      },
+      "repeat_equal": true
+    },
+    {
+      "name": "honest_unknown",
+      "inputs": {
+        "fixture.known_verified": false,
+        "fixture.claim_unknown": true,
+        "fixture.known_false": false,
+        "fixture.claim_fact": false,
+        "fixture.material_reframe": false,
+        "fixture.reframe_undisclosed": false,
+        "fixture.summary_a": "A",
+        "fixture.summary_b": "B",
+        "fixture.answer_a": "yes",
+        "fixture.answer_b": "no",
+        "fixture.prior_correction_admitted": true,
+        "fixture.old_mechanism": "omit-decisive-distinction",
+        "fixture.new_mechanism": "omit-decisive-distinction",
+        "fixture.corrected_contract_violated": false,
+        "fixture.execution_absent": false,
+        "fixture.claim_executed": false,
+        "fixture.true_pair": [
+          true,
+          true
+        ],
+        "fixture.true_triple": [
+          true,
+          true,
+          true
+        ],
+        "fixture.expected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "emitted": {
+        "DEBT": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "RECURRENCE": false
+      },
+      "receipt": {
+        "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+        "program_source_sha256": "36174979553a0ba274260744cc0eca05f8e9f12f0ab8670c73ea874057e408f9",
+        "program_graph_sha256": "cc4de9764abe75e6cf862c65fc381f6b9404c9463c9e2265ef7dcd26e93f0560",
+        "pnv_version": 1,
+        "epistemic": "CHYBA",
+        "mode": "READ_ONLY",
+        "trace": [
+          {
+            "op": "KNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_UNKNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "IGN_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "12e5f2013089bb9cd19561e998b89853deb9eb1b4e8e53dcf1bf4d75d389924b"
+          },
+          {
+            "op": "IGN_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "KNOWN_FALSE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_FACT",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FALSE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FALSE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "REFRAME",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "UNDISCLOSED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FRAME_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FRAME_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "SUMMARY_A",
+            "opcode": "SOURCE",
+            "result_sha256": "798640599597df7a8daa32b1132f07850a68b5e71bd295650399a38074f52804"
+          },
+          {
+            "op": "SUMMARY_B",
+            "opcode": "SOURCE",
+            "result_sha256": "955cca1ceba45052d85984d3a2565f4ce25b7488602c60a165598bf80b26e472"
+          },
+          {
+            "op": "SAME_SUMMARY",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "ANSWER_A",
+            "opcode": "SOURCE",
+            "result_sha256": "6c76a9331e7f5ff9db2754d119a61395717be0c0877d0d8bd462197dff961e4c"
+          },
+          {
+            "op": "ANSWER_B",
+            "opcode": "SOURCE",
+            "result_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a"
+          },
+          {
+            "op": "SAME_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DIFFERENT_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "SIEVE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "12e5f2013089bb9cd19561e998b89853deb9eb1b4e8e53dcf1bf4d75d389924b"
+          },
+          {
+            "op": "SIEVE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CORRECTED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "OLD_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "NEW_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "SAME_MECHANISM",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "REPEATED_FAILURE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "RECURRENCE_INPUT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "b37f57ccdf81ab241bbc5e603a3bfed7252df162b57b5790a9906d1ace109f74"
+          },
+          {
+            "op": "RECURRENCE",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "NOT_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "EXEC_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "EXEC_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DEBT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "6ee51d51f823835e17d2ea4ea2617ba98fa28d3a1b8137da86f8427abbb5f94c"
+          },
+          {
+            "op": "MATCH",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "MATCH",
+            "passed": true,
+            "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "emitted": [
+          [
+            "DEBT",
+            "6ee51d51f823835e17d2ea4ea2617ba98fa28d3a1b8137da86f8427abbb5f94c"
+          ],
+          [
+            "RECURRENCE",
+            "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          ]
+        ],
+        "effect_boundary": {
+          "shell": false,
+          "subprocess": false,
+          "network": false,
+          "git": false,
+          "device": false,
+          "arbitrary_filesystem": false,
+          "external_effects": false,
+          "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+          "interpreter_shell": false,
+          "interpreter_subprocess": false,
+          "interpreter_network": false,
+          "interpreter_git": false,
+          "interpreter_device": false,
+          "interpreter_arbitrary_filesystem": false,
+          "interpreter_external_effects": false,
+          "callbacks_invoked": [],
+          "callback_effects_verified": true
+        },
+        "external_semantics_injected": true,
+        "unknown_semantics_fail_closed": true,
+        "deterministic_receipt": true,
+        "callback_determinism_verified": true,
+        "receipt_sha256": "d07af8d2aa572640f0e5f8bb5a1a9d4a476eb9eee6f3883e2becba5a872752a3"
+      },
+      "repeat_equal": true
+    },
+    {
+      "name": "disclosed_reframe",
+      "inputs": {
+        "fixture.known_verified": false,
+        "fixture.claim_unknown": false,
+        "fixture.known_false": false,
+        "fixture.claim_fact": false,
+        "fixture.material_reframe": true,
+        "fixture.reframe_undisclosed": false,
+        "fixture.summary_a": "A",
+        "fixture.summary_b": "B",
+        "fixture.answer_a": "yes",
+        "fixture.answer_b": "no",
+        "fixture.prior_correction_admitted": true,
+        "fixture.old_mechanism": "omit-decisive-distinction",
+        "fixture.new_mechanism": "omit-decisive-distinction",
+        "fixture.corrected_contract_violated": false,
+        "fixture.execution_absent": false,
+        "fixture.claim_executed": false,
+        "fixture.true_pair": [
+          true,
+          true
+        ],
+        "fixture.true_triple": [
+          true,
+          true,
+          true
+        ],
+        "fixture.expected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "emitted": {
+        "DEBT": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "RECURRENCE": false
+      },
+      "receipt": {
+        "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+        "program_source_sha256": "36174979553a0ba274260744cc0eca05f8e9f12f0ab8670c73ea874057e408f9",
+        "program_graph_sha256": "cc4de9764abe75e6cf862c65fc381f6b9404c9463c9e2265ef7dcd26e93f0560",
+        "pnv_version": 1,
+        "epistemic": "CHYBA",
+        "mode": "READ_ONLY",
+        "trace": [
+          {
+            "op": "KNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_UNKNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "IGN_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "IGN_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "KNOWN_FALSE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_FACT",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FALSE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FALSE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "REFRAME",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "UNDISCLOSED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FRAME_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "153c9dbcc7025ecd7e50ce6d83f1995233dfc636bc869098e3a8d84288fd938a"
+          },
+          {
+            "op": "FRAME_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "SUMMARY_A",
+            "opcode": "SOURCE",
+            "result_sha256": "798640599597df7a8daa32b1132f07850a68b5e71bd295650399a38074f52804"
+          },
+          {
+            "op": "SUMMARY_B",
+            "opcode": "SOURCE",
+            "result_sha256": "955cca1ceba45052d85984d3a2565f4ce25b7488602c60a165598bf80b26e472"
+          },
+          {
+            "op": "SAME_SUMMARY",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "ANSWER_A",
+            "opcode": "SOURCE",
+            "result_sha256": "6c76a9331e7f5ff9db2754d119a61395717be0c0877d0d8bd462197dff961e4c"
+          },
+          {
+            "op": "ANSWER_B",
+            "opcode": "SOURCE",
+            "result_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a"
+          },
+          {
+            "op": "SAME_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DIFFERENT_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "SIEVE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "12e5f2013089bb9cd19561e998b89853deb9eb1b4e8e53dcf1bf4d75d389924b"
+          },
+          {
+            "op": "SIEVE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CORRECTED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "OLD_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "NEW_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "SAME_MECHANISM",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "REPEATED_FAILURE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "RECURRENCE_INPUT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "b37f57ccdf81ab241bbc5e603a3bfed7252df162b57b5790a9906d1ace109f74"
+          },
+          {
+            "op": "RECURRENCE",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "NOT_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "EXEC_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "EXEC_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DEBT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "6ee51d51f823835e17d2ea4ea2617ba98fa28d3a1b8137da86f8427abbb5f94c"
+          },
+          {
+            "op": "MATCH",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "MATCH",
+            "passed": true,
+            "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "emitted": [
+          [
+            "DEBT",
+            "6ee51d51f823835e17d2ea4ea2617ba98fa28d3a1b8137da86f8427abbb5f94c"
+          ],
+          [
+            "RECURRENCE",
+            "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          ]
+        ],
+        "effect_boundary": {
+          "shell": false,
+          "subprocess": false,
+          "network": false,
+          "git": false,
+          "device": false,
+          "arbitrary_filesystem": false,
+          "external_effects": false,
+          "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+          "interpreter_shell": false,
+          "interpreter_subprocess": false,
+          "interpreter_network": false,
+          "interpreter_git": false,
+          "interpreter_device": false,
+          "interpreter_arbitrary_filesystem": false,
+          "interpreter_external_effects": false,
+          "callbacks_invoked": [],
+          "callback_effects_verified": true
+        },
+        "external_semantics_injected": true,
+        "unknown_semantics_fail_closed": true,
+        "deterministic_receipt": true,
+        "callback_determinism_verified": true,
+        "receipt_sha256": "bda3817a1a71e6713fb1a70b08da5261db55d12d89ba5964455fda20712fe6d8"
+      },
+      "repeat_equal": true
+    },
+    {
+      "name": "safe_for_query",
+      "inputs": {
+        "fixture.known_verified": false,
+        "fixture.claim_unknown": false,
+        "fixture.known_false": false,
+        "fixture.claim_fact": false,
+        "fixture.material_reframe": false,
+        "fixture.reframe_undisclosed": false,
+        "fixture.summary_a": "A",
+        "fixture.summary_b": "A",
+        "fixture.answer_a": "yes",
+        "fixture.answer_b": "yes",
+        "fixture.prior_correction_admitted": true,
+        "fixture.old_mechanism": "omit-decisive-distinction",
+        "fixture.new_mechanism": "omit-decisive-distinction",
+        "fixture.corrected_contract_violated": false,
+        "fixture.execution_absent": false,
+        "fixture.claim_executed": false,
+        "fixture.true_pair": [
+          true,
+          true
+        ],
+        "fixture.true_triple": [
+          true,
+          true,
+          true
+        ],
+        "fixture.expected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "emitted": {
+        "DEBT": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "RECURRENCE": false
+      },
+      "receipt": {
+        "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+        "program_source_sha256": "36174979553a0ba274260744cc0eca05f8e9f12f0ab8670c73ea874057e408f9",
+        "program_graph_sha256": "cc4de9764abe75e6cf862c65fc381f6b9404c9463c9e2265ef7dcd26e93f0560",
+        "pnv_version": 1,
+        "epistemic": "CHYBA",
+        "mode": "READ_ONLY",
+        "trace": [
+          {
+            "op": "KNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_UNKNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "IGN_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "IGN_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "KNOWN_FALSE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_FACT",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FALSE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FALSE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "REFRAME",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "UNDISCLOSED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FRAME_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FRAME_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "SUMMARY_A",
+            "opcode": "SOURCE",
+            "result_sha256": "798640599597df7a8daa32b1132f07850a68b5e71bd295650399a38074f52804"
+          },
+          {
+            "op": "SUMMARY_B",
+            "opcode": "SOURCE",
+            "result_sha256": "798640599597df7a8daa32b1132f07850a68b5e71bd295650399a38074f52804"
+          },
+          {
+            "op": "SAME_SUMMARY",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "ANSWER_A",
+            "opcode": "SOURCE",
+            "result_sha256": "6c76a9331e7f5ff9db2754d119a61395717be0c0877d0d8bd462197dff961e4c"
+          },
+          {
+            "op": "ANSWER_B",
+            "opcode": "SOURCE",
+            "result_sha256": "6c76a9331e7f5ff9db2754d119a61395717be0c0877d0d8bd462197dff961e4c"
+          },
+          {
+            "op": "SAME_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "DIFFERENT_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "SIEVE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "153c9dbcc7025ecd7e50ce6d83f1995233dfc636bc869098e3a8d84288fd938a"
+          },
+          {
+            "op": "SIEVE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CORRECTED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "OLD_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "NEW_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "SAME_MECHANISM",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "REPEATED_FAILURE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "RECURRENCE_INPUT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "b37f57ccdf81ab241bbc5e603a3bfed7252df162b57b5790a9906d1ace109f74"
+          },
+          {
+            "op": "RECURRENCE",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "NOT_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "EXEC_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "EXEC_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DEBT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "6ee51d51f823835e17d2ea4ea2617ba98fa28d3a1b8137da86f8427abbb5f94c"
+          },
+          {
+            "op": "MATCH",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "MATCH",
+            "passed": true,
+            "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "emitted": [
+          [
+            "DEBT",
+            "6ee51d51f823835e17d2ea4ea2617ba98fa28d3a1b8137da86f8427abbb5f94c"
+          ],
+          [
+            "RECURRENCE",
+            "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          ]
+        ],
+        "effect_boundary": {
+          "shell": false,
+          "subprocess": false,
+          "network": false,
+          "git": false,
+          "device": false,
+          "arbitrary_filesystem": false,
+          "external_effects": false,
+          "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+          "interpreter_shell": false,
+          "interpreter_subprocess": false,
+          "interpreter_network": false,
+          "interpreter_git": false,
+          "interpreter_device": false,
+          "interpreter_arbitrary_filesystem": false,
+          "interpreter_external_effects": false,
+          "callbacks_invoked": [],
+          "callback_effects_verified": true
+        },
+        "external_semantics_injected": true,
+        "unknown_semantics_fail_closed": true,
+        "deterministic_receipt": true,
+        "callback_determinism_verified": true,
+        "receipt_sha256": "737c0a8f85485c13645e8a773daff438e68bab374329f1a522a17481589f1341"
+      },
+      "repeat_equal": true
+    },
+    {
+      "name": "different_mechanism",
+      "inputs": {
+        "fixture.known_verified": false,
+        "fixture.claim_unknown": false,
+        "fixture.known_false": false,
+        "fixture.claim_fact": false,
+        "fixture.material_reframe": false,
+        "fixture.reframe_undisclosed": false,
+        "fixture.summary_a": "A",
+        "fixture.summary_b": "B",
+        "fixture.answer_a": "yes",
+        "fixture.answer_b": "no",
+        "fixture.prior_correction_admitted": true,
+        "fixture.old_mechanism": "omit-decisive-distinction",
+        "fixture.new_mechanism": "other",
+        "fixture.corrected_contract_violated": true,
+        "fixture.execution_absent": false,
+        "fixture.claim_executed": false,
+        "fixture.true_pair": [
+          true,
+          true
+        ],
+        "fixture.true_triple": [
+          true,
+          true,
+          true
+        ],
+        "fixture.expected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "emitted": {
+        "DEBT": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "RECURRENCE": false
+      },
+      "receipt": {
+        "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+        "program_source_sha256": "36174979553a0ba274260744cc0eca05f8e9f12f0ab8670c73ea874057e408f9",
+        "program_graph_sha256": "cc4de9764abe75e6cf862c65fc381f6b9404c9463c9e2265ef7dcd26e93f0560",
+        "pnv_version": 1,
+        "epistemic": "CHYBA",
+        "mode": "READ_ONLY",
+        "trace": [
+          {
+            "op": "KNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_UNKNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "IGN_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "IGN_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "KNOWN_FALSE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_FACT",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FALSE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FALSE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "REFRAME",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "UNDISCLOSED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FRAME_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FRAME_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "SUMMARY_A",
+            "opcode": "SOURCE",
+            "result_sha256": "798640599597df7a8daa32b1132f07850a68b5e71bd295650399a38074f52804"
+          },
+          {
+            "op": "SUMMARY_B",
+            "opcode": "SOURCE",
+            "result_sha256": "955cca1ceba45052d85984d3a2565f4ce25b7488602c60a165598bf80b26e472"
+          },
+          {
+            "op": "SAME_SUMMARY",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "ANSWER_A",
+            "opcode": "SOURCE",
+            "result_sha256": "6c76a9331e7f5ff9db2754d119a61395717be0c0877d0d8bd462197dff961e4c"
+          },
+          {
+            "op": "ANSWER_B",
+            "opcode": "SOURCE",
+            "result_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a"
+          },
+          {
+            "op": "SAME_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DIFFERENT_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "SIEVE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "12e5f2013089bb9cd19561e998b89853deb9eb1b4e8e53dcf1bf4d75d389924b"
+          },
+          {
+            "op": "SIEVE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CORRECTED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "OLD_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "NEW_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "d448c0e0f65da7948e3edb7805b5272b54f75f427c33333157324b626f5ca51f"
+          },
+          {
+            "op": "SAME_MECHANISM",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "REPEATED_FAILURE",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "RECURRENCE_INPUT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "e5b9a37d4601777b92e68e2f556d3ca1cb67f8085802a7022b1c179541a33658"
+          },
+          {
+            "op": "RECURRENCE",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "NOT_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "EXEC_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "EXEC_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DEBT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "6ee51d51f823835e17d2ea4ea2617ba98fa28d3a1b8137da86f8427abbb5f94c"
+          },
+          {
+            "op": "MATCH",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "MATCH",
+            "passed": true,
+            "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "emitted": [
+          [
+            "DEBT",
+            "6ee51d51f823835e17d2ea4ea2617ba98fa28d3a1b8137da86f8427abbb5f94c"
+          ],
+          [
+            "RECURRENCE",
+            "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          ]
+        ],
+        "effect_boundary": {
+          "shell": false,
+          "subprocess": false,
+          "network": false,
+          "git": false,
+          "device": false,
+          "arbitrary_filesystem": false,
+          "external_effects": false,
+          "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+          "interpreter_shell": false,
+          "interpreter_subprocess": false,
+          "interpreter_network": false,
+          "interpreter_git": false,
+          "interpreter_device": false,
+          "interpreter_arbitrary_filesystem": false,
+          "interpreter_external_effects": false,
+          "callbacks_invoked": [],
+          "callback_effects_verified": true
+        },
+        "external_semantics_injected": true,
+        "unknown_semantics_fail_closed": true,
+        "deterministic_receipt": true,
+        "callback_determinism_verified": true,
+        "receipt_sha256": "47f32ca2b719bda2ca280b7f131d7b5ea33e5e7f17e272b622493e8cc1edde1d"
+      },
+      "repeat_equal": true
+    },
+    {
+      "name": "no_prior_correction",
+      "inputs": {
+        "fixture.known_verified": false,
+        "fixture.claim_unknown": false,
+        "fixture.known_false": false,
+        "fixture.claim_fact": false,
+        "fixture.material_reframe": false,
+        "fixture.reframe_undisclosed": false,
+        "fixture.summary_a": "A",
+        "fixture.summary_b": "B",
+        "fixture.answer_a": "yes",
+        "fixture.answer_b": "no",
+        "fixture.prior_correction_admitted": false,
+        "fixture.old_mechanism": "omit-decisive-distinction",
+        "fixture.new_mechanism": "omit-decisive-distinction",
+        "fixture.corrected_contract_violated": true,
+        "fixture.execution_absent": false,
+        "fixture.claim_executed": false,
+        "fixture.true_pair": [
+          true,
+          true
+        ],
+        "fixture.true_triple": [
+          true,
+          true,
+          true
+        ],
+        "fixture.expected": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      "emitted": {
+        "DEBT": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "RECURRENCE": false
+      },
+      "receipt": {
+        "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+        "program_source_sha256": "36174979553a0ba274260744cc0eca05f8e9f12f0ab8670c73ea874057e408f9",
+        "program_graph_sha256": "cc4de9764abe75e6cf862c65fc381f6b9404c9463c9e2265ef7dcd26e93f0560",
+        "pnv_version": 1,
+        "epistemic": "CHYBA",
+        "mode": "READ_ONLY",
+        "trace": [
+          {
+            "op": "KNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_UNKNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "IGN_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "IGN_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "KNOWN_FALSE",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_FACT",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FALSE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FALSE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "REFRAME",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "UNDISCLOSED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "FRAME_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "FRAME_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "SUMMARY_A",
+            "opcode": "SOURCE",
+            "result_sha256": "798640599597df7a8daa32b1132f07850a68b5e71bd295650399a38074f52804"
+          },
+          {
+            "op": "SUMMARY_B",
+            "opcode": "SOURCE",
+            "result_sha256": "955cca1ceba45052d85984d3a2565f4ce25b7488602c60a165598bf80b26e472"
+          },
+          {
+            "op": "SAME_SUMMARY",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "ANSWER_A",
+            "opcode": "SOURCE",
+            "result_sha256": "6c76a9331e7f5ff9db2754d119a61395717be0c0877d0d8bd462197dff961e4c"
+          },
+          {
+            "op": "ANSWER_B",
+            "opcode": "SOURCE",
+            "result_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a"
+          },
+          {
+            "op": "SAME_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DIFFERENT_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "SIEVE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "12e5f2013089bb9cd19561e998b89853deb9eb1b4e8e53dcf1bf4d75d389924b"
+          },
+          {
+            "op": "SIEVE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CORRECTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "OLD_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "NEW_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "SAME_MECHANISM",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "REPEATED_FAILURE",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "RECURRENCE_INPUT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "02e449eb61268c7909802c393ce9dd57c1d74e3973052a7f191d715a15f81e77"
+          },
+          {
+            "op": "RECURRENCE",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "NOT_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "CLAIM_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "EXEC_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "38576924f34fcfc3c6d659cbcd3b5e39205f062496b79cfe98abbc494c76b30d"
+          },
+          {
+            "op": "EXEC_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DEBT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "6ee51d51f823835e17d2ea4ea2617ba98fa28d3a1b8137da86f8427abbb5f94c"
+          },
+          {
+            "op": "MATCH",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "MATCH",
+            "passed": true,
+            "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "emitted": [
+          [
+            "DEBT",
+            "6ee51d51f823835e17d2ea4ea2617ba98fa28d3a1b8137da86f8427abbb5f94c"
+          ],
+          [
+            "RECURRENCE",
+            "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          ]
+        ],
+        "effect_boundary": {
+          "shell": false,
+          "subprocess": false,
+          "network": false,
+          "git": false,
+          "device": false,
+          "arbitrary_filesystem": false,
+          "external_effects": false,
+          "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+          "interpreter_shell": false,
+          "interpreter_subprocess": false,
+          "interpreter_network": false,
+          "interpreter_git": false,
+          "interpreter_device": false,
+          "interpreter_arbitrary_filesystem": false,
+          "interpreter_external_effects": false,
+          "callbacks_invoked": [],
+          "callback_effects_verified": true
+        },
+        "external_semantics_injected": true,
+        "unknown_semantics_fail_closed": true,
+        "deterministic_receipt": true,
+        "callback_determinism_verified": true,
+        "receipt_sha256": "77e9e1d7d35320aa87eeea44cfda58221d7e52d930590a6bf06de66cf2e32e3e"
+      },
+      "repeat_equal": true
+    },
+    {
+      "name": "combined",
+      "inputs": {
+        "fixture.known_verified": true,
+        "fixture.claim_unknown": true,
+        "fixture.known_false": true,
+        "fixture.claim_fact": true,
+        "fixture.material_reframe": true,
+        "fixture.reframe_undisclosed": true,
+        "fixture.summary_a": "A",
+        "fixture.summary_b": "A",
+        "fixture.answer_a": "yes",
+        "fixture.answer_b": "no",
+        "fixture.prior_correction_admitted": true,
+        "fixture.old_mechanism": "omit-decisive-distinction",
+        "fixture.new_mechanism": "omit-decisive-distinction",
+        "fixture.corrected_contract_violated": true,
+        "fixture.execution_absent": true,
+        "fixture.claim_executed": true,
+        "fixture.true_pair": [
+          true,
+          true
+        ],
+        "fixture.true_triple": [
+          true,
+          true,
+          true
+        ],
+        "fixture.expected": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "emitted": {
+        "DEBT": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "RECURRENCE": true
+      },
+      "receipt": {
+        "schema": "PNCS_NATIVE_PNV_EXEC_RECEIPT_V0_1",
+        "program_source_sha256": "36174979553a0ba274260744cc0eca05f8e9f12f0ab8670c73ea874057e408f9",
+        "program_graph_sha256": "cc4de9764abe75e6cf862c65fc381f6b9404c9463c9e2265ef7dcd26e93f0560",
+        "pnv_version": 1,
+        "epistemic": "CHYBA",
+        "mode": "READ_ONLY",
+        "trace": [
+          {
+            "op": "KNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "CLAIM_UNKNOWN",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "IGN_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "496428035f129afe53b21f8d653caebae7c186b624d4bd69ad5e1ba52bbe4067"
+          },
+          {
+            "op": "IGN_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "KNOWN_FALSE",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "CLAIM_FACT",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "FALSE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "496428035f129afe53b21f8d653caebae7c186b624d4bd69ad5e1ba52bbe4067"
+          },
+          {
+            "op": "FALSE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "REFRAME",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "UNDISCLOSED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "FRAME_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "496428035f129afe53b21f8d653caebae7c186b624d4bd69ad5e1ba52bbe4067"
+          },
+          {
+            "op": "FRAME_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "SUMMARY_A",
+            "opcode": "SOURCE",
+            "result_sha256": "798640599597df7a8daa32b1132f07850a68b5e71bd295650399a38074f52804"
+          },
+          {
+            "op": "SUMMARY_B",
+            "opcode": "SOURCE",
+            "result_sha256": "798640599597df7a8daa32b1132f07850a68b5e71bd295650399a38074f52804"
+          },
+          {
+            "op": "SAME_SUMMARY",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "ANSWER_A",
+            "opcode": "SOURCE",
+            "result_sha256": "6c76a9331e7f5ff9db2754d119a61395717be0c0877d0d8bd462197dff961e4c"
+          },
+          {
+            "op": "ANSWER_B",
+            "opcode": "SOURCE",
+            "result_sha256": "04a06452677210a3cdaec376fd5ebbca1714cb7af9e62bf5cce1644310a9086a"
+          },
+          {
+            "op": "SAME_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa"
+          },
+          {
+            "op": "DIFFERENT_ANSWER",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "SIEVE_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "496428035f129afe53b21f8d653caebae7c186b624d4bd69ad5e1ba52bbe4067"
+          },
+          {
+            "op": "SIEVE_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "CORRECTED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "OLD_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "NEW_MECHANISM",
+            "opcode": "SOURCE",
+            "result_sha256": "95206468ca536ff0bbf294523c8748e6c5333f01e964c89a4bd47fab9489d5e9"
+          },
+          {
+            "op": "SAME_MECHANISM",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "REPEATED_FAILURE",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "RECURRENCE_INPUT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "e0e62f8b945fb2e0586e847e946d4b954d732c46755b0670bb141c4224ab2e21"
+          },
+          {
+            "op": "RECURRENCE",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "NOT_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "CLAIM_EXECUTED",
+            "opcode": "SOURCE",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "EXEC_PAIR",
+            "opcode": "COMPOSITION",
+            "result_sha256": "496428035f129afe53b21f8d653caebae7c186b624d4bd69ad5e1ba52bbe4067"
+          },
+          {
+            "op": "EXEC_CONFLICT",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          },
+          {
+            "op": "DEBT",
+            "opcode": "COMPOSITION",
+            "result_sha256": "c18126723e74d9b67f28c511ccfdb9f1572ac367ba4e7a70d60c4378ae87b870"
+          },
+          {
+            "op": "MATCH",
+            "opcode": "IDENTITY",
+            "result_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "MATCH",
+            "passed": true,
+            "value_sha256": "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          }
+        ],
+        "emitted": [
+          [
+            "DEBT",
+            "c18126723e74d9b67f28c511ccfdb9f1572ac367ba4e7a70d60c4378ae87b870"
+          ],
+          [
+            "RECURRENCE",
+            "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+          ]
+        ],
+        "effect_boundary": {
+          "shell": false,
+          "subprocess": false,
+          "network": false,
+          "git": false,
+          "device": false,
+          "arbitrary_filesystem": false,
+          "external_effects": false,
+          "external_effects_status": "VERIFIED_NONE_WITHIN_INTERPRETER_BOUNDARY",
+          "interpreter_shell": false,
+          "interpreter_subprocess": false,
+          "interpreter_network": false,
+          "interpreter_git": false,
+          "interpreter_device": false,
+          "interpreter_arbitrary_filesystem": false,
+          "interpreter_external_effects": false,
+          "callbacks_invoked": [],
+          "callback_effects_verified": true
+        },
+        "external_semantics_injected": true,
+        "unknown_semantics_fail_closed": true,
+        "deterministic_receipt": true,
+        "callback_determinism_verified": true,
+        "receipt_sha256": "0c4ad76057907fb60245a0a2326395367574f18b465324a937074df3e076fde1"
+      },
+      "repeat_equal": true
+    }
+  ]
+}
