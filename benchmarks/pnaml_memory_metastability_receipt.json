@@ -1,0 +1,58 @@
+{
+  "schema": "PNAML_CIRCULATION_METASTABILITY_CPU_V1",
+  "scope": "Executed local CPU PNAML Mobile 1.5.8 Model AST and transcribed HTRI kernel, source-derived frozen A/B endpoints. Separate chosen scalar bistable potential, not native HTRI law. Repository adapter not independently executed. No H200 or physical energy claim.",
+  "seed": 42,
+  "oscillators": 1164,
+  "lanes": 36,
+  "source_ticks": 256,
+  "cycle": {
+    "dt": 0.01,
+    "current_frob": 0.0001501739765967525,
+    "reverse_current_error": 7.958887116589465e-14,
+    "divergence_error": 1.1335583376297152e-14,
+    "uniform_evolution_error": 1.2465503853206028e-15,
+    "hermiticity_error": 2.7547408798511697e-13,
+    "reconstruction_error": 1.6335329462014317e-14,
+    "gauge_current_error": 7.400456893881341e-17,
+    "triangle": [
+      9,
+      11,
+      22
+    ],
+    "triangle_currents": [
+      0.00000921691355788575,
+      0.000007922426009794278,
+      0.000006690964932571163
+    ],
+    "loop_phase": 3.138873546741968,
+    "reverse_loop_phase": -3.138873546742117,
+    "gauge_loop_error": 4.79420648145934e-19,
+    "commuting_current": 5.922712822621602e-14
+  },
+  "structural": {
+    "dt": 0.02,
+    "T": 20,
+    "kappa": 50,
+    "mu": 0.5,
+    "initial": [
+      0.2,
+      0.8
+    ],
+    "bistable_final": [
+      0.20050471154694458,
+      0.7990294550822957
+    ],
+    "convex_final": [
+      0.5001422030597226,
+      0.5001423158668582
+    ],
+    "access_initial": 0.2,
+    "access_final": 0.00000907998595249697,
+    "gap_bistable": 0.5985247435353511,
+    "gap_convex": 1.1280713563266431e-7,
+    "fine_step_difference": 3.349888064718698e-7,
+    "max_balance_error": 1.4166445794216997e-13,
+    "max_energy_increase": 0
+  },
+  "notes": "Finite two-well retention is constructed by the chosen potential, not evidence of spontaneous bistability in source HTRI; accessibility is passive independent exponential decay. Current is effective stroboscopic model current, not microscopic instantaneous flux or physical circulation."
+}

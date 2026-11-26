@@ -1,0 +1,13 @@
+{
+  "scope": "independent JavaScript reference of candidate directed 36-lane ring, not Python runtime test",
+  "n": 36,
+  "dt": 0.01,
+  "steps": 1000,
+  "initial_access": 0.2,
+  "reinforced_access": 0.4,
+  "rms_gap": 0.9810776583213893,
+  "control_gap": 0,
+  "coherence_before": 0.46358619202441076,
+  "coherence_unreinforced": 0.37684312221806526,
+  "coherence_reinforced": 0.40273500512478055
+}

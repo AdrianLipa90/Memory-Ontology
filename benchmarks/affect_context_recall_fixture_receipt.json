@@ -1,0 +1,50 @@
+{
+  "schema": "AFFECT_CONTEXT_RECALL_STATIC_PNV_FIXTURE_V1",
+  "scope": "Existing pinned PNV/1 interpreter; static analytically supplied exact coherences; no calculation of overlap by interpreter, no native NOEMA, no live AUX, no causal or affect-specific validation. Event equality checks ID only.",
+  "interpreter_git_blob": "c9041234cc66d5670e7b74f0c101434647067341",
+  "analytic_inputs": {
+    "fixture.event_before": "synthetic-occurrence-1",
+    "fixture.event_after": "synthetic-occurrence-1",
+    "fixture.context_a": "reference-Q1",
+    "fixture.context_b": "reference-Q2",
+    "fixture.r11": 1,
+    "fixture.r12": 0.5,
+    "fixture.r21": 0.5,
+    "fixture.r22": 1,
+    "fixture.common_rephase_coherences": [
+      1,
+      0.5,
+      0.5,
+      1
+    ],
+    "fixture.restored_context_coherences": [
+      1,
+      0.5,
+      0.5,
+      1
+    ]
+  },
+  "operations": 22,
+  "assertions": 8,
+  "negative_controls": {
+    "fixture.event_after": "ASSERT failed for A.EVENT_MATCH",
+    "fixture.context_b": "ASSERT failed for A.CONTEXT_DISTINCT",
+    "fixture.r11": "ASSERT failed for A.MARGIN1",
+    "fixture.r22": "ASSERT failed for A.MARGIN2",
+    "fixture.common_rephase_coherences": "ASSERT failed for A.GAUGE_MATCH",
+    "fixture.restored_context_coherences": "ASSERT failed for A.RESTORE_MATCH"
+  },
+  "repeat_equal": true,
+  "emitted": {
+    "A.BASE": [
+      1,
+      0.5,
+      0.5,
+      1
+    ],
+    "A.D1": 0.5,
+    "A.D2": 0.5
+  },
+  "receipt_sha256": "8f50419fd074c56cdc741fa1db561b6749461cefa9afccf9b4779c4fda1e1998",
+  "note": "Compact summary of terminal receipt, not the full hashed interpreter payload."
+}

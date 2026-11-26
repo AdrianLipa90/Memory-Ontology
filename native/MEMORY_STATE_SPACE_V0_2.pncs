@@ -1,0 +1,25 @@
+# Candidate PNCS Hybrid Memory Grammar v0.3 source.
+# Source authority: PNCS_HYBRID_MEMORY_GRAMMAR_V0_3.
+# Structural declaration only; compute operators require existing admission.
+PROGRAM memory_state_space
+TASK transition
+INPUT active_state : STATE
+INPUT relation_graph : GRAPH
+INPUT observed_transition : JSON
+INPUT context : JSON
+
+MEMORY trace_history RETAINS STATE RELATION PATH PERSISTENCE PERSISTENT ACCESS DIRECT PLASTICITY APPEND_ONLY EFFECT CONSTRAINT EPISTEMIC HYPOTHESIS
+MEMORY learned_geometry RETAINS RELATION PATH TOPOLOGY OPERATOR BOUNDARY PERSISTENCE STRUCTURAL ACCESS IMPLICIT RECONSTRUCTIVE PLASTICITY ADAPTIVE CONSOLIDATING EFFECT ROUTING CONSTRAINT EPISTEMIC HYPOTHESIS
+
+COMPUTE admitted_transition : JSON USING verified_transition INPUT observed_transition context MODE AUTO
+REQUIRE verified_source ON compute.admitted_transition
+COMPUTE next_route : JSON USING relation_route_selection INPUT active_state relation_graph context MODE AUTO
+
+EVENT transition_event FROM admitted_transition
+LAW geometry_update FOR learned_geometry USING path_reinforcement
+TRACE transition_trace FROM transition_event INTO trace_history
+ROUTE transition_route : compute.admitted_transition compute.next_route
+GUIDE compute.next_route USING learned_geometry
+COUPLE trace_history TO learned_geometry MODE CONSOLIDATE TIMESCALE slow
+
+RETURN next_route

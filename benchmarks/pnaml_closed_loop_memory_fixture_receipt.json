@@ -1,0 +1,69 @@
+{
+  "schema": "PNAML_CLOSED_LOOP_MEMORY_FIXTURE_V1",
+  "scope": "executed local CPU Model and transcribed HTRI source; synthetic typed arithmetic tasks verified by tagged Collatz inverse; two Bargmann cycles of actual simulated QHTRI states per event. Native Coupler, H200, Q28, RDSSG, MAHAL and actual user memory not executed.",
+  "oscillators": 1164,
+  "lanes": 36,
+  "ticks": 256,
+  "dt": 0.01,
+  "seed": 42,
+  "runs": 5,
+  "comparisons": {
+    "verified_vs_none": {
+      "phase_rms": 0.6103387068565314,
+      "coupling_frobenius": 0.9838363773543107,
+      "projective_distance": 0.1447799306404685
+    },
+    "unverified_vs_none": {
+      "phase_rms": 0,
+      "coupling_frobenius": 0,
+      "projective_distance": 0
+    },
+    "gain_zero": {
+      "phase_rms": 0,
+      "coupling_frobenius": 0,
+      "projective_distance": 2.2794393510786276e-7
+    }
+  },
+  "events": [
+    {
+      "tick": 32,
+      "status": "VERIFIED_FIXTURE",
+      "rho": 0.9999997238926037,
+      "a_before": 0.1949449803203587,
+      "a_after": 0.39620867966985773
+    },
+    {
+      "tick": 64,
+      "status": "REPLAY",
+      "rho": 0.9998289090600678,
+      "a_before": 0.3861944663049788,
+      "a_after": 0.3861944663049788
+    },
+    {
+      "tick": 96,
+      "status": "VERIFIED_FIXTURE",
+      "rho": 0.9856967341474093,
+      "a_before": 0.37643336316827775,
+      "a_after": 0.5300952625303559
+    },
+    {
+      "tick": 128,
+      "status": "UNVERIFIED_FIXTURE",
+      "rho": 0.998690834447408,
+      "a_before": 0.516697052609478,
+      "a_after": 0.516697052609478
+    }
+  ],
+  "final": {
+    "access_verified": 0.46640610800590004,
+    "access_no_events": 0.16296205243374545,
+    "conductance_verified": 2.985696458040013,
+    "energy_verified": 2.445314535265622,
+    "energy_no_events": 2.3535944331673706,
+    "energy_gain_zero": 2.3448241346723973,
+    "operator_work_verified": 1.873947943603871,
+    "max_energy_residual": 3.752553823233029e-14,
+    "max_norm_error": 4.4853010194856324e-14
+  },
+  "notes": "Events are synthetic reference tasks, not semantic evidence from production. Phase cycles affect update magnitude only; arithmetic evidence is independent. Gain-zero projective distance is numerical normalization roundoff. No unexplained surplus or continuous AUX archival. Replay dedup in process only."
+}

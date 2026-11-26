@@ -1,0 +1,50 @@
+{
+  "schema": "PNAML_JOINT_STATE_STABILITY_V1",
+  "scope": "Executed local CPU Model AST v1.5.8 and transcribed HTRI; installed plugin v1.5.9 code inspected; full plugin Coupler not executed. Fixed frequencies and core; sampled batch phase and symmetric weight perturbations.",
+  "dt": 0.01,
+  "warmup": 256,
+  "follow": 512,
+  "epsilon": 1e-8,
+  "first_fd_check_seed42_eps_1e_6": 0.004911395701509658,
+  "runs": [
+    {
+      "seed": 42,
+      "phase_gain": 1.1958835362366607,
+      "weight_gain": 0.6029514183634733,
+      "weight_component": 0.5832481038232171,
+      "phase_component_from_weight": 0.15287924088360058,
+      "control_gain": 0.5782262278933659,
+      "fd_relative_error": 2.213879866234105e-8,
+      "max_mean_error": 6.484010859095532e-16
+    },
+    {
+      "seed": 43,
+      "phase_gain": 1.1733682547140716,
+      "weight_gain": 0.6008164369087645,
+      "weight_component": 0.5822980026644363,
+      "phase_component_from_weight": 0.14801833316434668,
+      "control_gain": 0.5774671738920427,
+      "fd_relative_error": 2.2948788284947036e-8,
+      "max_mean_error": 4.070817756958907e-16
+    },
+    {
+      "seed": 44,
+      "phase_gain": 1.2114283777963788,
+      "weight_gain": 0.6005929904971556,
+      "weight_component": 0.5831581888331291,
+      "phase_component_from_weight": 0.14366094469681417,
+      "control_gain": 0.578901732449964,
+      "fd_relative_error": 2.1649604208342373e-8,
+      "max_mean_error": 4.3483735131151963e-16
+    }
+  ],
+  "coherent_fixture": {
+    "scope": "synthetic equal-frequency coherent rotating fixture; not default producer trajectory",
+    "lambda_max": 36.000000000000085,
+    "predicted_gain": 1.01,
+    "measured_gain": 1.0100000001724583,
+    "coupling_fixed_point_error": 0,
+    "nonzero_laplacian_modes": 35
+  },
+  "limitations": "Reference adapter port not independently imported; no asymptotic basin, maximal Lyapunov exponent, semantic memory or physical H200 claim. No source sign changed."
+}

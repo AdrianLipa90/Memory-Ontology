@@ -1,0 +1,119 @@
+{
+  "schema": "PNAML_NATIVE_RULE_CONSOLIDATION_V1",
+  "scope": "Isolated CPU Model AST from PNAML Mobile 1.5.8 and locally transcribed HTRI kernel; synthetic phase stimulation, matched active state and g transplant; no added plasticity potential or native host.",
+  "dt": 0.01,
+  "oscillators": 1164,
+  "lanes": 36,
+  "contraction": 0.9999154859929605,
+  "planned_seeds": [
+    42,
+    43,
+    44
+  ],
+  "completed_seeds": [
+    42
+  ],
+  "execution_status": "partial: outer process timed out after completed seed 42; other seeds not recorded",
+  "runs": [
+    {
+      "seed": 42,
+      "initial_gap": 57.77037742371057,
+      "train": 192,
+      "follow": 1024,
+      "source_replay_error": 1.1102230246251565e-16,
+      "contraction_bound_violation": 0,
+      "max_lift_error": 1.6800181805299453e-11,
+      "identical_history_control_steps": 16,
+      "samples": [
+        {
+          "step": 0,
+          "time": 0,
+          "full_gap": 57.77037742371057,
+          "aggregate_gap": 1.2877869179698793,
+          "phase_rms": 0,
+          "replay_gap": 57.77037742371057,
+          "bound": 57.77037742371057,
+          "lambda2_A": 1.4812181922105752,
+          "lambda2_B": 1.4856286759208681
+        },
+        {
+          "step": 1,
+          "time": 0.01,
+          "full_gap": 57.583422653418104,
+          "aggregate_gap": 1.2829114239043247,
+          "phase_rms": 0.0001968493440668302,
+          "replay_gap": 57.58366944298955,
+          "bound": 57.765495017626314,
+          "lambda2_A": 1.4816548849676805,
+          "lambda2_B": 1.4861673761730183
+        },
+        {
+          "step": 16,
+          "time": 0.16,
+          "full_gap": 54.410870761643366,
+          "aggregate_gap": 1.2098024110258672,
+          "phase_rms": 0.002889019995869946,
+          "replay_gap": 54.4427769924796,
+          "bound": 57.69230842264307,
+          "lambda2_A": 1.5068741004069754,
+          "lambda2_B": 1.5088038661776697
+        },
+        {
+          "step": 64,
+          "time": 0.64,
+          "full_gap": 43.35592807062028,
+          "aggregate_gap": 1.015689239656528,
+          "phase_rms": 0.007965735961026399,
+          "replay_gap": 43.625673434193295,
+          "bound": 57.45873384874498,
+          "lambda2_A": 1.5795445988500143,
+          "lambda2_B": 1.582605414136713
+        },
+        {
+          "step": 128,
+          "time": 1.28,
+          "full_gap": 33.54109063163333,
+          "aggregate_gap": 0.8551127066608801,
+          "phase_rms": 0.011799012332509337,
+          "replay_gap": 33.89562392689422,
+          "bound": 57.14877144191691,
+          "lambda2_A": 1.6318633009128019,
+          "lambda2_B": 1.6348012143846127
+        },
+        {
+          "step": 256,
+          "time": 2.56,
+          "full_gap": 26.597119002739603,
+          "aggregate_gap": 0.7248034728057994,
+          "phase_rms": 0.015582163442869631,
+          "replay_gap": 26.796579627562323,
+          "bound": 56.53385390520243,
+          "lambda2_A": 1.6860426130868518,
+          "lambda2_B": 1.6859953856818082
+        },
+        {
+          "step": 512,
+          "time": 5.12,
+          "full_gap": 24.54146642931197,
+          "aggregate_gap": 0.6645974657279806,
+          "phase_rms": 0.018327543447206315,
+          "replay_gap": 24.17574954138289,
+          "bound": 55.32379707221737,
+          "lambda2_A": 1.728190705975519,
+          "lambda2_B": 1.730906616879023
+        },
+        {
+          "step": 1024,
+          "time": 10.24,
+          "full_gap": 23.08406992860966,
+          "aggregate_gap": 0.6078852380875623,
+          "phase_rms": 0.020020993065638322,
+          "replay_gap": 22.27426257500856,
+          "bound": 52.98082960475313,
+          "lambda2_A": 1.7646115675486636,
+          "lambda2_B": 1.7609133122298974
+        }
+      ]
+    }
+  ]
+}

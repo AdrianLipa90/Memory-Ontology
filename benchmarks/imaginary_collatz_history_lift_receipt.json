@@ -1,0 +1,21 @@
+{
+  "N": 4096,
+  "H": 32,
+  "stepChecks": 131072,
+  "radial": 131072,
+  "accelerated": 44041,
+  "reverse": 4096,
+  "terminal_orbit_cap": 10000,
+  "max_first_hit_1": 237,
+  "distinct_endpoints": 719,
+  "largest_endpoint_fibre": 301,
+  "conditional_history_entropy_bits": 4.3331005659861335,
+  "endpoint_entropy_bits": 7.6668994340138665,
+  "example_collision": {
+    "n1": 1,
+    "n2": 8,
+    "endpoint": 4
+  },
+  "scope": "exact BigInt rational phase/rapidity and reversible history lift, uniform finite seed ensemble; no HTRI run",
+  "execution": "Witness executed in JavaScript tool runtime before serialization; repository module read back, not independently imported."
+}

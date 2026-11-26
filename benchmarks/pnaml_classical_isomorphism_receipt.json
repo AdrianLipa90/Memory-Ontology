@@ -1,0 +1,54 @@
+{
+  "schema": "PNAML_CLASSICAL_ISOMORPHISM_CPU_V1",
+  "scope": "Executed local CPU PNAML Mobile 1.5.8 Model AST and locally transcribed HTRI numerical kernel; synthetic memory interventions, 1164 oscillators, 36 lanes. Frozen source-derived A/B order test; cloned structural intervention. Separate projected memory relaxation candidate. No native runtime or physical energy claim. Repository adapter is a port, not separately executed.",
+  "seed": 42,
+  "dt": 0.01,
+  "ticks": 256,
+  "commutator_norm": 1.0811029625784279,
+  "commuting_control": 1.5714777763643365e-16,
+  "order_samples": [
+    {
+      "dt": 0.01,
+      "gap": 0.00010809526427595233,
+      "leading": 0.0001081102962578428,
+      "mean_error": 0.00005404764408565665,
+      "bch_error": 3.717031711829055e-8
+    },
+    {
+      "dt": 0.0025,
+      "gap": 0.000006756834790245602,
+      "leading": 0.000006756893516115175
+    }
+  ],
+  "zero_mode_initial": 0.8000919064727077,
+  "max_zero_mode_error": 1.9779134197516817e-14,
+  "spectrum": {
+    "initial_lambda2": 0.10514681880779328,
+    "unreinforced_final": 1.6056683947340022,
+    "reinforced_final": 1.6403210172303353,
+    "zero_modes": 1,
+    "positive_edges": 621
+  },
+  "retention": {
+    "initial_gap": 0.7599434462759082,
+    "final_gap": 0.5508974301975943,
+    "initial_phase_rms": 0,
+    "final_phase_rms": 0.005112482174029176,
+    "interval": 2.56
+  },
+  "gradient": {
+    "analytic": 0.014903213365112439,
+    "numeric": 0.014903213374495293
+  },
+  "thermodynamics": {
+    "k": 1,
+    "mu": 0.2,
+    "initial_total": 2.5463543701947637,
+    "final_total": 2.2496526006649655,
+    "heat": 0.2967017695297742,
+    "gradient_heat": 0.2967017695297708,
+    "balance_error": 3.4638958368304884e-14,
+    "gradient_error": 1.2535545518277402e-15,
+    "final_energy_step_difference": 0.00009318902425370368
+  }
+}

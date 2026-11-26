@@ -1,0 +1,45 @@
+{
+  "schema": "PNAML_MEMORY_PRODUCER_FEEDBACK_CANDIDATE_V1",
+  "scope": "Isolated CPU PNAML Mobile 1.5.8 Model class, locally transcribed HTRI numerical kernel and time-ordered QHTRI Laplacian evolution. Native Coupler, Q28, RDSSG, physical H200 and journal not executed.",
+  "oscillators": 1164,
+  "lanes": 36,
+  "ticks": 256,
+  "dt": 0.01,
+  "seed": 42,
+  "fixture": {
+    "access_before": 0.2,
+    "access_reinforced": 0.4,
+    "conductance_before": 1,
+    "conductance_reinforced": 2,
+    "decay": 0.08,
+    "gain": 1,
+    "actual_memory_events": 0
+  },
+  "control": {
+    "phase_rms": 0,
+    "coupling_frobenius": 0,
+    "projective_distance": 2.2794393510786276e-7
+  },
+  "feedback": {
+    "phase_rms": 0.34654667387735194,
+    "coupling_frobenius": 0.7599434462759082,
+    "projective_distance": 0.12447133552908388
+  },
+  "energy": {
+    "initial": 0.5713665916617443,
+    "control_final": 2.3448241346723973,
+    "unreinforced_feedback_final": 2.353607160837309,
+    "reinforced_feedback_final": 2.401975859810344,
+    "reinforced_operator_work": 1.8306092681486097,
+    "max_balance_error": 2.6423307986078726e-14,
+    "max_norm_error": 4.0190073491430667e-14,
+    "max_source_lift_error": 8.506893721109381e-13,
+    "max_target_error": 7.105427357601002e-14
+  },
+  "coherence": {
+    "control": 0.6526608359525196,
+    "unreinforced_feedback": 0.681036869163824,
+    "reinforced_feedback": 0.7144735070737607
+  },
+  "notes": "Summary of executed local receipt; no dynamic phase arrays or hashes. Candidate directed-ring actuator, synthetic verified-event fixture. Work is from changing H, not energy surplus."
+}
