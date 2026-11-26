@@ -185,3 +185,7 @@ The v0.2 orbital-holographic stack is an implementation formalism. Phase, qxel, 
 ## Author
 
 Adrian Lipa
+
+## RDSS Book I V32 — candidate memory mechanics integration
+
+See [equation and mechanism crosswalk](formalism/rdss-book-v32-mechanics-crosswalk.md), [reference kernel](engines/rdss_memory_mechanics_v32.py), [tests](tests/test_rdss_memory_mechanics_v32.py), and [FOLD–Collatz candidate](formalism/fold-collatz-memory-dynamics-candidate-v0.4.md). These are optional computational reference realizations, not modifications of the substrate-neutral core law or physical evidence.
