@@ -70,5 +70,12 @@ class RelationalDynamics(unittest.TestCase):
         c=b.update("fail","source",False,.25,1,1)
         self.assertEqual(c.phase_weight(),b.phase_weight())
 
+    def test_ciel_winding_and_ring(self):
+        self.assertAlmostEqual(m.ciel_weighted_winding([(math.pi,1,.5)]),1)
+        with self.assertRaises(ValueError): m.ciel_weighted_winding([(1,1,0)])
+        r=m.ring_intervention()
+        self.assertAlmostEqual(r["rms_gap"],.9810776583213893,places=9)
+        self.assertEqual(r["control_gap"],0)
+
 if __name__=="__main__":
     unittest.main()
