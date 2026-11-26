@@ -47,3 +47,43 @@ jobs:
         with:
           name: audited-source
           path: audited-source.zip
+  pncs-compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 0f62ba7e08fda0229db10e17ee57a67d93614bc0
+          path: ontology
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: AdrianLipa90/PhaseNav-Natural-Coding-System
+          ref: 958d41402c3af4107856fccee849027aedfaad8d
+          path: pncs-source
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile every existing PNCS declaration using original compiler
+        env:
+          PYTHONPATH: pncs-source/src
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          from phasenav_natural_code.hybrid_memory_grammar_v03 import compile_hybrid_memory_program
+          rows=[]
+          for p in sorted(Path("ontology").rglob("*.pncs")):
+              try:
+                  c=compile_hybrid_memory_program(p.read_text())
+                  rows.append({"path":str(p),"status":"COMPILED","ir_sha256":c.ir_sha256,"execution": "NOT_RUN"})
+              except Exception as e:
+                  rows.append({"path":str(p),"status":"FAIL","error":str(e)})
+          print(json.dumps(rows,indent=2))
+          Path("pncs-compile.json").write_text(json.dumps(rows,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pncs-compile
+          path: pncs-compile.json
