@@ -1,0 +1,134 @@
+{
+  "schema": "ARCHIVE_CHECKPOINT_RESTORE_PNV_SUMMARY_V0_2",
+  "interpreter_git_blob": "c9041234cc66d5670e7b74f0c101434647067341",
+  "program_blobs": [
+    "8aaa5b06e6714a348377ca1e98e09642259686c2",
+    "5410583d42403c329f6e81ab56b15d64e040ad29"
+  ],
+  "initial": {
+    "full": {
+      "checkpoint.N": 108,
+      "checkpoint.D": 320,
+      "checkpoint.WEST": 12,
+      "checkpoint.COUNT": 20,
+      "checkpoint.DETAIL": "synthetic-e1"
+    },
+    "reduced": {
+      "checkpoint.N": 108,
+      "checkpoint.D": 320,
+      "checkpoint.WEST": 12,
+      "checkpoint.COUNT": 20,
+      "checkpoint.DETAIL": null
+    },
+    "reset": {
+      "checkpoint.N": 4,
+      "checkpoint.D": 5,
+      "checkpoint.WEST": 12,
+      "checkpoint.COUNT": 20,
+      "checkpoint.DETAIL": null
+    }
+  },
+  "inputs": {
+    "positive_reinforcement": [
+      1,
+      1,
+      1
+    ],
+    "west": [
+      1,
+      0,
+      1
+    ]
+  },
+  "process_invocations": 9,
+  "weights": {
+    "full": [
+      [
+        956,
+        1280
+      ],
+      [
+        4148,
+        5120
+      ],
+      [
+        17564,
+        20480
+      ]
+    ],
+    "reduced": [
+      [
+        956,
+        1280
+      ],
+      [
+        4148,
+        5120
+      ],
+      [
+        17564,
+        20480
+      ]
+    ],
+    "reset": [
+      [
+        8,
+        20
+      ],
+      [
+        44,
+        80
+      ],
+      [
+        212,
+        320
+      ]
+    ]
+  },
+  "counts_all": [
+    [
+      13,
+      21
+    ],
+    [
+      13,
+      22
+    ],
+    [
+      14,
+      23
+    ]
+  ],
+  "route_margin_numerators": {
+    "full": [
+      940,
+      5380,
+      26380
+    ],
+    "reduced": [
+      940,
+      5380,
+      26380
+    ],
+    "reset": [
+      -20,
+      -20,
+      100
+    ]
+  },
+  "detail_unavailable": {
+    "full": false,
+    "reduced": true,
+    "reset": true
+  },
+  "comparison_assertions": 7,
+  "negative_controls": {
+    "result.reduced.weights": "ASSERT failed for WEIGHTS_EQUAL",
+    "result.reduced.counts": "ASSERT failed for COUNTS_EQUAL",
+    "result.reduced.detail": "ASSERT failed for REDUCED_UNAVAILABLE",
+    "result.reset.margins": "ASSERT failed for RESET_MARGIN_DISTINCT"
+  },
+  "repeat_equal": true,
+  "comparison_receipt_sha256": "536eca37ae4e6470ccfb373f0e4ceb752c9cc5af6863cfdbdb2351d0e4245208",
+  "scope": "Static synthetic independent JSON checkpoint restores through original PNV interpreter, no callbacks. Initial checkpoints manually constructed from exact previous fixture. No actual archive deletion, native geometry or route execution, no full replay/admission protection or live NOEMA. Detail is one direct slot. The weight and count are distinct source-book examples; fixed comparison weight 3/5 is a new diagnostic assumption. Host only maps emitted fields to checkpoint JSON and invokes interpreter. Compact summary, not full interpreter receipt."
+}
