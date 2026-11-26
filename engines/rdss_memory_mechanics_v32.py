@@ -2,7 +2,6 @@
 from math import acos, cos, exp, isfinite, log, pi, sqrt
 from fractions import Fraction
 from dataclasses import dataclass, replace
-from cmath import exp as cexp
 
 KAPPA = log(2)/(24*pi)
 WEIGHTS = (.25,.25,.20,.15,.15)
@@ -45,6 +44,7 @@ def contraction(depth):
 
 def branch_address(signs):
     # Euler-root address: e^(i*pi * odd numerator / 2^d), retained genealogy.
+    signs=tuple(signs)
     numerator,denominator=1,1
     for sign in signs:
         if sign not in (-1,1): raise ValueError("expected signed branch")
@@ -112,7 +112,7 @@ def norm(a):
     return sqrt(dot(a,a))
 
 def unitvec(a):
-    if len(a)!=3 or abs(norm(a)-1)>1e-9: raise ValueError("unit Bloch vector required")
+    if len(a)!=3 or not all(isfinite(x) for x in a) or abs(norm(a)-1)>1e-9: raise ValueError("unit Bloch vector required")
     return tuple(a)
 
 def fs_log(n,b):
