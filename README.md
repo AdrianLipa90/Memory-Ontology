@@ -209,3 +209,15 @@ Current priority: derive source-compatible state-space evolution, spontaneous co
 ## Native implementation authority — PNCS/PNV
 
 [PNCS/PNV implementation policy and migration](formalism/pncs-pnv-native-migration-v0.1.md). PNCS is semantic authority; PNV/1 is the target program representation. The four former JavaScript prototypes are replaced in the active branch by native candidate graphs; historical prototype sources and their actual execution receipts remain in Git history. The native transform bindings and native execution are UNVERIFIED. Existing Python CPU diagnostics are historical evidence, not the target architecture. Notify the author before any proposed language or runtime deviation.
+
+## Research consolidation — 2026-11-26
+
+The author has requested integration of the research branch into main. This consolidates candidate mathematics and recorded evidence, not canonical promotion or a production NOEMA release. PNCS/PNV is the target implementation; no new JavaScript source remains in the active change set. The 12 added legacy Python engine/test files are historical diagnostics pending native migration, not the implementation authority. Their source and recorded receipts are retained for audit. Recorded execution claims (including earlier conditional contraction and joint stability numerical receipts) have not been independently re-run for this merge. Do not equate the presence of a receipt with independent verification. No repository-wide CI or full native NOEMA conformance run is evidenced by this consolidation.
+
+- [PNCS and PNLF integration and migration ledger](formalism/pncs-memory-pnlf-integration-v0.2.md)
+- [Imaginary Collatz history lift](formalism/imaginary-collatz-history-lift-v0.1.md)
+- [Intention, will and sacrifice](formalism/prospective-memory-intention-will-sacrifice-v0.1.md) and [determination](formalism/prospective-memory-determination-v0.2.md)
+- [Affective memory and contextual geometry](formalism/affective-memory-contextual-geometry-v0.1.md)
+- [Static PNV contextual fixture](native/AFFECT_CONTEXT_RECALL_FIXTURE_V0_1.pnv) and [recorded receipt](benchmarks/affect_context_recall_fixture_receipt.json)
+
+The static PNV assertions are not a native dynamics benchmark. Unbound transforms, exact KAKU/RADICAL realization, live producer observation and causal/metric constitutive validation remain open. Existing archived benchmark provenance is not relabeled as PNV execution. No change to other repositories or the PNAML plugin is implied by this merge.
