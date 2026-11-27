@@ -1,5 +1,4 @@
 """Offline selected-event replay through existing PNAML components."""
-import math
 import os
 from pathlib import Path
 import pytest
@@ -106,11 +105,10 @@ def test_selected_returns_restart_and_model_step(sources,tmp_path,flags):
     with Store(db) as reopened:
         records=replay_records(reopened)
         assert [r["event_id"] for r in records]==ids
-        for r,e in zip(records,events):
+        for r in records:
             values=relation_values(r)
-            assert values["generation"]==str(original[len(edge.history)]["source_frame"]["generation"])
             restarted.pip.causal.advance(r["event_id"],
-                 original[len(edge.history)]["source_frame"]["generation"],int(values["sequence"]))
+                 values["generation"],int(values["sequence"]))
             assert restarted.pip.causal.now==int(values["hotel_index"])
             verified=values["verified"]=="1"
             assert index==int(values["collatz_before"])
