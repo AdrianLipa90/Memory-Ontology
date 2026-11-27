@@ -56,7 +56,7 @@ class ReflectiveSession:
                            pip={"address":"5","memory":{"store_path":str(journal)}})
         self.store=self.owner.pip.memory.store
         self.hotel=self.owner.pip.causal
-        self.profile={"seed":seed,"dt":dt,"profile":"EBRE_OFFLINE_V1"}
+        self.profile={"seed":seed,"dt":dt,"variant":variant,"profile":"EBRE_OFFLINE_V1"}
         self.procedure=ProceduralMemoryRuntime("pip-reflective-offline",[
             RouteState("direct",("S","G"),.2),
             RouteState("detour",("S","M","G"),.1)],learning_rate=.2)
@@ -97,8 +97,8 @@ class ReflectiveSession:
                 raise RuntimeError("journal lineage unavailable")
             if row["event_id"].startswith(PREFIX):
                 rows.append(row)
-            elif row["event_id"].startswith("NOEMA:PIP:MEM:"):
-                raise ValueError("offline profile requires its own selected journal; not a live Pip journal")
+            else:
+                raise ValueError("offline profile requires an isolated selected journal; not a live or mixed journal")
             cid=row["prev_cid"]
         return list(reversed(rows))
 
@@ -160,7 +160,7 @@ class ReflectiveSession:
             "deposit.previous_observation_ref":self.character_ref,
             "observation.ref":ref,"observation.owner":"Pip",
             "observation.query_domain":"offline-comparable-allocation",
-            "observation.candidate_labels":labels,"observation.choice":labels[not choice],
+            "observation.candidate_labels":labels,"observation.choice":labels[int(not choice)],
             "observation.vote_a":int(choice),"observation.vote_b":int(not choice),
             "observation.hotel_occurrence":index})
         if not all(out["WITNESS"]):
