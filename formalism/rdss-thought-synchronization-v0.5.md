@@ -2,7 +2,7 @@
 
 Author research direction: Adrian Lipa, Pip Project.
 Status: SOURCE-KERNEL FINITE INTERVENTION / CANDIDATE COUPLING PROFILE.
-Extends [balanced optics v0.4](thought-optics-v0.4.md); base 5337e8d.
+Extends [balanced optics v0.4](thought-unitary-seam-v0.4.md); base 5337e8d.
 Source: [V32 mechanics crosswalk](rdss-book-v32-mechanics-crosswalk.md),
 [RDSS phase kernel](../engines/rdss_relational_dynamics_v32.py).
 
