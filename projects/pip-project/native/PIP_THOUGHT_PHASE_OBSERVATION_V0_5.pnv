@@ -1,0 +1,30 @@
+PNV 1
+EPISTEMIC CHYBA
+MODE READ_ONLY
+# Immutable source-owned phase observations; not a numerical integrator.
+OP C SOURCE prior.scope
+OP M SOURCE prior.memory_ref
+OP P SOURCE prior.phase
+OP T SOURCE prior.duration
+OP N SOURCE prior.count
+OP R SOURCE prior.ref
+OP OC SOURCE observation.scope
+OP OM SOURCE observation.memory_ref
+OP B SOURCE observation.before
+OP A SOURCE observation.after
+OP DT SOURCE observation.duration
+OP OR SOURCE observation.previous_ref
+OP S SOURCE observation.step_ref
+OP C_MATCH IDENTITY C OC
+OP M_MATCH IDENTITY M OM
+OP P_MATCH IDENTITY P B
+OP R_MATCH IDENTITY R OR
+OP NEG_DT DIFFERENCE 0 DT
+OP TOTAL DIFFERENCE T NEG_DT
+OP COUNT DIFFERENCE N -1
+OP ENTRY COMPOSITION R S C M B A DT TOTAL COUNT
+OP CHECKPOINT COMPOSITION C M A TOTAL COUNT S
+OP WITNESS COMPOSITION C_MATCH M_MATCH P_MATCH R_MATCH
+EMIT CHECKPOINT
+EMIT ENTRY
+EMIT WITNESS
