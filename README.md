@@ -251,3 +251,7 @@ The original memory law remains authoritative. Reflective theory branches are hy
 ### v1.2 prospective choice and character
 
 [Finite prospective contract](formalism/euler-bombelli-prospective-choice-v1.2.md) · [native policy](projects/pip-project/native/PIP_EBRE_PROSPECTIVE_CHOICE_V1_2.pnv) · [TCD selected-occurrence seam](projects/pip-project/native/PIP_EBRE_PROSPECTIVE_TCD_V1_2.pnv) · [tests](tests/test_pip_ebre_prospective_choice.py). Exact finite intention/will/determination specialization, original Character Depository and selected TCD/NEXUS views. Route proposal and proof validity are separate; no new runtime or scheduler.
+
+### v1.3 experience loop (finite conformance)
+
+[Experience contract](formalism/euler-bombelli-experience-loop-v1.3.md) · [environment PNV](projects/pip-project/native/PIP_EBRE_ENVIRONMENT_STEP_V1_3.pnv) · [GUIDE and journal replay test](projects/pip-project/tests/test_pip_ebre_experience_loop.py). This is a synthetic integration fixture, not the production dispatcher.
