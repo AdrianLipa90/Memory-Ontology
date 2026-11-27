@@ -43,12 +43,12 @@ def experiment(feedback=True, gain=.2, flags=(True,True), dt=.02):
             old_v=v
             old_n=n
             ref="return-"+str(k)
-            edge=edge.update(ref,["fixture",j+1],verified,0,Q,1)
             if verified:
                 v=kick(v,Q,imprint(theta)*z/abs(z))
                 n,tag=collatz_step(n)
             else:
                 tag=None
+            edge=edge.update(ref,["fixture",j+1],verified,0,Q,1)
             work=orbit_invariants(z,v,1)[0]-orbit_invariants(z,old_v,1)[0]
             assert work==pytest.approx(
                 (old_v.conjugate()*(v-old_v)).real+abs(v-old_v)**2/2,
