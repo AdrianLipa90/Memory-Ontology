@@ -85,3 +85,26 @@ def test_hold_withdrawal_and_replay(profile):
         assert saved["hotel"]["index"]==2
     with session.ReflectiveSession(*profile) as b:
         assert b.snapshot()==saved
+
+
+def test_actual_separate_process_restart(profile,tmp_path):
+    import subprocess,sys
+    journal,tcd,variant=profile
+    def run(db,count):
+        command=[sys.executable,str(ROOT/"integrations/pnaml/reflective_session.py"),
+                 "--journal",str(db),"--tcd-root",tcd,"--variant",variant,
+                 "--episodes",str(count)]
+        result=subprocess.run(command,check=True,capture_output=True,text=True,
+                              env=os.environ.copy(),timeout=120)
+        lines=[json.loads(line) for line in result.stdout.splitlines()]
+        return lines[:-1],lines[-1]
+    a,one=run(journal,3)
+    b,two=run(journal,3)
+    all_at_once,whole=run(tmp_path/"reference.sqlite",6)
+    assert [x["semantic"] for x in a+b]==[x["semantic"] for x in all_at_once]
+    for k in ("episodes","procedure","edge_weight","collatz","character","orbit","theory","next_guide"):
+        assert two[k]==whole[k]
+    assert two["journal"]["events_checked"]==whole["journal"]["events_checked"]==7
+    assert two["hotel"]["index"]==whole["hotel"]["index"]==6
+    assert a[0]["source_frame"]["generation"]!=b[0]["source_frame"]["generation"]
+    assert "phase36" not in two
