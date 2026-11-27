@@ -75,3 +75,7 @@ hash or storage. Native runtime all-module orchestration, arbitrary
 proof language, general theorem search and actual live integration
 are still open. Do not relabel existing Python diagnostics as native
 hardware results. No manuscript or plugin release changes.
+
+## Exact-scope proof reuse
+
+PIP_EBRE_REUSE_V1_0 consumes the selected original proof result and receipt reference. It derives reuse eligibility from exact theory identity, exact premise mask and proved status. A changed premise mask invalidates reuse in this conservative fixture (even if another proof may exist); re-evaluate in the original finite proof program. The receipt reference is retained, not authenticated by this PNV graph. The source must supply actual selected immutable proof output. This is a native logical memory seam, not general proof caching or operational authority.
