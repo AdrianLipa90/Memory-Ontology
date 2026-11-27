@@ -1,0 +1,34 @@
+PNV 1
+EPISTEMIC CHYBA
+MODE READ_ONLY
+# Source-owned immutable event observations. No numerical runtime replacement.
+OP C SOURCE prior.scope
+OP M SOURCE prior.memory_ref
+OP R SOURCE prior.ref
+OP N SOURCE prior.count
+OP I SOURCE prior.collatz_index
+OP EC SOURCE event.scope
+OP EM SOURCE event.memory_ref
+OP ER SOURCE event.previous_ref
+OP E SOURCE event.ref
+OP P SOURCE event.phase_ref
+OP B SOURCE event.orbit_before
+OP A SOURCE event.orbit_after
+OP D SOURCE event.displacement
+OP Q SOURCE event.quality
+OP V SOURCE event.verified
+OP J SOURCE event.collatz_before
+OP K SOURCE event.collatz_after
+OP T SOURCE event.parity
+OP H SOURCE event.odd_intermediate
+OP CM IDENTITY C EC
+OP MM IDENTITY M EM
+OP RM IDENTITY R ER
+OP IM IDENTITY I J
+OP COUNT DIFFERENCE N -1
+OP ENTRY COMPOSITION R E C M P B A D Q V J K T H COUNT
+OP CHECKPOINT COMPOSITION C M E COUNT K
+OP WITNESS COMPOSITION CM MM RM IM
+EMIT ENTRY
+EMIT CHECKPOINT
+EMIT WITNESS
