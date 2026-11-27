@@ -94,3 +94,25 @@ def test_proof_memory_orbit_and_single_hotel(pncs):
     assert abs(x[4][18]-x[4][0]) < abs(y[4][18]-y[4][0])
     assert abs(x[5][0]-y[5][0]) > .01
     assert arm(good,0)[4:]==arm(bad,0)[4:]
+
+
+def test_native_reuse_and_dependency_revision(pncs):
+    mask=(True,True,True,True)
+    source={"theory.ref":"T","occurrence.ref":"original-proof",
+            **{"theory.c"+str(i):b for i,b in enumerate(mask)}}
+    first=execute(pncs,PROGRAM,source)
+    cert=first.emitted["CERTIFICATE"]
+    data={"cached.theory":cert[0],"cached.premises":cert[2],
+          "cached.proved":cert[-1],"cached.occurrence":cert[1],
+          "cached.receipt_ref":first.receipt["receipt_sha256"],
+          "query.theory":"T","query.premises":list(mask),
+          "query.occurrence":"later-query"}
+    def reuse(**updates):
+        return execute(pncs,"PIP_EBRE_REUSE_V1_0.pnv",{**data,**updates}).emitted
+    assert reuse()["REUSABLE"] is True
+    assert reuse()["INFERENCE"][-1][0]=="original-proof"
+    assert reuse(**{"query.theory":"T-next"})["W"]==[False,True,True]
+    revised=[True,False,True,True]
+    assert reuse(**{"query.premises":revised})["REUSABLE"] is False
+    assert not proof(pncs,tuple(revised))["PROVED"]
+    assert reuse(**{"cached.proved":False})["REUSABLE"] is False
