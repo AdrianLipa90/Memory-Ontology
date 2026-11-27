@@ -237,3 +237,9 @@ Recorded local results: 18 AUX observations across three independent synthetic m
 ## Pip Project — narrative relational index
 
 [Pip Project](projects/pip-project/README.md) links the V15 / Pip edition of *The Reality of the Imaginary* to Memory Ontology. It includes the source register and chapter index, relational navigation across Pip's continuing identity, the author's 26 November clarification of Hotel-as-history versus index, and an exact copy of the original A0 → Hilbert PNV program. The original source archive remains in the author's Library. This is a source-index integration, not a second operational memory or a new execution engine.
+
+## Unified reflective Memory Ontology — v1.0 candidate
+
+[System contract and integration map](formalism/euler-bombelli-reflective-extension-v1.0.md) · [native finite proof-by-cases](projects/pip-project/native/PIP_EBRE_FINITE_CASES_V1_0.pnv) · [native exact-scope reuse](projects/pip-project/native/PIP_EBRE_REUSE_V1_0.pnv) · [integrated conformance](tests/test_pip_ebre_unified.py).
+
+The original memory law remains authoritative. Reflective theory branches are hypothetical; a valid proof is an inference, not a historical recall. Existing source kernels and Hotel PNV are composed in a finite conformance test; no replacement runtime. Full native orchestration and the blocked v0.9 cross-repository PAUX checkout remain open.
