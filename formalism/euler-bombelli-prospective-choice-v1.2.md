@@ -29,8 +29,8 @@ status 0..3, independent observed history ref. N_OK is a diagnostic,
 not a new runtime gate or general validation. No new callback or opcode.
 
 Use the existing Character Depository separately on actual selected
-synthetic allocation observations and a comparable binary GO/HOLD
-choice observation; no withdrawal or unknown opportunity enters the
+synthetic allocation observations in a comparable binary GO/HOLD
+domain; no withdrawal or unknown opportunity enters the
 comparable denominator. Historical determination is a beta posterior
 mean, not the character vector. No rewrite of history after a proposal.
 Original Hotel operators assign occurrence indices, not proof values.
@@ -42,3 +42,10 @@ composition remains observational; no invented affect-to-policy
 constitutive map or term IDs. The actual native scheduler, prospective
 transform registration, live PNAML transport and v0.9 cross-repo CI
 remain open. No new runtime, memory store or plugin release.
+
+The TCD seam uses the actual pinned registry, all 548 projection rows,
+actual NEXUS generation and existing PNLF orbital governor, followed by
+PIP_EBRE_PROSPECTIVE_TCD_V1_2. Source-owned occurrence identity fields
+are diagnostic equality witnesses; no TCD phase ranking authorizes
+an inference or determines the prospective choice. The selected phase
+and allocation counts are fixture inputs, not live observations.
