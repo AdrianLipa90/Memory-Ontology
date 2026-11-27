@@ -92,10 +92,10 @@ def test_collatz_collision_and_exact_native_lineage(pncs):
     theta = simulate(source_snapshots()[0],1,400)
     paths=[]
     for n in (3,10,2**100+1):
-        cp=[SCOPE,"M0","origin",2**63,n]
+        cp=[SCOPE,"M0","origin-"+str(n),2**63,n]
         entries=[]
         for k in range(4):
-            r=record(pncs,cp,"event-"+str(k),theta)
+            r=record(pncs,cp,"event-"+str(n)+"-"+str(k),theta)
             assert r["WITNESS"] == [True]*4
             entry=r["ENTRY"]
             assert entry[0]==cp[2]
@@ -112,6 +112,7 @@ def test_collatz_collision_and_exact_native_lineage(pncs):
         paths.append(entries)
     assert paths[0][0][11]==paths[1][0][11]==5
     assert paths[0][0][12]!=paths[1][0][12]
+    assert paths[0][0][1]!=paths[1][0][1]
 
 @pytest.mark.parametrize("field,value,slot",[
     ("scope",["other"],0),("memory_ref","wrong",1),
