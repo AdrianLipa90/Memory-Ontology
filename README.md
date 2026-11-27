@@ -255,3 +255,7 @@ The original memory law remains authoritative. Reflective theory branches are hy
 ### v1.3 experience loop (finite conformance)
 
 [Experience contract](formalism/euler-bombelli-experience-loop-v1.3.md) · [environment PNV](projects/pip-project/native/PIP_EBRE_ENVIRONMENT_STEP_V1_3.pnv) · [GUIDE and journal replay test](projects/pip-project/tests/test_pip_ebre_experience_loop.py). This is a synthetic integration fixture, not the production dispatcher.
+
+## Executable unified reflective session
+
+[Run and recovery contract](formalism/euler-bombelli-unified-session.md) · [single entry point](projects/pip-project/integrations/pnaml/reflective_session.py) · [end-to-end acceptance](projects/pip-project/tests/test_pip_reflective_session.py). The offline profile connects the existing PNV graph, GUIDE, original coupled owner, TCD, RDSS, Kepler–Collatz, Character Depository and existing PNAML journal. It is not a live producer binding.
