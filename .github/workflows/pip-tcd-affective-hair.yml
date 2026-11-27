@@ -34,6 +34,12 @@ jobs:
           ref: ff8d5f191c77c7ce1b371ff0dddc74300fc061cc
           path: _bioos
           persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: AdrianLipa90/PNV-State-Memory
+          ref: 8a677caf0a5e810ddffd35811c038915f38fb142
+          path: _pnv_state
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -41,6 +47,9 @@ jobs:
       - run: python -m pip install -r projects/pip-project/integrations/pnaml/${{ matrix.variant }}/skills/pnaml-coupled-phase-stream/references/requirements.txt
       - env:
           TCD_ROOT: _tcd
+          PNCS_ROOT: _pncs
+          PNV_STATE_MEMORY_ROOT: _pnv_state
+          PYTHONPATH: _pnv_state/src
           BIOOS_ROOT: _bioos
           PNAML_VARIANT: ${{ matrix.variant }}
           OPENBLAS_NUM_THREADS: '1'
