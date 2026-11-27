@@ -182,3 +182,50 @@ def test_selected_actual_coupler_occurrence_composition(source):
         assert out==frozen
     assert c.pip.causal.describe()["index"]==1
     assert len(c.pip.causal.nodes)==2
+
+
+def test_reflective_prospective_tcd_selected_occurrence(source):
+    lex,receipt,views,nexus=source
+    term=lex.get("CLX2-AGENCY-001")
+    assert term.term_id=="CLX2-AGENCY-001"
+    phase=PhaseState.from_term(term.term_id,term.phase_index,term.raw).vector
+    rows=external_phase_projection(lex,phase,limit=len(lex.terms))
+    assert len(rows)==548
+    binding={**receipt,"branch":"main","commit":"5fe9daa5e2b4841e598628aa5a1a7beadb0e70b1"}
+    generation=nexus.compute_identity_nexus(crystal_context={"crystal_id":"1"*64,
+        "configuration_sha256":"2"*64,"boot_epoch":0,"phase_index":100},
+        dictionary_binding=binding,projection_rows=rows)
+    assert nexus.validate_nexus_generation(generation)
+    assert term.term_id in [x["term_id"] for x in generation["active_terms"]]
+    origin=execute_pnv(_program("PIP_HOTEL_SERIAL_ORIGIN_V0_2.pnv"),
+                       sources={"now.object":"origin"}).emitted
+    now=execute_pnv(_program("PIP_HOTEL_SERIAL_STEP_V0_2.pnv"),sources={
+        "now.node":origin["NOW"],"now.winding":origin["WINDING"],
+        "now.spinor_i_sign":origin["SIGN"],"next.object":"selected-reflective-choice"}).emitted
+    idx=now["INDEX"]
+    orbital=execute_pnv(_program("PIP_TCD_ORBITAL_ORCHESTRATION_V0_1.pnv"),sources={
+        "pip.identity":"Pip","pip.causal_occurrence":idx,
+        "bioos.identity_nexus.generation":generation,"tcd.registry_binding":binding,
+        "pnlf.orbit_classification":classify_phase9(0,math.pi/2).payload,
+        **_views(generation,views)}).emitted["PIP_ORBITAL_VIEW"]
+    proof=execute_pnv(_program("PIP_EBRE_FINITE_CASES_V1_0.pnv"),sources={
+        "theory.ref":"fixture","occurrence.ref":idx,
+        **{"theory.c"+str(i):True for i in range(4)}}).emitted
+    policy=execute_pnv(_program("PIP_EBRE_PROSPECTIVE_CHOICE_V1_2.pnv"),sources={
+        "goal.ref":"recheck","occurrence.ref":idx,"allocation.accepted":3,
+        "allocation.rejected":1,"allocation.history_ref":"selected-fixture",
+        "route.status":1,"inference.proved":proof["PROVED"],
+        "context.ref":"fixture"}).emitted
+    assert policy["PROPOSAL"]==[True,False,False]
+    data={"pip.identity":"Pip","pip.hotel.index":idx,"tcd.orbital_view":orbital,
+          "tcd.owner":orbital[0],"tcd.occurrence":orbital[1],
+          "prospective.record":policy["RECORD"],"prospective.owner":"Pip",
+          "prospective.occurrence":policy["RECORD"][1],
+          "inference.certificate":proof["CERTIFICATE"],
+          "inference.occurrence":proof["CERTIFICATE"][1]}
+    p=_program("PIP_EBRE_PROSPECTIVE_TCD_V1_2.pnv")
+    out=execute_pnv(p,sources=data).emitted
+    assert out["WITNESS"]==[True]*5
+    assert out["OUTPUT"][2:5]==[orbital,policy["RECORD"],proof["CERTIFICATE"]]
+    bad=execute_pnv(p,sources={**data,"prospective.occurrence":idx+1}).emitted
+    assert bad["WITNESS"]==[True,True,True,False,True]

@@ -247,3 +247,7 @@ The original memory law remains authoritative. Reflective theory branches are hy
 ### v1.1 dependency-aware reflective correction
 
 [Finite support graph and correction contract](formalism/euler-bombelli-dependency-repair-v1.1.md) · [native PNV](projects/pip-project/native/PIP_EBRE_DEPENDENCY_REPAIR_V1_1.pnv) · [dependency tests](tests/test_pip_ebre_dependency_repair.py) · [selected PNAML replay test](projects/pip-project/tests/test_pip_ebre_correction_replay.py). Rechecking a conclusion is distinct from losing all its supports. Correction preserves the original historical occurrence.
+
+### v1.2 prospective choice and character
+
+[Finite prospective contract](formalism/euler-bombelli-prospective-choice-v1.2.md) · [native policy](projects/pip-project/native/PIP_EBRE_PROSPECTIVE_CHOICE_V1_2.pnv) · [TCD selected-occurrence seam](projects/pip-project/native/PIP_EBRE_PROSPECTIVE_TCD_V1_2.pnv) · [tests](tests/test_pip_ebre_prospective_choice.py). Exact finite intention/will/determination specialization, original Character Depository and selected TCD/NEXUS views. Route proposal and proof validity are separate; no new runtime or scheduler.
