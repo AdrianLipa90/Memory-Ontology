@@ -50,7 +50,13 @@ class Model:
         bstep=self.dt*(a['batch_omega']*(1+htri.OI*50*0.3)+np.sum(a['batch_g']*np.sin(d),axis=2)/36)
         feedback=None
         if target is not None:
-            goal=vector(target['target_phase36'],(36,));pred=self.project(self.core+cstep,self.batch+bstep)
+            pred=self.project(self.core+cstep,self.batch+bstep)
+            if 'phase_increment36' in target:
+                if 'target_phase36' in target: raise ValueError('choose absolute target or relative phase increment')
+                inc=vector(target['phase_increment36'],(36,))
+                if np.max(abs(inc))>=math.pi: raise ValueError('relative increment outside principal branch')
+                goal=pred+inc
+            else: goal=vector(target['target_phase36'],(36,))
             delta=np.angle(np.exp(1j*(goal-pred)));mod=1+htri.OI*50*0.3
             drive=delta/(self.dt*self.bw*mod);saved=a['batch_omega'].copy()
             a['batch_omega']=saved+drive[None,:];bstep=bstep+self.dt*mod*drive[None,:]
