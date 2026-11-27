@@ -1,0 +1,33 @@
+PNV 1
+EPISTEMIC CHYBA
+MODE READ_ONLY
+OP C SOURCE prior.scope
+OP R SOURCE prior.ref
+OP M SOURCE prior.memory_ref
+OP I SOURCE prior.index
+OP N SOURCE prior.count
+OP EC SOURCE event.scope
+OP ER SOURCE event.previous_ref
+OP EM SOURCE event.memory_before
+OP EN SOURCE event.memory_after
+OP EI SOURCE event.index_before
+OP EJ SOURCE event.index_after
+OP E SOURCE event.ref
+OP V SOURCE event.verified
+OP P SOURCE event.phase
+OP B SOURCE event.orbit_before
+OP A SOURCE event.orbit_after
+OP T SOURCE event.time
+OP G SOURCE event.parity
+OP W SOURCE event.work
+OP CM IDENTITY C EC
+OP RM IDENTITY R ER
+OP MM IDENTITY M EM
+OP IM IDENTITY I EI
+OP COUNT DIFFERENCE N -1
+OP ENTRY COMPOSITION R E C M EN V P B A T I EJ G W COUNT
+OP CHECKPOINT COMPOSITION C E EN EJ COUNT
+OP WITNESS COMPOSITION CM RM MM IM
+EMIT ENTRY
+EMIT CHECKPOINT
+EMIT WITNESS
