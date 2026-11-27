@@ -1,0 +1,16 @@
+PNV 1
+EPISTEMIC CHYBA
+MODE READ_ONLY
+# CONTRACT PIP_THOUGHT_C4_TRANSPORT_V0_3
+# Exact Gaussian integer sector: all four unit phase rotations.
+# The source edge owner selects its declared orientation; no selection here.
+OP X SOURCE amplitude.real
+OP Y SOURCE amplitude.imag
+OP NX DIFFERENCE 0 X
+OP NY DIFFERENCE 0 Y
+OP R0 COMPOSITION X Y
+OP R1 COMPOSITION NY X
+OP R2 COMPOSITION NX NY
+OP R3 COMPOSITION Y NX
+OP ROTATIONS COMPOSITION R0 R1 R2 R3
+EMIT ROTATIONS
