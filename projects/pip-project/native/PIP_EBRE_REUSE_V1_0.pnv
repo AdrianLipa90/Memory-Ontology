@@ -1,0 +1,24 @@
+PNV 1
+EPISTEMIC CHYBA
+MODE INTERNAL_EXECUTION
+# Selected immutable result from PIP_EBRE_FINITE_CASES_V1_0, not arbitrary asserted truth.
+# Exact-scope reuse of Q in the fixed finite theory family.
+OP CT SOURCE cached.theory
+OP CP SOURCE cached.premises
+OP CV SOURCE cached.proved
+OP CO SOURCE cached.occurrence
+OP CR SOURCE cached.receipt_ref
+OP T SOURCE query.theory
+OP P SOURCE query.premises
+OP O SOURCE query.occurrence
+OP TS IDENTITY CT T
+OP PS IDENTITY CP P
+OP VS IDENTITY CV TRUE
+OP W COMPOSITION TS PS VS
+OP YES COMPOSITION TRUE TRUE TRUE
+OP REUSABLE IDENTITY W YES
+OP TRACE COMPOSITION CO CR CT CP CV
+OP INFERENCE COMPOSITION O T P REUSABLE TRACE
+EMIT REUSABLE
+EMIT W
+EMIT INFERENCE
