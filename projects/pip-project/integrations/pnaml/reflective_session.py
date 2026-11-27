@@ -41,7 +41,7 @@ class ReflectiveSession:
     reopen from its verified committed events instead of retrying a partial
     in-memory mutation. One writer per explicitly selected session.
     """
-    def __init__(self, journal, tcd_root, variant="mobile", *, seed=42, dt=.01):
+    def __init__(self, journal, tcd_root, variant="mobile", *, seed=42, dt=.01, optical_mode=None):
         refs=activate_sources(variant)
         from coupled_stream import Coupler, Model
         from phasenav_natural_code.native_pnv_exec_v01 import execute_pnv
@@ -57,12 +57,20 @@ class ReflectiveSession:
         self.store=self.owner.pip.memory.store
         self.hotel=self.owner.pip.causal
         self.profile={"seed":seed,"dt":dt,"variant":variant,"profile":"EBRE_OFFLINE_V1"}
+        if optical_mode not in (None,"coupled","ablated"):
+            raise ValueError("explicit optical profile required")
+        self.optical_mode=optical_mode
+        if optical_mode is not None:
+            self.profile.update(profile="EBRE_OPTICAL_OFFLINE_V1", optical_mode=optical_mode,
+                                photo_pair=[0,18], kick_gain=.05, orbital_coupling_rate=.2)
         self.procedure=ProceduralMemoryRuntime("pip-reflective-offline",[
             RouteState("direct",("S","G"),.2),
             RouteState("detour",("S","M","G"),.1)],learning_rate=.2)
         self.edge=AdaptiveEdge("left","right",.5,1.)
         self.collatz=3
         self.orbit=(1+0j,1j)
+        self.reference_orbit=self.orbit
+        self.optical_steps=0
         self.window=[True,True,True,False] # declared synthetic prior, not user history
         self.character=[0,0,0]
         self.character_ref=None
@@ -107,16 +115,36 @@ class ReflectiveSession:
                  "summary":json.dumps(body,sort_keys=True,allow_nan=False),
                  "importance":1.0,"source_ref":"offline-model:"+ref,
                  "context":{"session_id":"pip-reflective-offline","object_id":ref},
-                 "relations":[{"source":ref,"type":"profile","target":"EBRE_OFFLINE_V1","status":"fixture"}]}
+                 "relations":[{"source":ref,"type":"profile","target":self.profile["profile"],"status":"fixture"}]}
         return self.store.remember(payload)
 
-    def _tick(self,ref):
+    def _orbital_energy_shift(self):
+        from engines.rdss_memory_mechanics_v32 import orbit_invariants
+        return orbit_invariants(*self.orbit,1.)[0]-orbit_invariants(*self.reference_orbit,1.)[0]
+
+    def _tick(self,ref,*,optical=False,pulse=None):
         # Explicit test constitutive profile, from existing RDSS phase_step.
         # Feed only the relative coupling increment to the ORIGINAL Model.
         # No invented production transform binding. No phase arrays persisted.
         from engines.rdss_relational_dynamics_v32 import phase_step
+        # Explicit candidate constitutive law: the energy contrast against the
+        # no-optical-kick reference orbit modulates the SAME HTRI source
+        # coupling. Native Hebbian update and clipping remain in that source;
+        # Coupler consumes the resulting symmetric Laplacian. No AUX copy.
+        self.last_orbital_increment=0.
+        if self.optical_mode=="coupled" and self.last is not None:
+            shift=abs(self._orbital_energy_shift())
+            inc=self.profile["dt"]*self.profile["orbital_coupling_rate"]*shift/(1.+shift)
+            i,j=self.profile["photo_pair"]
+            g=self.model.h["batch_g"]
+            g[:,i,j]+=inc
+            g[:,j,i]+=inc
+            self.last_orbital_increment=inc
         target=None
-        if self.last is not None:
+        if optical and pulse is not None:
+            from photoreception import photo_target
+            target=photo_target(self.owner.scene,pulse)
+        elif self.last is not None and not optical:
             theta=tuple(self.last["phase36_lift"])
             K=.2*self.edge.phase_weight()
             A=tuple(tuple(K/18 if (i<18)!=(j<18) else 0. for j in range(36)) for i in range(36))
@@ -146,7 +174,9 @@ class ReflectiveSession:
             saved=json.loads(row["summary"])
             if saved["command"]["ref"]!=row["event_id"]:
                 raise RuntimeError("event identity mismatch")
-            actual=self._episode(saved["command"],replay=saved)
+            cmd=saved["command"]
+            actual=(self._optical_event(cmd,replay=saved) if cmd.get("kind")=="optical"
+                    else self._episode(cmd,replay=saved))
             if actual["semantic"]!=saved["semantic"]:
                 raise RuntimeError("selected event replay diverged")
 
@@ -222,6 +252,10 @@ class ReflectiveSession:
             dm=displacement((0.,0.,1.),(0.,-math.sin(delta),math.cos(delta)),(1.,0.,0.))
             v=kick(v,.05,dm)
         self.orbit=kepler_segment(z,v,1.,self.profile["dt"],1)
+        if self.optical_mode is not None:
+            rz,rv=self.reference_orbit
+            if arrived: rv=kick(rv,.05,dm)
+            self.reference_orbit=kepler_segment(rz,rv,1.,self.profile["dt"],1)
         # TCD projection uses actual owner frame; scores remain volatile.
         rows=external_phase_projection(self.lex,phases,limit=len(self.lex.terms))
         band=classify_phase9(phases[0],phases[18]).payload["orbital_band"]
@@ -253,6 +287,99 @@ class ReflectiveSession:
         self.theory=deepcopy(cmd["theory"])
         self.episodes+=1
         return {"semantic":semantic,"source_frame":{"generation":generation,"sequence":sequence}}
+
+    def _optical_event(self,cmd,replay=None):
+        # One selected optical or dark occurrence in the SAME causal Hotel.
+        # The optical tick uses the original natural HTRI step + Fiat Lux,
+        # not the synthetic route-only phase correction.
+        from engines.rdss_memory_mechanics_v32 import (
+            collatz_step,collatz_inverse,displacement,kick,kepler_segment)
+        ref=cmd["ref"]
+        if self.optical_mode is None:
+            raise ValueError("optical profile required")
+        pulse=cmd["pulse"]
+        frame=self._tick(ref,optical=True,pulse=pulse)
+        receipt=frame.get("photoreception")
+        dm=0j
+        tag=None
+        verified=False
+        if receipt is not None:
+            requested=receipt["requested_phase_increment36"]
+            realized=receipt["realized_phase_increment36"]
+            if max(abs(x-y) for x,y in zip(requested,realized))>1e-10:
+                raise RuntimeError("original Fiat Lux realization mismatch")
+            i,j=self.profile["photo_pair"]
+            delta=realized[j]-realized[i]
+            theta=frame["phase36_lift"][j]-frame["phase36_lift"][i]
+            # CP1 relative-phase chart: the paired no-pulse prediction
+            # is the same source step before the verified optical increment.
+            base=theta-delta
+            n=(math.cos(base),math.sin(base),0.)
+            b=(math.cos(theta),math.sin(theta),0.)
+            dm=displacement(n,b,(0.,0.,1.))
+            verified=(receipt["status"]=="PHOTOELECTRIC_RESPONSE" and abs(dm)>0.)
+        z,v=self.orbit
+        if verified:
+            v=kick(v,self.profile["kick_gain"],dm)
+            next_n,tag=collatz_step(self.collatz)
+            if collatz_inverse(next_n,tag)!=self.collatz:
+                raise RuntimeError("Collatz inverse mismatch")
+            self.collatz=next_n
+        self.orbit=kepler_segment(z,v,1.,self.profile["dt"],1)
+        self.reference_orbit=kepler_segment(*self.reference_orbit,1.,self.profile["dt"],1)
+        index=self.hotel.now+1
+        semantic={"kind":"optical","response":None if receipt is None else receipt["status"],
+                  "verified_model_imprint":verified,"fs_distance":abs(dm),
+                  "collatz":self.collatz,"tag":tag,"hotel_index":index,
+                  "energy_shift":self._orbital_energy_shift(),
+                  "source_coupling_increment":self.last_orbital_increment}
+        if replay is not None:
+            if semantic!=replay["semantic"] or frame["sequence"]!=replay["sequence"]:
+                raise RuntimeError("optical occurrence replay mismatch")
+            generation,sequence=replay["generation"],replay["sequence"]
+        else:
+            generation,sequence=frame["generation"],frame["sequence"]
+            body={"command":cmd,"semantic":semantic,"generation":generation,"sequence":sequence}
+            if self._record(ref,body)["status"]!="COMMITTED":
+                raise RuntimeError("optical occurrence not committed")
+        self.hotel.advance(ref,generation,sequence)
+        if self.hotel.now!=index:
+            raise RuntimeError("optical Hotel successor mismatch")
+        self.optical_steps+=1
+        return {"semantic":semantic,"source_frame":{"generation":generation,"sequence":sequence}}
+
+    def advance_optical(self,ref,pulse=None):
+        if self.failed:
+            raise RuntimeError("reopen from verified journal after interrupted operation")
+        if self.optical_mode is None:
+            raise ValueError("optical profile required")
+        if not isinstance(ref,str) or not ref.startswith(PREFIX) or ref==PREFIX+"origin":
+            raise ValueError("explicit offline occurrence reference required")
+        pulse=deepcopy(pulse)
+        if pulse is not None:
+            from photoreception import photo_target
+            if pulse.get("source_ref")!=ref:
+                raise ValueError("pulse and occurrence reference must match")
+            # Validate before mutating any source state. Retain declared input
+            # only, never the computed phase increment or live AUX.
+            allowed={"position_xy","material_id","wavelength_nm","photon_count",
+                     "work_function_ev","absorption_fraction","quantum_yield",
+                     "phase_gain_rad_per_ev","source_ref"}
+            if set(pulse)!=allowed:
+                raise ValueError("explicit typed Fiat Lux command required")
+            photo_target(self.owner.scene,pulse)
+        cmd={"kind":"optical","ref":ref,"pulse":pulse}
+        old=self.store.get_event(ref)
+        if old is not None:
+            saved=json.loads(old["summary"])
+            if saved.get("command")!=cmd:
+                raise ValueError("event identity collision")
+            return {"status":"DUPLICATE","semantic":saved["semantic"]}
+        try:
+            return {"status":"COMMITTED",**self._optical_event(cmd)}
+        except Exception:
+            self.failed=True
+            raise
 
     def advance(self,command):
         if self.failed:
@@ -287,13 +414,17 @@ class ReflectiveSession:
 
     def snapshot(self):
         # Volatile diagnostic readout, never stored/hashes of live AUX.
-        return {"episodes":self.episodes,"hotel":self.hotel.describe(),
+        result={"episodes":self.episodes,"hotel":self.hotel.describe(),
                 "procedure":self.procedure.snapshot(),"edge_weight":self.edge.phase_weight(),
                 "collatz":self.collatz,"character":self.character[:],
                 "phase36":self.last["phase36_lift"][:],
                 "orbit":[[z.real,z.imag] for z in self.orbit],
                 "theory":deepcopy(self.theory),"next_guide":self.procedure.guide(),
                 "journal":self.store.verify(),"native_host_verified":False}
+        if self.optical_mode is not None:
+            result.update(optical_steps=self.optical_steps,orbital_energy_shift=self._orbital_energy_shift(),
+                          optical_mode=self.optical_mode,source_coupling_increment=self.last_orbital_increment)
+        return result
 
 def demo_command(i):
     return {"ref":PREFIX+"episode-"+str(i),"status":0,
@@ -301,16 +432,28 @@ def demo_command(i):
                       "flags":[i>0,i>0,True,False,False,True]},
             "environment":"fixed-blocked-direct","edges":[False,True,True]}
 
+def demo_pulse(ref,material_id):
+    # Declared synthetic receptor, not measured material constants.
+    return {"source_ref":ref,"position_xy":[.15,.15],"material_id":material_id,
+            "wavelength_nm":400.,"photon_count":1,"work_function_ev":1.,
+            "absorption_fraction":1.,"quantum_yield":1.,"phase_gain_rad_per_ev":.2}
+
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--journal",required=True)
     p.add_argument("--tcd-root",required=True)
     p.add_argument("--variant",choices=("mobile","semantic"),default="mobile")
     p.add_argument("--episodes",type=int,default=6)
+    p.add_argument("--optical-mode",choices=("coupled","ablated"))
+    p.add_argument("--optical-steps",type=int,default=0)
     a=p.parse_args()
-    with ReflectiveSession(a.journal,a.tcd_root,a.variant) as s:
+    with ReflectiveSession(a.journal,a.tcd_root,a.variant,optical_mode=a.optical_mode) as s:
         for i in range(s.episodes,s.episodes+a.episodes):
             print(json.dumps(s.advance(demo_command(i)),allow_nan=False),flush=True)
+        for i in range(s.optical_steps,s.optical_steps+a.optical_steps):
+            ref=PREFIX+"optical-"+str(i)
+            pulse=demo_pulse(ref,s.owner.scene["materials"][0]["id"]) if i==0 else None
+            print(json.dumps(s.advance_optical(ref,pulse),allow_nan=False),flush=True)
         state=s.snapshot()
         # No raw evolving phase output in default CLI receipt.
         del state["phase36"]

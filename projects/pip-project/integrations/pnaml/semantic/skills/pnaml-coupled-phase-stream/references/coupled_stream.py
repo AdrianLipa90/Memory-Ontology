@@ -63,6 +63,9 @@ class Model:
             try:htri.evolve_htri_batch_system(a,dt=self.dt)
             finally:a['batch_omega']=saved
             feedback={'schema':'PNCS_SOURCE_MODEL_INVERSE_STEP_V1','source_ref':target.get('source_ref'),'term_id':target.get('term_id'),'drive36':drive.tolist(),'target_phase36':goal.tolist(),'phase_error':float(np.max(abs(np.angle(np.exp(1j*(goal-self.project(self.core+cstep,self.batch+bstep)))))))}
+            if 'photoreception' in target:
+                feedback['photoreception']=copy.deepcopy(target['photoreception'])
+                feedback['photoreception']['realized_phase_increment36']=(self.project(self.core+cstep,self.batch+bstep)-pred).tolist()
         else:htri.evolve_htri_batch_system(a,dt=self.dt)
         self.core+=cstep;self.batch+=bstep; self.seq+=1
         e=max(np.max(np.abs(np.angle(np.exp(1j*(self.core-a['core_phi']))))),np.max(np.abs(np.angle(np.exp(1j*(self.batch-a['batch_phi']))))))
@@ -105,7 +108,9 @@ class Coupler:
         if rec['status']!='PASS':raise RuntimeError(str(rec))
         q=rec['result']; self.count+=1
         out={'schema':'PNAML_COUPLED_RESULT_V1','generation':gen,'sequence':seq,'tau':tau,'source':f.get('source','EXTERNAL_DECLARED_SOURCE'),'phase36_lift':p.tolist(),'winding36':np.floor(p/TAU).astype(int).tolist(),'trits12':trits,'source_lift_error':f.get('source_lift_error'),'q28':q,'qhtri':{'norm':float(np.vdot(self.psi,self.psi).real),'hermiticity_error':herm,'potential_identity_error':abs(zpe-qexpect),'amplitude_real':self.psi.real.tolist(),'amplitude_imag':self.psi.imag.tolist(),'dt':dt},'rdssg':{'bloch36':bloch36_projection(p.tolist()),'rendered':False},'dynamic_hashing':'NONE_IN_THIS_ROUTE','host_authenticated':False,'physical_h200':False}
-        if f.get('producer_feedback') is not None:out['producer_feedback']=f['producer_feedback']
+        if f.get('producer_feedback') is not None:
+            out['producer_feedback']=f['producer_feedback']
+            if 'photoreception' in f['producer_feedback']: out['photoreception']=f['producer_feedback']['photoreception']
         if ekb is not None:out.update(ekb=ekb,source_phase36_lift=source_p.tolist())
         if self.render_every and (self.count-1)%self.render_every==0:
             scene=copy.deepcopy(self.scene); carrier=scene['carrier'];carrier.update(q36_lift=(p/TAU).tolist(),w36=np.floor(p/TAU).astype(int).tolist(),omega36=(w/TAU).tolist(),time_tau=tau)

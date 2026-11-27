@@ -108,3 +108,96 @@ def test_actual_separate_process_restart(profile,tmp_path):
     assert two["hotel"]["index"]==whole["hotel"]["index"]==6
     assert a[0]["source_frame"]["generation"]!=b[0]["source_frame"]["generation"]
     assert "phase36" not in two
+
+
+def test_fiat_lux_orbit_feedback_dark_ablation_and_restart(profile,tmp_path):
+    import numpy as np
+    journal,tcd,variant=profile
+    with session.ReflectiveSession(journal,tcd,variant,optical_mode="coupled") as a, \
+         session.ReflectiveSession(tmp_path/"ablation.sqlite",tcd,variant,optical_mode="ablated") as b:
+        ref=session.PREFIX+"light"
+        pulse=session.demo_pulse(ref,a.owner.scene["materials"][0]["id"])
+        first=a.advance_optical(ref,pulse)
+        other=b.advance_optical(ref,pulse)
+        assert first["semantic"]==other["semantic"]
+        assert first["semantic"]["verified_model_imprint"]
+        assert first["semantic"]["fs_distance"]>0
+        assert first["semantic"]["energy_shift"]!=0
+        assert first["semantic"]["collatz"]==5 and first["semantic"]["tag"]==1
+        assert first["semantic"]["source_coupling_increment"]==0
+        assert np.array_equal(a.owner.psi,b.owner.psi)
+        assert a.advance_optical(ref,pulse)["status"]=="DUPLICATE"
+        assert a.optical_steps==1
+        for i in range(4):
+            dark=session.PREFIX+"dark-"+str(i)
+            x=a.advance_optical(dark)["semantic"]
+            y=b.advance_optical(dark)["semantic"]
+            assert x["response"] is None and not x["verified_model_imprint"]
+            assert y["response"] is None and x["collatz"]==y["collatz"]==5
+            assert x["source_coupling_increment"]>0
+            assert y["source_coupling_increment"]==0
+        # Read the original owner's actual published coupling and QHTRI
+        # amplitudes, not the requested increment or a surrogate engine.
+        ga=np.asarray(a.owner.noema_surface.read("DYNAMIC_STATE_SPACE/g"))
+        gb=np.asarray(b.owner.noema_surface.read("DYNAMIC_STATE_SPACE/g"))
+        g_gap=float(np.linalg.norm(ga-gb))
+        phase_gap=float(np.linalg.norm(np.asarray(a.last["phase36_lift"])-np.asarray(b.last["phase36_lift"])))
+        qhtri_gap=float(np.linalg.norm(a.owner.psi-b.owner.psi))
+        assert g_gap>1e-10 and phase_gap>1e-10 and qhtri_gap>1e-10
+        assert np.max(abs(ga-ga.T))<1e-10
+        assert abs(a.last["qhtri"]["norm"]-1)<1e-10
+        assert a.last["trits12"] is None
+        assert a.last["dynamic_hashing"]=="NONE_IN_THIS_ROUTE"
+        saved=a.snapshot()
+        psi=a.owner.psi.copy()
+        print("FIAT_LUX_DARK_ABLATION",json.dumps({"fs_distance":first["semantic"]["fs_distance"],
+              "energy_shift":first["semantic"]["energy_shift"],"coupling_gap":g_gap,
+              "phase_gap":phase_gap,"qhtri_gap":qhtri_gap}))
+        for row in a._rows():
+            assert not any(k in row["summary"] for k in ("phase36_lift","omega36","coupling36",
+                    "realized_phase_increment36","requested_phase_increment36","amplitude_real"))
+        next_ref=session.PREFIX+"after-restart"
+        expected=a.advance_optical(next_ref)["semantic"]
+        next_psi=a.owner.psi.copy()
+    with session.ReflectiveSession(journal,tcd,variant,optical_mode="coupled") as a:
+        assert a.optical_steps==6
+        assert a.hotel.now==6 and a.store.verify()["events_checked"]==7
+        assert a.advance_optical(next_ref)["semantic"]==expected
+        assert np.allclose(a.owner.psi,next_psi,rtol=0,atol=1e-12)
+    with session.ReflectiveSession(tmp_path/"dark-only.sqlite",tcd,variant,optical_mode="coupled") as a:
+        for i in range(3):
+            r=a.advance_optical(session.PREFIX+"unlit-"+str(i))["semantic"]
+            assert r["source_coupling_increment"]==r["energy_shift"]==0
+            assert r["collatz"]==3
+        ref=session.PREFIX+"subthreshold"
+        pulse=session.demo_pulse(ref,a.owner.scene["materials"][0]["id"])
+        pulse["work_function_ev"]=10.
+        r=a.advance_optical(ref,pulse)["semantic"]
+        assert r["response"]=="NO_PHOTOELECTRIC_RESPONSE"
+        assert r["fs_distance"]==r["energy_shift"]==0
+        assert r["tag"] is None and r["collatz"]==3
+
+def test_optical_process_restart_and_route_interleave(profile,tmp_path):
+    import subprocess,sys
+    journal,tcd,variant=profile
+    def run(db,steps):
+        args=[sys.executable,str(ROOT/"integrations/pnaml/reflective_session.py"),
+              "--journal",str(db),"--tcd-root",tcd,"--variant",variant,
+              "--episodes","0","--optical-mode","coupled","--optical-steps",str(steps)]
+        p=subprocess.run(args,check=True,capture_output=True,text=True,timeout=120,env=os.environ.copy())
+        rows=[json.loads(line) for line in p.stdout.splitlines()]
+        return rows[:-1],rows[-1]
+    first,x=run(journal,2)
+    second,y=run(journal,3)
+    whole,z=run(tmp_path/"continuous.sqlite",5)
+    assert [r["semantic"] for r in first+second]==[r["semantic"] for r in whole]
+    for k in ("orbit","collatz","orbital_energy_shift","source_coupling_increment","optical_steps"):
+        assert y[k]==z[k]
+    assert first[0]["source_frame"]["generation"]!=second[0]["source_frame"]["generation"]
+    assert y["hotel"]["index"]==z["hotel"]["index"]==5
+    with session.ReflectiveSession(journal,tcd,variant,optical_mode="coupled") as a:
+        assert a.advance(session.demo_command(0))["status"]=="COMMITTED"
+        assert a.hotel.now==6 and a.episodes==1 and a.optical_steps==5
+        saved=a.snapshot()
+    with session.ReflectiveSession(journal,tcd,variant,optical_mode="coupled") as b:
+        assert b.snapshot()==saved
