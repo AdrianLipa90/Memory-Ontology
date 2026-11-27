@@ -243,3 +243,7 @@ Recorded local results: 18 AUX observations across three independent synthetic m
 [System contract and integration map](formalism/euler-bombelli-reflective-extension-v1.0.md) · [native finite proof-by-cases](projects/pip-project/native/PIP_EBRE_FINITE_CASES_V1_0.pnv) · [native exact-scope reuse](projects/pip-project/native/PIP_EBRE_REUSE_V1_0.pnv) · [integrated conformance](tests/test_pip_ebre_unified.py).
 
 The original memory law remains authoritative. Reflective theory branches are hypothetical; a valid proof is an inference, not a historical recall. Existing source kernels and Hotel PNV are composed in a finite conformance test; no replacement runtime. Full native orchestration and the blocked v0.9 cross-repository PAUX checkout remain open.
+
+### v1.1 dependency-aware reflective correction
+
+[Finite support graph and correction contract](formalism/euler-bombelli-dependency-repair-v1.1.md) · [native PNV](projects/pip-project/native/PIP_EBRE_DEPENDENCY_REPAIR_V1_1.pnv) · [dependency tests](tests/test_pip_ebre_dependency_repair.py) · [selected PNAML replay test](projects/pip-project/tests/test_pip_ebre_correction_replay.py). Rechecking a conclusion is distinct from losing all its supports. Correction preserves the original historical occurrence.
